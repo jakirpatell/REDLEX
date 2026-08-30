@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REDLEX | Premium Shopping</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+  background:#f5f8ff;
+  color:#14213d;
+}
+
+.topbar{
+  background:#0b1f3a;
+  color:white;
+  text-align:center;
+  padding:9px;
+  font-size:13px;
+}
+
+header{
+  background:white;
+  padding:16px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 3px 15px #d9e2f2;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:800;
+  color:#1769e0;
+  letter-spacing:2px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#24324a;
+  margin-left:20px;
+  font-size:14px;
+}
+
+.hero{
+  margin:25px auto;
+  max-width:1150px;
+  width:90%;
+  padding:55px 30px;
+  border-radius:25px;
+  background:linear-gradient(135deg,#e8f1ff,#ffffff);
+  text-align:center;
+}
+
+.badge{
+  display:inline-block;
+  background:#1769e0;
+  color:white;
+  padding:7px 14px;
+  border-radius:20px;
+  font-size:12px;
+  margin-bottom:15px;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:12px;
+  color:#102a50;
+}
+
+.hero p{
+  color:#667085;
+  margin-bottom:22px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 22px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  margin:5px;
+}
+
+.primary{
+  background:#1769e0;
+  color:white;
+}
+
+.secondary{
+  background:white;
+  color:#1769e0;
+  border:1px solid #1769e0;
+}
+
+.section{
+  max-width:1150px;
+  width:90%;
+  margin:45px auto;
+}
+
+.section h2{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:25px;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.card{
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 5px 20px #dce5f5;
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.product-img{
+  height:190px;
+  background:#eaf2ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:65px;
+}
+
+.card-body{
+  padding:15px;
+}
+
+.tag{
+  color:#1769e0;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.card h3{
+  margin:8px 0;
+  font-size:17px;
+}
+
+.rating{
+  color:#f5a623;
+  font-size:13px;
+}
+
+.price{
+  margin:10px 0;
+  font-weight:bold;
+}
+
+.old{
+  color:#999;
+  text-decoration:line-through;
+  margin-left:6px;
+  font-weight:normal;
+}
+
+.buy{
+  width:100%;
+  border:0;
+  padding:11px;
+  background:#1769e0;
+  color:white;
+  border-radius:9px;
+  font-weight:bold;
+}
+
+.offer{
+  max-width:1150px;
+  width:90%;
+  margin:40px auto;
+  padding:30px;
+  background:#0b1f3a;
+  color:white;
+  border-radius:20px;
+  text-align:center;
+}
+
+footer{
+  background:#07162b;
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+  margin-top:50px;
+}
+
+footer p{
+  color:#aebbd0;
+  font-size:13px;
+}
+
+@media(max-width:800px){
+
+  header{
+    padding:14px 5%;
+  }
+
+  nav a{
+    margin-left:8px;
+    font-size:12px;
+  }
+
+  .hero{
+    padding:40px 18px;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .product-img{
+    height:145px;
+    font-size:50px;
+  }
+
+  .card h3{
+    font-size:14px;
+  }
+}
+
+@media(max-width:420px){
+
+  .logo{
+    font-size:20px;
+  }
+
+  nav a{
+    font-size:11px;
+    margin-left:5px;
+  }
+
+  .hero h1{
+    font-size:27px;
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+✦ FREE SHIPPING ON SELECTED ORDERS ✦
+</div>
+
+<header>
+<div class="logo">REDLEX</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#shop">Shop</a>
+<a href="#why">Why Us</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<div class="badge">CURATED FOR YOU</div>
+
+<h1>Discover Premium Products</h1>
+
+<p>
+Modern products. Smart prices. Simple shopping.
+</p>
+
+<a href="#shop" class="btn primary">Shop Collection</a>
+<a href="#why" class="btn secondary">Explore</a>
+
+</section>
+
+<section class="section" id="shop">
+
+<h2>Featured Collection</h2>
+
+<div class="products">
+
+<div class="card">
+<div class="product-img">🎧</div>
+<div class="card-body">
+<span class="tag">TRENDING</span>
+<h3>Premium Wireless Headphones</h3>
+<div class="rating">★★★★★</div>
+<div class="price">₹999 <span class="old">₹1,999</span></div>
+<button class="buy">Buy Now</button>
+</div>
+</div>
+
+<div class="card">
+<div class="product-img">⌚</div>
+<div class="card-body">
+<span class="tag">BEST SELLER</span>
+<h3>Smart Fitness Watch</h3>
+<div class="rating">★★★★★</div>
+<div class="price">₹1,299 <span class="old">₹2,499</span></div>
+<button class="buy">Buy Now</button>
+</div>
+</div>
+
+<div class="card">
+<div class="product-img">🎒</div>
+<div class="card-body">
+<span class="tag">NEW</span>
+<h3>Urban Travel Backpack</h3>
+<div class="rating">★★★★★</div>
+<div class="price">₹799 <span class="old">₹1,499</span></div>
+<button class="buy">Buy Now</button>
+</div>
+</div>
+
+<div class="card">
+<div class="product-img">💡</div>
+<div class="card-body">
+<span class="tag">POPULAR</span>
+<h3>Modern LED Desk Lamp</h3>
+<div class="rating">★★★★★</div>
+<div class="price">₹699 <span class="old">₹1,299</span></div>
+<button class="buy">Buy Now</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="offer">
+
+<h2>Special Deals Inside</h2>
+
+<p>Discover selected products at prices you'll love.</p>
+
+<br>
+
+<a href="#shop" class="btn primary">View Products</a>
+
+</section>
+
+<section class="section" id="why">
+
+<h2>Why REDLEX?</h2>
+
+<p style="text-align:center;color:#667085;line-height:1.8;">
+Carefully selected products • Great value • Simple shopping • Reliable support
+</p>
+
+</section>
+
+<footer>
+
+<h3>REDLEX</h3>
+
+<p>Premium products. Better shopping.</p>
+
+<p>© 2026 REDLEX. All rights reserved.</p>
+
+</footer>
+
+</body>
+</html>
