@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>REDLEX | Premium Shopping</title>
+<title>REDLEX | Premium Fashion</title>
 
 <style>
 *{
@@ -14,251 +14,356 @@
 }
 
 body{
-  background:#f5f8ff;
-  color:#14213d;
+  background:#f7f7f5;
+  color:#111;
 }
 
 .topbar{
-  background:#0b1f3a;
-  color:white;
+  background:#111;
+  color:#fff;
   text-align:center;
-  padding:9px;
-  font-size:13px;
+  padding:11px 15px;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:600;
 }
 
 header{
-  background:white;
-  padding:16px 5%;
+  background:#fff;
+  padding:20px 6%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  box-shadow:0 3px 15px #d9e2f2;
   position:sticky;
   top:0;
-  z-index:10;
+  z-index:20;
+  border-bottom:1px solid #eee;
 }
 
 .logo{
   font-size:25px;
-  font-weight:800;
-  color:#1769e0;
-  letter-spacing:2px;
+  font-weight:900;
+  letter-spacing:4px;
 }
 
 nav a{
+  color:#111;
   text-decoration:none;
-  color:#24324a;
-  margin-left:20px;
+  margin-left:25px;
   font-size:14px;
 }
 
 .hero{
-  margin:25px auto;
-  max-width:1150px;
-  width:90%;
-  padding:55px 30px;
-  border-radius:25px;
-  background:linear-gradient(135deg,#e8f1ff,#ffffff);
+  min-height:75vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
+  padding:60px 20px;
+  background:
+    radial-gradient(circle at top,#fff 0,#f7f7f5 55%,#ecece8 100%);
 }
 
-.badge{
-  display:inline-block;
-  background:#1769e0;
-  color:white;
-  padding:7px 14px;
-  border-radius:20px;
+.hero-box{
+  max-width:850px;
+}
+
+.small-title{
   font-size:12px;
-  margin-bottom:15px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:22px;
+  color:#777;
 }
 
 .hero h1{
-  font-size:42px;
-  margin-bottom:12px;
-  color:#102a50;
+  font-size:clamp(42px,8vw,82px);
+  line-height:.95;
+  letter-spacing:-4px;
+  margin-bottom:25px;
 }
 
 .hero p{
-  color:#667085;
-  margin-bottom:22px;
+  color:#666;
+  max-width:560px;
+  margin:auto;
+  font-size:17px;
+  line-height:1.7;
 }
 
 .btn{
   display:inline-block;
-  padding:13px 22px;
-  border-radius:10px;
+  margin-top:30px;
+  padding:16px 34px;
+  background:#111;
+  color:#fff;
   text-decoration:none;
+  border-radius:4px;
   font-weight:bold;
-  margin:5px;
-}
-
-.primary{
-  background:#1769e0;
-  color:white;
-}
-
-.secondary{
-  background:white;
-  color:#1769e0;
-  border:1px solid #1769e0;
+  letter-spacing:1px;
+  border:none;
+  cursor:pointer;
 }
 
 .section{
-  max-width:1150px;
-  width:90%;
-  margin:45px auto;
+  padding:80px 6%;
 }
 
-.section h2{
+.section-title{
   text-align:center;
-  font-size:28px;
-  margin-bottom:25px;
+  margin-bottom:45px;
 }
 
-.products{
+.section-title span{
+  font-size:11px;
+  letter-spacing:3px;
+  color:#777;
+}
+
+.section-title h2{
+  font-size:42px;
+  margin-top:10px;
+}
+
+.product{
+  max-width:1150px;
+  margin:auto;
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
+  grid-template-columns:1.1fr .9fr;
+  gap:55px;
+  background:#fff;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 20px 60px rgba(0,0,0,.08);
 }
 
-.card{
-  background:white;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 5px 20px #dce5f5;
-  transition:.25s;
+.gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
 }
 
-.card:hover{
-  transform:translateY(-5px);
+.gallery img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:12px;
+  background:#eee;
 }
 
-.product-img{
-  height:190px;
-  background:#eaf2ff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:65px;
-}
-
-.card-body{
-  padding:15px;
+.details{
+  padding:25px 15px;
 }
 
 .tag{
-  color:#1769e0;
-  font-size:11px;
-  font-weight:bold;
+  display:inline-block;
+  background:#111;
+  color:#fff;
+  padding:7px 12px;
+  font-size:10px;
+  letter-spacing:2px;
+  border-radius:20px;
 }
 
-.card h3{
-  margin:8px 0;
-  font-size:17px;
+.details h2{
+  font-size:36px;
+  margin:18px 0 10px;
 }
 
-.rating{
-  color:#f5a623;
-  font-size:13px;
+.subtitle{
+  color:#777;
+  line-height:1.6;
 }
 
 .price{
-  margin:10px 0;
-  font-weight:bold;
+  margin:25px 0;
 }
 
-.old{
+.sale{
+  font-size:34px;
+  font-weight:800;
+}
+
+.mrp{
   color:#999;
   text-decoration:line-through;
-  margin-left:6px;
-  font-weight:normal;
+  margin-left:10px;
+}
+
+.offer{
+  color:#555;
+  font-size:13px;
+  margin-top:7px;
+}
+
+.label{
+  display:block;
+  font-weight:bold;
+  margin:24px 0 10px;
+}
+
+.sizes{
+  display:flex;
+  gap:10px;
+}
+
+.size{
+  width:55px;
+  height:45px;
+  border:1px solid #ccc;
+  background:#fff;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+.size.active{
+  background:#111;
+  color:#fff;
+  border-color:#111;
 }
 
 .buy{
   width:100%;
-  border:0;
-  padding:11px;
-  background:#1769e0;
-  color:white;
-  border-radius:9px;
+  margin-top:28px;
+  padding:17px;
+  border:none;
+  background:#111;
+  color:#fff;
   font-weight:bold;
+  font-size:15px;
+  letter-spacing:1px;
+  cursor:pointer;
+  border-radius:5px;
 }
 
-.offer{
-  max-width:1150px;
-  width:90%;
-  margin:40px auto;
+.features{
+  margin-top:30px;
+  border-top:1px solid #eee;
+  padding-top:20px;
+}
+
+.feature{
+  padding:9px 0;
+  color:#555;
+  font-size:14px;
+}
+
+.order-box{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  z-index:100;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.order-card{
+  width:100%;
+  max-width:480px;
+  background:#fff;
   padding:30px;
-  background:#0b1f3a;
-  color:white;
-  border-radius:20px;
+  border-radius:15px;
+  max-height:90vh;
+  overflow:auto;
+}
+
+.order-card h2{
+  margin-bottom:7px;
+}
+
+.order-card p{
+  color:#777;
+  font-size:13px;
+  margin-bottom:20px;
+}
+
+input,textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:5px;
+  margin-bottom:12px;
+  font-size:14px;
+}
+
+textarea{
+  min-height:90px;
+  resize:none;
+}
+
+.close{
+  float:right;
+  border:none;
+  background:none;
+  font-size:25px;
+  cursor:pointer;
+}
+
+.confirm{
+  width:100%;
+  padding:15px;
+  background:#111;
+  color:#fff;
+  border:none;
+  border-radius:5px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.success{
+  display:none;
   text-align:center;
+  padding:30px 10px;
+}
+
+.success .check{
+  font-size:55px;
+  margin-bottom:15px;
 }
 
 footer{
-  background:#07162b;
-  color:white;
+  background:#111;
+  color:#fff;
   text-align:center;
-  padding:30px 15px;
-  margin-top:50px;
+  padding:50px 20px;
+}
+
+footer .logo{
+  margin-bottom:15px;
 }
 
 footer p{
-  color:#aebbd0;
+  color:#aaa;
   font-size:13px;
 }
 
 @media(max-width:800px){
-
-  header{
-    padding:14px 5%;
+  nav{
+    display:none;
   }
 
-  nav a{
-    margin-left:8px;
-    font-size:12px;
+  .product{
+    grid-template-columns:1fr;
+    padding:15px;
+    gap:15px;
   }
 
-  .hero{
-    padding:40px 18px;
+  .details{
+    padding:15px 5px;
   }
 
-  .hero h1{
-    font-size:32px;
+  .details h2{
+    font-size:29px;
   }
 
-  .products{
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
+  .section{
+    padding:55px 15px;
   }
 
-  .product-img{
-    height:145px;
-    font-size:50px;
-  }
-
-  .card h3{
-    font-size:14px;
-  }
-}
-
-@media(max-width:420px){
-
-  .logo{
-    font-size:20px;
-  }
-
-  nav a{
-    font-size:11px;
-    margin-left:5px;
-  }
-
-  .hero h1{
-    font-size:27px;
-  }
-
-  .products{
-    grid-template-columns:repeat(2,1fr);
+  .gallery{
+    gap:7px;
   }
 }
 </style>
@@ -267,118 +372,227 @@ footer p{
 <body>
 
 <div class="topbar">
-✦ FREE SHIPPING ON SELECTED ORDERS ✦
+  ✦ PREMIUM COLLECTION • COD AVAILABLE • EASY RETURNS ✦
 </div>
 
 <header>
-<div class="logo">REDLEX</div>
+  <div class="logo">REDLEX</div>
 
-<nav>
-<a href="#">Home</a>
-<a href="#shop">Shop</a>
-<a href="#why">Why Us</a>
-</nav>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#details">Details</a>
+  </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
+  <div class="hero-box">
+    <div class="small-title">REDLEX • NEW COLLECTION</div>
 
-<div class="badge">CURATED FOR YOU</div>
+    <h1>Style That<br>Speaks.</h1>
 
-<h1>Discover Premium Products</h1>
+    <p>
+      Discover premium everyday fashion designed for a clean,
+      modern and effortless look.
+    </p>
 
-<p>
-Modern products. Smart prices. Simple shopping.
-</p>
-
-<a href="#shop" class="btn primary">Shop Collection</a>
-<a href="#why" class="btn secondary">Explore</a>
-
+    <a href="#shop" class="btn">SHOP COLLECTION</a>
+  </div>
 </section>
 
 <section class="section" id="shop">
 
-<h2>Featured Collection</h2>
+  <div class="section-title">
+    <span>FEATURED PRODUCT</span>
+    <h2>Premium Polo</h2>
+  </div>
 
-<div class="products">
+  <div class="product">
 
-<div class="card">
-<div class="product-img">🎧</div>
-<div class="card-body">
-<span class="tag">TRENDING</span>
-<h3>Premium Wireless Headphones</h3>
-<div class="rating">★★★★★</div>
-<div class="price">₹999 <span class="old">₹1,999</span></div>
-<button class="buy">Buy Now</button>
-</div>
-</div>
+    <div class="gallery">
 
-<div class="card">
-<div class="product-img">⌚</div>
-<div class="card-body">
-<span class="tag">BEST SELLER</span>
-<h3>Smart Fitness Watch</h3>
-<div class="rating">★★★★★</div>
-<div class="price">₹1,299 <span class="old">₹2,499</span></div>
-<button class="buy">Buy Now</button>
-</div>
-</div>
+      <img src="tshirt-1.jpg" alt="REDLEX Premium Polo Front">
 
-<div class="card">
-<div class="product-img">🎒</div>
-<div class="card-body">
-<span class="tag">NEW</span>
-<h3>Urban Travel Backpack</h3>
-<div class="rating">★★★★★</div>
-<div class="price">₹799 <span class="old">₹1,499</span></div>
-<button class="buy">Buy Now</button>
-</div>
-</div>
+      <img src="tshirt-2.jpg" alt="REDLEX Premium Polo Back">
 
-<div class="card">
-<div class="product-img">💡</div>
-<div class="card-body">
-<span class="tag">POPULAR</span>
-<h3>Modern LED Desk Lamp</h3>
-<div class="rating">★★★★★</div>
-<div class="price">₹699 <span class="old">₹1,299</span></div>
-<button class="buy">Buy Now</button>
-</div>
-</div>
+      <img src="tshirt-3.jpg" alt="REDLEX Premium Polo Side">
 
-</div>
-</section>
+      <img src="tshirt-4.jpg" alt="REDLEX Premium Polo Details">
 
-<section class="offer">
+    </div>
 
-<h2>Special Deals Inside</h2>
+    <div class="details">
 
-<p>Discover selected products at prices you'll love.</p>
+      <span class="tag">NEW ARRIVAL</span>
 
-<br>
+      <h2>Leaf Print Premium Polo</h2>
 
-<a href="#shop" class="btn primary">View Products</a>
+      <p class="subtitle">
+        A clean white polo featuring an elegant monochrome leaf print.
+        Designed for a smart, comfortable and premium everyday look.
+      </p>
 
-</section>
+      <div class="price">
+        <span class="sale">₹499</span>
+        <span class="mrp">₹999</span>
+        <div class="offer">Limited-time launch price</div>
+      </div>
 
-<section class="section" id="why">
+      <span class="label">SELECT SIZE</span>
 
-<h2>Why REDLEX?</h2>
+      <div class="sizes">
+        <button class="size" onclick="selectSize(this,'M')">M</button>
+        <button class="size" onclick="selectSize(this,'L')">L</button>
+        <button class="size" onclick="selectSize(this,'XL')">XL</button>
+      </div>
 
-<p style="text-align:center;color:#667085;line-height:1.8;">
-Carefully selected products • Great value • Simple shopping • Reliable support
-</p>
+      <button class="buy" onclick="openOrder()">
+        BUY NOW — ₹499
+      </button>
+
+      <div class="features">
+
+        <div class="feature">✓ Premium look & comfortable fit</div>
+        <div class="feature">✓ Elegant monochrome leaf pattern</div>
+        <div class="feature">✓ Sizes available: M, L, XL</div>
+        <div class="feature">✓ Cash on Delivery available</div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
+
+<section class="section" id="details">
+
+  <div class="section-title">
+    <span>WHY REDLEX</span>
+    <h2>Made To Impress.</h2>
+  </div>
+
+  <div style="max-width:800px;margin:auto;text-align:center;color:#666;line-height:1.8;">
+    REDLEX brings together modern design, premium presentation and
+    effortless shopping. Every product is selected to give you a
+    stylish look without unnecessary complexity.
+  </div>
+
+</section>
+
+<div class="order-box" id="orderBox">
+
+  <div class="order-card">
+
+    <button class="close" onclick="closeOrder()">×</button>
+
+    <div id="orderForm">
+
+      <h2>Complete Your Order</h2>
+
+      <p>
+        Cash on Delivery • ₹499
+      </p>
+
+      <input id="name" type="text" placeholder="Full Name">
+
+      <input id="phone" type="tel" placeholder="Mobile Number">
+
+      <input id="pincode" type="number" placeholder="Pincode">
+
+      <textarea id="address" placeholder="Full Delivery Address"></textarea>
+
+      <input id="city" type="text" placeholder="City">
+
+      <input id="state" type="text" placeholder="State">
+
+      <input id="sizeInput" type="text" placeholder="Selected Size" readonly>
+
+      <button class="confirm" onclick="placeOrder()">
+        CONFIRM ORDER — ₹499 COD
+      </button>
+
+    </div>
+
+    <div class="success" id="success">
+
+      <div class="check">✓</div>
+
+      <h2>Order Successful!</h2>
+
+      <p>
+        Thank you for shopping with REDLEX.
+        Your order has been received successfully.
+      </p>
+
+      <button class="confirm" onclick="closeOrder()">
+        CONTINUE SHOPPING
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
 
 <footer>
-
-<h3>REDLEX</h3>
-
-<p>Premium products. Better shopping.</p>
-
-<p>© 2026 REDLEX. All rights reserved.</p>
-
+  <div class="logo">REDLEX</div>
+  <p>Premium fashion. Simple shopping.</p>
+  <p style="margin-top:15px;">© 2026 REDLEX. All rights reserved.</p>
 </footer>
 
+<script>
+
+let selectedSize = "";
+
+function selectSize(button,size){
+
+  document.querySelectorAll(".size").forEach(function(btn){
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+
+  selectedSize = size;
+
+  document.getElementById("sizeInput").value = size;
+}
+
+function openOrder(){
+
+  if(selectedSize === ""){
+    alert("Please select your size first.");
+    return;
+  }
+
+  document.getElementById("orderBox").style.display = "flex";
+}
+
+function closeOrder(){
+
+  document.getElementById("orderBox").style.display = "none";
+}
+
+function placeOrder(){
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let pincode = document.getElementById("pincode").value;
+  let address = document.getElementById("address").value;
+  let city = document.getElementById("city").value;
+  let state = document.getElementById("state").value;
+
+  if(!name || !phone || !pincode || !address || !city || !state){
+
+    alert("Please fill all delivery details.");
+    return;
+  }
+
+  document.getElementById("orderForm").style.display = "none";
+  document.getElementById("success").style.display = "block";
+}
+
+</script>
+
 </body>
-</html>
+      </html>
