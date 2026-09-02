@@ -3,149 +3,265 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>REDLEX | Premium Floral Polo T-Shirt</title>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<meta name="theme-color" content="#FFB6C1">
+<title>REDLEX | Premium Fashion</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+html{scroll-behavior:smooth}
 
 body{
-  font-family:Arial,sans-serif;
   background:#fff;
   color:#222;
 }
 
+/* HEADER */
 header{
   position:sticky;
   top:0;
-  z-index:100;
+  z-index:1000;
   background:rgba(255,255,255,.97);
-  border-bottom:1px solid #f4dce7;
-  padding:15px 20px;
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #f5e3e7;
+}
+
+.header{
+  max-width:1180px;
+  margin:auto;
+  padding:17px 22px;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
 
 .logo{
-  font-size:27px;
+  font-size:25px;
   font-weight:900;
-  letter-spacing:2px;
+  letter-spacing:3px;
 }
 
-.review-link{
-  color:#e75480;
+nav{
+  display:flex;
+  gap:25px;
+}
+
+nav a{
+  color:#333;
   text-decoration:none;
+  font-size:14px;
   font-weight:700;
 }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:25px 18px 60px;
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#fff,#fff5f7,#ffeef2);
+  text-align:center;
+  padding:65px 20px;
+  border-bottom:1px solid #f8e5e9;
 }
 
+.tag{
+  display:inline-block;
+  background:#ffd9e1;
+  color:#7b4b56;
+  padding:8px 15px;
+  border-radius:30px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.5px;
+}
+
+.hero h1{
+  margin-top:17px;
+  font-size:clamp(34px,7vw,58px);
+  line-height:1.05;
+}
+
+.hero p{
+  max-width:620px;
+  margin:18px auto 0;
+  color:#777;
+  line-height:1.7;
+  font-size:15px;
+}
+
+/* PRODUCT */
 .product{
+  max-width:1180px;
+  margin:auto;
+  padding:55px 20px 80px;
+}
+
+.grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:45px;
+  gap:55px;
 }
 
+/* GALLERY */
 .gallery{
   position:sticky;
-  top:85px;
+  top:90px;
 }
 
-.main-image{
+.main-photo{
+  position:relative;
   width:100%;
-  height:570px;
-  object-fit:contain;
-  background:#fff7fa;
-  border:1px solid #f3d9e4;
-  border-radius:24px;
+  aspect-ratio:1/1;
+  border-radius:22px;
+  overflow:hidden;
+  background:#fff7f8;
+  border:1px solid #f3dfe4;
+}
+
+.main-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
   display:block;
+}
+
+.counter{
+  position:absolute;
+  right:14px;
+  top:14px;
+  background:rgba(255,255,255,.9);
+  padding:7px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
 }
 
 .thumbs{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  margin-top:12px;
+  gap:9px;
+  margin-top:11px;
 }
 
 .thumb{
-  border:2px solid #f0d4e0;
+  padding:0;
+  border:2px solid transparent;
   border-radius:12px;
   overflow:hidden;
-  background:#fff7fa;
+  background:#fff7f8;
   cursor:pointer;
+  aspect-ratio:1/1;
 }
 
 .thumb.active{
-  border-color:#ff8fba;
+  border-color:#FFB6C1;
 }
 
 .thumb img{
   width:100%;
-  height:100px;
-  object-fit:contain;
-  display:block;
+  height:100%;
+  object-fit:cover;
 }
 
-.badge{
+/* INFO */
+.offer{
   display:inline-block;
-  background:#ffe4ee;
-  color:#d94d79;
+  background:#ffe9ee;
+  color:#704c54;
   padding:8px 13px;
-  border-radius:30px;
+  border-radius:20px;
   font-size:12px;
   font-weight:800;
-  margin-bottom:12px;
 }
 
-h1{
-  font-size:36px;
-  line-height:1.15;
-  margin-bottom:15px;
+h2{
+  font-size:clamp(32px,5vw,47px);
+  line-height:1.08;
+  margin-top:15px;
 }
 
-.description{
-  color:#666;
-  line-height:1.7;
-  margin-bottom:22px;
+.rating{
+  margin-top:15px;
+  color:#e89cab;
+  letter-spacing:2px;
 }
 
-.price-box{
-  background:#fff5f9;
-  padding:18px;
-  border-radius:18px;
-  margin-bottom:22px;
+.rating span{
+  color:#777;
+  letter-spacing:0;
+  font-size:13px;
+  margin-left:8px;
+}
+
+.price-row{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-top:24px;
 }
 
 .price{
-  font-size:34px;
+  font-size:42px;
   font-weight:900;
-  color:#e75480;
 }
 
 .mrp{
-  color:#888;
+  color:#999;
   text-decoration:line-through;
-  margin-left:9px;
+  font-size:19px;
 }
 
 .save{
-  color:#18864b;
-  font-weight:700;
-  margin-left:9px;
+  display:inline-block;
+  margin-top:8px;
+  background:#fff0f3;
+  color:#76535b;
+  padding:7px 11px;
+  border-radius:8px;
+  font-size:12px;
+  font-weight:800;
 }
 
-.title{
-  font-size:16px;
-  font-weight:800;
-  margin:20px 0 10px;
+.description{
+  color:#6d6769;
+  line-height:1.8;
+  margin-top:23px;
+  font-size:15px;
+}
+
+/* FEATURES */
+.features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:24px;
+}
+
+.feature{
+  padding:14px;
+  border:1px solid #f2e1e5;
+  background:#fffafb;
+  border-radius:12px;
+}
+
+.feature b{
+  display:block;
+  font-size:13px;
+  margin-bottom:5px;
+}
+
+.feature small{
+  color:#777;
+}
+
+/* SIZES */
+.label{
+  margin-top:28px;
+  margin-bottom:11px;
+  font-size:14px;
+  font-weight:900;
 }
 
 .sizes{
@@ -154,212 +270,327 @@ h1{
 }
 
 .size{
-  width:58px;
-  height:46px;
-  border:1px solid #c8dff0;
-  background:#edf7ff;
-  color:#246b9c;
-  border-radius:12px;
-  font-weight:800;
-  cursor:pointer;
-}
-
-.size.selected{
-  background:#b9ddf6;
-  border-color:#5ba8dc;
-}
-
-.quantity{
-  display:flex;
-  align-items:center;
-  gap:16px;
-}
-
-.quantity button{
-  width:40px;
-  height:40px;
-  border:1px solid #c8dff0;
-  background:#edf7ff;
+  min-width:68px;
+  padding:13px 18px;
+  background:#fff;
+  border:1.5px solid #ddd;
   border-radius:10px;
-  font-size:20px;
   cursor:pointer;
+  font-weight:900;
 }
 
-#qty{
-  font-weight:800;
+.size:hover,
+.size.selected{
+  background:#FFB6C1;
+  border-color:#FFB6C1;
+  color:#472d33;
 }
 
+/* BUY */
 .buy{
   width:100%;
   margin-top:25px;
   padding:17px;
   border:0;
-  border-radius:15px;
-  background:#ffb6d5;
-  color:#6b2140;
+  border-radius:13px;
+  background:#FFB6C1;
+  color:#3f282d;
   font-size:17px;
   font-weight:900;
   cursor:pointer;
+  box-shadow:0 8px 25px rgba(255,182,193,.35);
 }
 
-.trust{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-  margin-top:20px;
+.buy:hover{
+  background:#ffaab7;
 }
 
-.trust div{
-  background:#fff8fb;
-  border:1px solid #f3dce6;
-  border-radius:14px;
-  padding:14px 7px;
+.cod{
   text-align:center;
-  font-size:13px;
-  font-weight:700;
+  color:#777;
+  font-size:12px;
+  margin-top:10px;
 }
 
-/* ORDER */
+/* DETAILS */
+.details{
+  max-width:1180px;
+  margin:auto;
+  padding:0 20px 70px;
+}
 
-#order{
+.details h3{
+  text-align:center;
+  font-size:30px;
+  margin-bottom:25px;
+}
+
+.details img{
+  width:100%;
+  display:block;
+  border-radius:20px;
+  border:1px solid #f1dfe4;
+}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:3000;
   display:none;
-  margin-top:55px;
-  background:#fff7fa;
-  border:1px solid #f3dce6;
-  border-radius:24px;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  background:rgba(35,25,28,.5);
+}
+
+.modal.show{
+  display:flex;
+}
+
+.box{
+  position:relative;
+  width:100%;
+  max-width:560px;
+  max-height:94vh;
+  overflow:auto;
+  background:#fff;
+  border-radius:22px;
   padding:25px;
 }
 
-#order h2{
-  font-size:28px;
-  margin-bottom:8px;
+.close{
+  position:absolute;
+  right:16px;
+  top:14px;
+  border:0;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#fff0f3;
+  font-size:22px;
+  cursor:pointer;
 }
 
-.subtitle{
+.box h3{
+  font-size:27px;
+}
+
+.sub{
   color:#777;
+  font-size:13px;
+  margin-top:5px;
   margin-bottom:20px;
 }
 
-.form{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-}
-
-.field{
-  display:flex;
-  flex-direction:column;
-  gap:7px;
-}
-
-.full{
-  grid-column:1/-1;
-}
-
-label{
-  font-size:13px;
-  font-weight:800;
-}
-
-input,textarea{
-  width:100%;
-  border:1px solid #e4ccd7;
-  border-radius:11px;
-  padding:13px;
-  font-size:15px;
-  background:#fff;
-  outline:none;
-}
-
-textarea{
-  min-height:90px;
-  resize:vertical;
-}
-
 .summary{
-  margin-top:20px;
-  background:#fff;
-  border:1px solid #f0dce5;
-  border-radius:15px;
-  padding:17px;
+  background:#fff5f7;
+  border:1px solid #f3dce2;
+  padding:15px;
+  border-radius:12px;
+  margin-bottom:18px;
 }
 
-.row{
+.line{
   display:flex;
   justify-content:space-between;
-  margin:8px 0;
+  gap:15px;
+  margin:7px 0;
+  font-size:14px;
 }
 
 .total{
-  border-top:1px solid #eee;
-  padding-top:12px;
-  margin-top:12px;
-  font-size:19px;
+  border-top:1px solid #efdce1;
+  padding-top:9px;
+  margin-top:9px;
   font-weight:900;
 }
 
-.place{
+.field{
+  margin-bottom:14px;
+}
+
+.field label{
+  display:block;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:7px;
+}
+
+.field input,
+.field textarea{
   width:100%;
-  margin-top:18px;
-  padding:17px;
+  padding:13px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  outline:none;
+  font-size:14px;
+}
+
+.field input:focus,
+.field textarea:focus{
+  border-color:#FFB6C1;
+}
+
+.field textarea{
+  min-height:85px;
+  resize:vertical;
+}
+
+.row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.cod-box{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding:13px;
+  border:1px solid #f0dce1;
+  background:#fff8f9;
+  border-radius:10px;
+}
+
+.cod-box b{
+  display:block;
+  font-size:14px;
+}
+
+.cod-box small{
+  color:#777;
+}
+
+.confirm{
+  width:100%;
+  margin-top:17px;
+  padding:16px;
   border:0;
-  border-radius:14px;
-  background:#ffb6d5;
-  color:#6b2140;
+  border-radius:12px;
+  background:#FFB6C1;
+  color:#3f282d;
   font-size:16px;
   font-weight:900;
   cursor:pointer;
 }
 
+/* SUCCESS */
 .success{
   display:none;
-  margin-top:20px;
-  background:#eaf9f0;
-  border:1px solid #b8e5c9;
-  color:#176b37;
-  border-radius:16px;
-  padding:20px;
+  text-align:center;
+  padding:20px 5px;
+}
+
+.success.show{
+  display:block;
+}
+
+.check{
+  width:75px;
+  height:75px;
+  border-radius:50%;
+  background:#ffdce4;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto;
+  font-size:40px;
+  color:#71434d;
+}
+
+.success h2{
+  margin-top:17px;
+  font-size:28px;
+}
+
+.success p{
+  color:#777;
   line-height:1.7;
+  margin-top:9px;
 }
 
-.error{
-  display:none;
-  margin-top:15px;
-  background:#fff0f0;
-  border:1px solid #efbbbb;
-  color:#a52b2b;
-  border-radius:14px;
-  padding:15px;
+.order-id{
+  margin:17px 0;
+  padding:13px;
+  border-radius:10px;
+  background:#fff3f6;
+  color:#70434d;
+  font-weight:900;
 }
 
+.continue{
+  width:100%;
+  margin-top:18px;
+  padding:14px;
+  border:1px solid #FFB6C1;
+  background:white;
+  color:#70434d;
+  border-radius:11px;
+  font-weight:800;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px 20px;
+  background:#fff8fa;
+  border-top:1px solid #f2e0e5;
+}
+
+footer b{
+  letter-spacing:2px;
+}
+
+footer p{
+  color:#888;
+  font-size:12px;
+  margin-top:7px;
+}
+
+/* MOBILE */
 @media(max-width:800px){
+
+  .header{
+    padding:15px 16px;
+  }
+
+  nav{
+    gap:13px;
+  }
+
+  nav a{
+    font-size:12px;
+  }
+
+  .hero{
+    padding:48px 18px;
+  }
+
   .product{
+    padding:30px 15px 55px;
+  }
+
+  .grid{
     grid-template-columns:1fr;
-    gap:25px;
+    gap:32px;
   }
 
   .gallery{
     position:static;
   }
 
-  .main-image{
-    height:430px;
+  .main-photo{
+    border-radius:17px;
   }
 
-  h1{
-    font-size:29px;
+  .details{
+    padding:0 15px 55px;
   }
 
-  .form{
+  .row{
     grid-template-columns:1fr;
-  }
-
-  .full{
-    grid-column:auto;
-  }
-
-  .trust{
-    grid-template-columns:1fr;
+    gap:0;
   }
 }
 </style>
@@ -368,523 +599,641 @@ textarea{
 <body>
 
 <header>
-  <div class="logo">REDLEX</div>
-  <a href="#reviews" class="review-link">Reviews ❤️</a>
+  <div class="header">
+    <div class="logo">REDLEX</div>
+
+    <nav>
+      <a href="#product">Shop</a>
+      <a href="#details">Details</a>
+    </nav>
+  </div>
 </header>
 
-<main class="container">
 
-<section class="product">
+<section class="hero">
 
-<!-- ================= PHOTO GALLERY ================= -->
+  <span class="tag">REDLEX PREMIUM COLLECTION</span>
 
-<div class="gallery">
+  <h1>Premium Style.<br>Made For You.</h1>
 
-<img
-id="mainImage"
-class="main-image"
-src="file_00000000c58482078d28ede43bb0cffb.png"
-alt="REDLEX Floral Polo T-Shirt">
-
-<div class="thumbs">
-
-<!-- 1 FRONT -->
-<div class="thumb active"
-onclick="changeImage(this,'file_00000000c58482078d28ede43bb0cffb.png')">
-<img src="file_00000000c58482078d28ede43bb0cffb.png" alt="Front View">
-</div>
-
-<!-- 2 BACK -->
-<div class="thumb"
-onclick="changeImage(this,'file_0000000084380211b06359360a1effe5.png')">
-<img src="file_0000000084380211b06359360a1effe5.png" alt="Back View">
-</div>
-
-<!-- 3 SIDE -->
-<div class="thumb"
-onclick="changeImage(this,'file_00000000d8608207ba913d1d8ef96594.png')">
-<img src="file_00000000d8608207ba913d1d8ef96594.png" alt="Side View">
-</div>
-
-<!-- 4 DETAILS -->
-<div class="thumb"
-onclick="changeImage(this,'file_00000000a22c8207a780e8c9148ff6d.png')">
-<img src="file_00000000a22c8207a780e8c9148ff6d.png" alt="Product Details">
-</div>
-
-</div>
-</div>
-
-
-<!-- ================= PRODUCT INFO ================= -->
-
-<div>
-
-<span class="badge">FLORAL POLO T-SHIRT</span>
-
-<h1>Premium Floral Printed Polo T-Shirt</h1>
-
-<p class="description">
-Stylish floral printed polo T-shirt designed for a clean,
-premium and comfortable everyday look. Perfect for casual
-outings and smart-casual styling.
-</p>
-
-<div class="price-box">
-<span class="price">₹499</span>
-<span class="mrp">₹999</span>
-<span class="save">SAVE ₹500</span>
-</div>
-
-<div class="title">Select Size</div>
-
-<div class="sizes">
-<button class="size" onclick="selectSize(this,'M')">M</button>
-<button class="size" onclick="selectSize(this,'L')">L</button>
-<button class="size" onclick="selectSize(this,'XL')">XL</button>
-</div>
-
-<div class="title">Quantity</div>
-
-<div class="quantity">
-<button onclick="changeQty(-1)">−</button>
-<span id="qty">1</span>
-<button onclick="changeQty(1)">+</button>
-</div>
-
-<button class="buy" onclick="openOrder()">
-BUY NOW 🩷
-</button>
-
-<div class="trust">
-<div>💵 COD Available</div>
-<div>🚚 3–10 Days Delivery</div>
-<div>💗 REDLEX Support</div>
-</div>
-
-</div>
+  <p>
+    Discover the REDLEX Premium Leaf Print Polo —
+    comfortable, stylish and made for your everyday look.
+  </p>
 
 </section>
 
 
-<!-- ================= ORDER FORM ================= -->
+<section class="product" id="product">
 
-<section id="order">
+  <div class="grid">
 
-<h2>Complete Your Order 🩷</h2>
+    <!-- PHOTOS -->
+    <div class="gallery">
 
-<p class="subtitle">
-Enter your correct details for Cash on Delivery.
-</p>
+      <div class="main-photo">
 
-<div class="form">
+        <img
+          id="mainImage"
+          src="file_0000000084388211b06359360a1effe5.png"
+          alt="REDLEX Front Photo"
+        >
 
-<div class="field">
-<label>Full Name *</label>
-<input id="name" type="text" placeholder="Your full name">
-</div>
+        <div class="counter" id="counter">
+          1 / 4
+        </div>
 
-<div class="field">
-<label>Mobile Number *</label>
-<input id="phone" type="tel" maxlength="10"
-placeholder="10 digit mobile number">
-</div>
-
-<div class="field full">
-<label>Full Address *</label>
-<textarea id="address"
-placeholder="House no., street, area, landmark"></textarea>
-</div>
-
-<div class="field">
-<label>City *</label>
-<input id="city" type="text" placeholder="City">
-</div>
-
-<div class="field">
-<label>State *</label>
-<input id="state" type="text" placeholder="State">
-</div>
-
-<div class="field">
-<label>Pincode *</label>
-<input id="pincode" type="text" maxlength="6"
-placeholder="6 digit pincode">
-</div>
-
-</div>
+      </div>
 
 
-<div class="summary">
+      <div class="thumbs">
 
-<div class="row">
-<span>Product</span>
-<strong>Floral Polo T-Shirt</strong>
-</div>
+        <button class="thumb active"
+          onclick="showImage(0)">
+          <img
+            src="file_0000000084388211b06359360a1effe5.png"
+            alt="Front"
+          >
+        </button>
 
-<div class="row">
-<span>Size</span>
-<strong id="summarySize">Not selected</strong>
-</div>
+        <button class="thumb"
+          onclick="showImage(1)">
+          <img
+            src="file_00000000c58482078d28ede43bb0cffb.png"
+            alt="Back"
+          >
+        </button>
 
-<div class="row">
-<span>Quantity</span>
-<strong id="summaryQty">1</strong>
-</div>
+        <button class="thumb"
+          onclick="showImage(2)">
+          <img
+            src="file_00000000d8608207ba913d1d8ef96594.png"
+            alt="Right Side"
+          >
+        </button>
 
-<div class="row">
-<span>Payment</span>
-<strong>Cash on Delivery</strong>
-</div>
+        <button class="thumb"
+          onclick="showImage(3)">
+          <img
+            src="file_00000000a22c8207a780e8c914f8ff6d.png"
+            alt="Details"
+          >
+        </button>
 
-<div class="row total">
-<span>Total</span>
-<strong id="summaryAmount">₹499</strong>
-</div>
+      </div>
 
-</div>
+    </div>
 
 
-<button class="place" onclick="placeOrder()">
-PLACE COD ORDER 🩷
-</button>
+    <!-- PRODUCT INFORMATION -->
+    <div>
 
-<div id="error" class="error"></div>
+      <span class="offer">
+        50% OFF • LIMITED OFFER
+      </span>
 
-<div id="success" class="success"></div>
+      <h2>
+        Premium Leaf Print Polo
+      </h2>
+
+      <div class="rating">
+        ★★★★★
+        <span>Premium Quality</span>
+      </div>
+
+
+      <div class="price-row">
+
+        <span class="price">
+          ₹499
+        </span>
+
+        <span class="mrp">
+          ₹999
+        </span>
+
+      </div>
+
+      <span class="save">
+        SAVE ₹500
+      </span>
+
+
+      <p class="description">
+        Upgrade your everyday wardrobe with the REDLEX
+        Premium Leaf Print Polo. Featuring a classic collar,
+        clean button detailing and a comfortable lightweight
+        feel, it is designed for a stylish and effortless look.
+      </p>
+
+
+      <div class="features">
+
+        <div class="feature">
+          <b>🌿 Comfortable Fabric</b>
+          <small>Lightweight everyday comfort.</small>
+        </div>
+
+        <div class="feature">
+          <b>✨ Premium Look</b>
+          <small>Clean and stylish finish.</small>
+        </div>
+
+        <div class="feature">
+          <b>👕 Classic Polo</b>
+          <small>Timeless collar design.</small>
+        </div>
+
+        <div class="feature">
+          <b>🚚 Easy Delivery</b>
+          <small>Delivered in 3–10 days.</small>
+        </div>
+
+      </div>
+
+
+      <div class="label">
+        SELECT SIZE
+      </div>
+
+      <div class="sizes">
+
+        <button class="size"
+          onclick="selectSize('M',this)">
+          M
+        </button>
+
+        <button class="size"
+          onclick="selectSize('L',this)">
+          L
+        </button>
+
+        <button class="size"
+          onclick="selectSize('XL',this)">
+          XL
+        </button>
+
+      </div>
+
+
+      <button class="buy" onclick="openOrder()">
+        BUY NOW — ₹499
+      </button>
+
+      <div class="cod">
+        🔒 Secure Order • Cash on Delivery Only
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- REVIEWS -->
+<section class="details" id="details">
 
-<section id="reviews"
-style="margin-top:55px;text-align:center;">
+  <h3>
+    Product Details
+  </h3>
 
-<h2>Customer Reviews ❤️</h2>
-
-<p style="color:#777;margin-top:8px;">
-Genuine REDLEX customer reviews will appear here.
-</p>
+  <img
+    src="file_00000000a22c8207a780e8c914f8ff6d.png"
+    alt="REDLEX Product Details"
+  >
 
 </section>
 
-</main>
+
+<!-- ORDER FORM -->
+<div class="modal" id="modal">
+
+  <div class="box">
+
+    <button class="close" onclick="closeOrder()">
+      ×
+    </button>
+
+
+    <div id="formArea">
+
+      <h3>
+        Complete Your Order
+      </h3>
+
+      <p class="sub">
+        Fill your delivery details below.
+      </p>
+
+
+      <div class="summary">
+
+        <div class="line">
+          <span>Product</span>
+          <strong>Premium Leaf Print Polo</strong>
+        </div>
+
+        <div class="line">
+          <span>Size</span>
+          <strong id="summarySize">—</strong>
+        </div>
+
+        <div class="line">
+          <span>Payment</span>
+          <strong>COD</strong>
+        </div>
+
+        <div class="line total">
+          <span>Total</span>
+          <strong>₹499</strong>
+        </div>
+
+      </div>
+
+
+      <form id="orderForm">
+
+        <div class="field">
+          <label>Full Name *</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Enter your full name"
+            required
+          >
+        </div>
+
+
+        <div class="field">
+          <label>Mobile Number *</label>
+          <input
+            id="phone"
+            type="tel"
+            maxlength="10"
+            placeholder="10 digit mobile number"
+            required
+          >
+        </div>
+
+
+        <div class="field">
+          <label>Full Address *</label>
+          <textarea
+            id="address"
+            placeholder="House no., street, area..."
+            required
+          ></textarea>
+        </div>
+
+
+        <div class="row">
+
+          <div class="field">
+            <label>City *</label>
+            <input
+              id="city"
+              type="text"
+              placeholder="City"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <label>State *</label>
+            <input
+              id="state"
+              type="text"
+              placeholder="State"
+              required
+            >
+          </div>
+
+        </div>
+
+
+        <div class="field">
+          <label>Pincode *</label>
+          <input
+            id="pincode"
+            type="tel"
+            maxlength="6"
+            placeholder="6 digit pincode"
+            required
+          >
+        </div>
+
+
+        <div class="cod-box">
+
+          <div style="font-size:23px">
+            💵
+          </div>
+
+          <div>
+            <b>Cash on Delivery</b>
+            <small>
+              Pay ₹499 when your order arrives.
+            </small>
+          </div>
+
+        </div>
+
+
+        <button
+          class="confirm"
+          type="submit">
+          CONFIRM ORDER — ₹499
+        </button>
+
+      </form>
+
+    </div>
+
+
+    <!-- SUCCESS -->
+    <div class="success" id="success">
+
+      <div class="check">
+        ✓
+      </div>
+
+      <h2>
+        Order Confirmed!
+      </h2>
+
+      <p>
+        Thank you for shopping with REDLEX.
+        Your order has been successfully placed.
+      </p>
+
+      <div class="order-id">
+        Order ID:
+        <span id="orderId"></span>
+      </div>
+
+      <p>
+        🚚 Your order will arrive in
+        <strong>3–10 days</strong>.<br>
+        💵 Payment:
+        <strong>Cash on Delivery</strong>
+      </p>
+
+      <button
+        class="continue"
+        onclick="closeOrder()">
+        CONTINUE SHOPPING
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<footer>
+
+  <b>REDLEX</b>
+
+  <p>
+    Premium Fashion • Cash on Delivery
+  </p>
+
+  <p>
+    © 2026 REDLEX. All Rights Reserved.
+  </p>
+
+</footer>
 
 
 <script>
 
-/* ================= SUPABASE ================= */
+/* PRODUCT PHOTOS */
 
-const SUPABASE_URL =
-"https://puonprsyhtqqnmanthoa.supabase.co";
+const photos = [
 
-const SUPABASE_KEY =
-"sb_publishable_rq5Cx3FL4snHx9Fj3YBbDw_jSvEpCc0";
+  "file_0000000084388211b06359360a1effe5.png",
 
-const db =
-supabase.createClient(
-SUPABASE_URL,
-SUPABASE_KEY
-);
+  "file_00000000c58482078d28ede43bb0cffb.png",
 
+  "file_00000000d8608207ba913d1d8ef96594.png",
 
-/* ================= PRODUCT ================= */
+  "file_00000000a22c8207a780e8c914f8ff6d.png"
+
+];
+
 
 let selectedSize = "";
-let quantity = 1;
-const price = 499;
 
 
-/* ================= PHOTOS ================= */
+/* CHANGE PHOTO */
 
-function changeImage(element, image){
+function showImage(index){
 
-document.getElementById("mainImage").src = image;
+  document.getElementById("mainImage").src =
+    photos[index];
 
-document.querySelectorAll(".thumb").forEach(function(x){
-x.classList.remove("active");
-});
+  document.getElementById("counter").textContent =
+    (index + 1) + " / 4";
 
-element.classList.add("active");
+  document.querySelectorAll(".thumb")
+    .forEach(function(button){
+      button.classList.remove("active");
+    });
 
+  document.querySelectorAll(".thumb")[index]
+    .classList.add("active");
 }
 
 
-/* ================= SIZE ================= */
+/* SELECT SIZE */
 
-function selectSize(button,size){
+function selectSize(size,button){
 
-selectedSize = size;
+  selectedSize = size;
 
-document.querySelectorAll(".size").forEach(function(x){
-x.classList.remove("selected");
-});
+  document.querySelectorAll(".size")
+    .forEach(function(btn){
+      btn.classList.remove("selected");
+    });
 
-button.classList.add("selected");
+  button.classList.add("selected");
 
-document.getElementById("summarySize").textContent = size;
-
+  document.getElementById("summarySize")
+    .textContent = size;
 }
 
 
-/* ================= QUANTITY ================= */
-
-function changeQty(value){
-
-quantity += value;
-
-if(quantity < 1) quantity = 1;
-if(quantity > 10) quantity = 10;
-
-document.getElementById("qty").textContent = quantity;
-
-document.getElementById("summaryQty").textContent = quantity;
-
-document.getElementById("summaryAmount").textContent =
-"₹" + (price * quantity);
-
-}
-
-
-/* ================= OPEN ORDER ================= */
+/* OPEN ORDER */
 
 function openOrder(){
 
-if(!selectedSize){
+  if(selectedSize === ""){
 
-alert("Please select your size first.");
+    alert(
+      "Please select your size first: M, L or XL."
+    );
 
-return;
+    return;
+  }
 
-}
+  document.getElementById("summarySize")
+    .textContent = selectedSize;
 
-document.getElementById("order").style.display = "block";
+  document.getElementById("modal")
+    .classList.add("show");
 
-document.getElementById("order").scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-
-/* ================= ORDER ID ================= */
-
-function generateOrderId(){
-
-const date = new Date();
-
-const y = date.getFullYear();
-const m = String(date.getMonth()+1).padStart(2,"0");
-const d = String(date.getDate()).padStart(2,"0");
-
-const random =
-Math.floor(1000 + Math.random()*9000);
-
-return "RED" + y + m + d + random;
-
+  document.body.style.overflow = "hidden";
 }
 
 
-/* ================= PLACE ORDER ================= */
+/* CLOSE ORDER */
 
-async function placeOrder(){
+function closeOrder(){
 
-const name =
-document.getElementById("name").value.trim();
+  document.getElementById("modal")
+    .classList.remove("show");
 
-const phone =
-document.getElementById("phone").value.trim();
-
-const address =
-document.getElementById("address").value.trim();
-
-const city =
-document.getElementById("city").value.trim();
-
-const state =
-document.getElementById("state").value.trim();
-
-const pincode =
-document.getElementById("pincode").value.trim();
-
-const errorBox =
-document.getElementById("error");
-
-const successBox =
-document.getElementById("success");
-
-
-errorBox.style.display = "none";
-successBox.style.display = "none";
-
-
-/* VALIDATION */
-
-if(!selectedSize){
-
-errorBox.textContent =
-"Please select M, L or XL size.";
-
-errorBox.style.display = "block";
-
-return;
-
-}
-
-if(
-!name ||
-!phone ||
-!address ||
-!city ||
-!state ||
-!pincode
-){
-
-errorBox.textContent =
-"Please fill all required details.";
-
-errorBox.style.display = "block";
-
-return;
-
-}
-
-if(!/^[0-9]{10}$/.test(phone)){
-
-errorBox.textContent =
-"Please enter a valid 10 digit mobile number.";
-
-errorBox.style.display = "block";
-
-return;
-
-}
-
-if(!/^[0-9]{6}$/.test(pincode)){
-
-errorBox.textContent =
-"Please enter a valid 6 digit pincode.";
-
-errorBox.style.display = "block";
-
-return;
-
+  document.body.style.overflow = "auto";
 }
 
 
-/* ORDER DATA */
+/* FORM */
 
-const orderId = generateOrderId();
+document.getElementById("orderForm")
+.addEventListener("submit",function(e){
 
-const amount = price * quantity;
+  e.preventDefault();
 
 
-/* ================= SAVE TO SUPABASE ================= */
+  const name =
+    document.getElementById("name").value.trim();
 
-try{
+  const phone =
+    document.getElementById("phone").value.trim();
 
-const { error } = await db
-.from("orders")
-.insert({
+  const address =
+    document.getElementById("address").value.trim();
 
-order_id: orderId,
+  const city =
+    document.getElementById("city").value.trim();
 
-customer_name: name,
+  const state =
+    document.getElementById("state").value.trim();
 
-phone: phone,
+  const pincode =
+    document.getElementById("pincode").value.trim();
 
-address: address,
 
-city: city,
+  if(!/^[0-9]{10}$/.test(phone)){
 
-state: state,
+    alert("Please enter a valid 10 digit mobile number.");
 
-pincode: pincode,
+    return;
+  }
 
-size: selectedSize,
 
-quantity: quantity,
+  if(!/^[0-9]{6}$/.test(pincode)){
 
-amount: amount,
+    alert("Please enter a valid 6 digit pincode.");
 
-order_status: "Pending"
+    return;
+  }
+
+
+  const orderId =
+    "REDLEX-" +
+    Date.now().toString().slice(-8);
+
+
+  const order = {
+
+    orderId:orderId,
+
+    product:"Premium Leaf Print Polo",
+
+    price:499,
+
+    mrp:999,
+
+    size:selectedSize,
+
+    customerName:name,
+
+    mobile:phone,
+
+    address:address,
+
+    city:city,
+
+    state:state,
+
+    pincode:pincode,
+
+    payment:"Cash on Delivery",
+
+    status:"Confirmed",
+
+    delivery:"3–10 days",
+
+    createdAt:new Date().toLocaleString()
+
+  };
+
+
+  /*
+    TEMPORARY TEST SAVE
+
+    Later this will be replaced by
+    the real online database.
+  */
+
+  let orders =
+    JSON.parse(
+      localStorage.getItem("redlexOrders") || "[]"
+    );
+
+  orders.push(order);
+
+  localStorage.setItem(
+    "redlexOrders",
+    JSON.stringify(orders)
+  );
+
+
+  document.getElementById("formArea")
+    .style.display = "none";
+
+  document.getElementById("success")
+    .classList.add("show");
+
+  document.getElementById("orderId")
+    .textContent = orderId;
 
 });
 
 
-if(error){
+/* OUTSIDE CLICK */
 
-console.error(error);
+document.getElementById("modal")
+.addEventListener("click",function(e){
 
-throw error;
+  if(e.target === this){
+    closeOrder();
+  }
 
-}
-
-
-/* ================= SUCCESS ================= */
-
-successBox.innerHTML = `
-
-<div style="font-size:25px;font-weight:900;margin-bottom:8px;">
-🎉 Congratulations!
-</div>
-
-<div style="font-size:18px;font-weight:800;">
-Your order has been successfully confirmed.
-</div>
-
-<br>
-
-<strong>Order ID:</strong> ${orderId}<br>
-
-<strong>Product:</strong> Floral Polo T-Shirt<br>
-
-<strong>Size:</strong> ${selectedSize}<br>
-
-<strong>Quantity:</strong> ${quantity}<br>
-
-<strong>Total Amount:</strong> ₹${amount}<br>
-
-<strong>Payment:</strong> Cash on Delivery<br>
-
-<strong>Delivery:</strong> 3–10 Days
-
-<br><br>
-
-We will process your order shortly. ❤️
-
-`;
-
-successBox.style.display = "block";
-
-successBox.scrollIntoView({
-behavior:"smooth"
 });
 
 
-/* CLEAR FORM */
+/* ESC */
 
-document.getElementById("name").value = "";
-document.getElementById("phone").value = "";
-document.getElementById("address").value = "";
-document.getElementById("city").value = "";
-document.getElementById("state").value = "";
-document.getElementById("pincode").value = "";
+document.addEventListener("keydown",function(e){
 
+  if(e.key === "Escape"){
+    closeOrder();
+  }
 
-}catch(error){
-
-console.error("SUPABASE ORDER ERROR:",error);
-
-errorBox.innerHTML =
-"Order save nahi hua. Please try again.";
-
-errorBox.style.display = "block";
-
-}
-
-}
+});
 
 </script>
 
