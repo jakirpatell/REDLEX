@@ -6,6 +6,9 @@
 <meta name="theme-color" content="#FFB6C1">
 <title>REDLEX | Premium Fashion</title>
 
+<!-- Supabase Client Library -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <style>
 *{
   margin:0;
@@ -941,6 +944,7 @@ footer p{
 
         <button
           class="confirm"
+          id="submitBtn"
           type="submit">
           CONFIRM ORDER — ₹499
         </button>
@@ -1007,6 +1011,13 @@ footer p{
 
 
 <script>
+
+/* SUPABASE CONFIGURATION */
+const SUPABASE_URL = "https://psmprpylwqxonmsvfmeu.supabase.co";
+const SUPABASE_ANON_KEY = "YOUR_REAL_SUPABASE_ANON_KEY_HERE"; // Bas yahan apni real Anon Key daal dein
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
 
 /* PRODUCT PHOTOS */
 
@@ -1098,13 +1109,16 @@ function closeOrder(){
 }
 
 
-/* FORM */
+/* FORM SUBMIT TO SUPABASE */
 
 document.getElementById("orderForm")
-.addEventListener("submit",function(e){
+.addEventListener("submit", async function(e){
 
   e.preventDefault();
 
+  const submitBtn = document.getElementById("submitBtn");
+  submitBtn.disabled = true;
+  submitBtn.textContent = "PROCESSING...";
 
   const name =
     document.getElementById("name").value.trim();
@@ -1126,17 +1140,17 @@ document.getElementById("orderForm")
 
 
   if(!/^[0-9]{10}$/.test(phone)){
-
     alert("Please enter a valid 10 digit mobile number.");
-
+    submitBtn.disabled = false;
+    submitBtn.textContent = "CONFIRM ORDER — ₹499";
     return;
   }
 
 
   if(!/^[0-9]{6}$/.test(pincode)){
-
     alert("Please enter a valid 6 digit pincode.");
-
+    submitBtn.disabled = false;
+    submitBtn.textContent = "CONFIRM ORDER — ₹499";
     return;
   }
 
@@ -1146,69 +1160,48 @@ document.getElementById("orderForm")
     Date.now().toString().slice(-8);
 
 
-  const order = {
-
-    orderId:orderId,
-
-    product:"Premium Leaf Print Polo",
-
-    price:499,
-
-    mrp:999,
-
-    size:selectedSize,
-
-    customerName:name,
-
-    mobile:phone,
-
-    address:address,
-
-    city:city,
-
-    state:state,
-
-    pincode:pincode,
-
-    payment:"Cash on Delivery",
-
-    status:"Confirmed",
-
-    delivery:"3–10 days",
-
-    createdAt:new Date().toLocaleString()
-
+  const orderData = {
+    order_id: orderId,
+    product: "Premium Leaf Print Polo",
+    price: 499,
+    mrp: 999,
+    size: selectedSize,
+    customer_name: name,
+    mobile: phone,
+    address: address,
+    city: city,
+    state: state,
+    pincode: pincode,
+    payment: "Cash on Delivery",
+    status: "Confirmed",
+    delivery: "3–10 days"
   };
 
+  try {
+    // Save to Supabase Database
+    const { error } = await supabaseClient
+      .from('orders')
+      .insert([orderData]);
 
-  /*
-    TEMPORARY TEST SAVE
+    if (error) {
+      console.error("Supabase Error:", error);
+    }
+  } catch (err) {
+    console.error("Connection Error:", err);
+  }
 
-    Later this will be replaced by
-    the real online database.
-  */
+  // Backup Local Storage Save
+  let orders = JSON.parse(localStorage.getItem("redlexOrders") || "[]");
+  orders.push(orderData);
+  localStorage.setItem("redlexOrders", JSON.stringify(orders));
 
-  let orders =
-    JSON.parse(
-      localStorage.getItem("redlexOrders") || "[]"
-    );
+  // UI Updates
+  document.getElementById("formArea").style.display = "none";
+  document.getElementById("success").classList.add("show");
+  document.getElementById("orderId").textContent = orderId;
 
-  orders.push(order);
-
-  localStorage.setItem(
-    "redlexOrders",
-    JSON.stringify(orders)
-  );
-
-
-  document.getElementById("formArea")
-    .style.display = "none";
-
-  document.getElementById("success")
-    .classList.add("show");
-
-  document.getElementById("orderId")
-    .textContent = orderId;
+  submitBtn.disabled = false;
+  submitBtn.textContent = "CONFIRM ORDER — ₹499";
 
 });
 
