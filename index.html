@@ -6,11 +6,7 @@
 <title>REDLEX | Premium Polo T-Shirt</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
   font-family:Arial,Helvetica,sans-serif;
@@ -19,7 +15,7 @@ body{
 }
 
 header{
-  background:#ffffff;
+  background:#fff;
   padding:18px 6%;
   display:flex;
   justify-content:space-between;
@@ -174,7 +170,7 @@ h1{
   width:58px;
   height:45px;
   border:1px solid #d8c7a6;
-  background:white;
+  background:#fff;
   border-radius:10px;
   cursor:pointer;
   font-weight:bold;
@@ -182,7 +178,7 @@ h1{
 
 .size.selected{
   background:#c7a45b;
-  color:white;
+  color:#fff;
   border-color:#c7a45b;
 }
 
@@ -197,15 +193,13 @@ h1{
   width:40px;
   height:40px;
   border:1px solid #d8c7a6;
-  background:white;
+  background:#fff;
   border-radius:9px;
   font-size:20px;
   cursor:pointer;
 }
 
-#qty{
-  font-weight:bold;
-}
+#qty{font-weight:bold}
 
 .buy-btn{
   width:100%;
@@ -213,16 +207,14 @@ h1{
   border:0;
   border-radius:13px;
   background:linear-gradient(135deg,#d1b16a,#b88d3e);
-  color:white;
+  color:#fff;
   font-size:17px;
   font-weight:bold;
   cursor:pointer;
   box-shadow:0 8px 20px rgba(170,130,55,.18);
 }
 
-.buy-btn:hover{
-  opacity:.92;
-}
+.buy-btn:hover{opacity:.92}
 
 .delivery{
   margin-top:15px;
@@ -268,8 +260,6 @@ section{
   line-height:1.5;
 }
 
-/* ORDER POPUP */
-
 .modal{
   display:none;
   position:fixed;
@@ -282,7 +272,7 @@ section{
 
 .modal-box{
   max-width:520px;
-  background:white;
+  background:#fff;
   margin:30px auto;
   border-radius:20px;
   padding:25px;
@@ -298,9 +288,7 @@ section{
   color:#777;
 }
 
-.modal-box h2{
-  margin-bottom:6px;
-}
+.modal-box h2{margin-bottom:6px}
 
 .modal-sub{
   color:#777;
@@ -351,7 +339,7 @@ form textarea{
   width:100%;
   border:0;
   background:#c29a4d;
-  color:white;
+  color:#fff;
   padding:15px;
   border-radius:11px;
   font-size:16px;
@@ -359,8 +347,6 @@ form textarea{
   cursor:pointer;
   margin-top:10px;
 }
-
-/* SUCCESS */
 
 .success{
   display:none;
@@ -408,39 +394,23 @@ footer{
     gap:30px;
   }
 
-  .gallery{
-    position:static;
-  }
+  .gallery{position:static}
 
-  h1{
-    font-size:32px;
-  }
+  h1{font-size:32px}
 
-  .features{
-    grid-template-columns:1fr;
-  }
+  .features{grid-template-columns:1fr}
 }
 
 @media(max-width:500px){
-  header{
-    padding:15px 5%;
-  }
+  header{padding:15px 5%}
 
-  .logo{
-    font-size:24px;
-  }
+  .logo{font-size:24px}
 
-  .header-tag{
-    font-size:11px;
-  }
+  .header-tag{font-size:11px}
 
-  .hero{
-    padding:25px 5% 40px;
-  }
+  .hero{padding:25px 5% 40px}
 
-  .info{
-    grid-template-columns:1fr 1fr 1fr;
-  }
+  .info{grid-template-columns:1fr 1fr 1fr}
 
   .two{
     grid-template-columns:1fr;
@@ -461,240 +431,236 @@ footer{
 
 <div class="product">
 
-  <!-- GALLERY -->
-  <div class="gallery">
+<div class="gallery">
 
-    <img
-      id="mainImage"
-      class="main-image"
-      src="./file_00000000c58482078d28ede43bb0cffb.png"
-      alt="REDLEX Premium Polo T-Shirt"
-    >
+<img
+  id="mainImage"
+  class="main-image"
+  src="./file_00000000c58482078d28ede43bb0cffb.png"
+  alt="REDLEX Premium Polo T-Shirt"
+>
 
-    <div class="thumbnails">
+<div class="thumbnails">
 
-      <img
-        class="active"
-        src="./file_00000000c58482078d28ede43bb0cffb.png"
-        onclick="changeImage(this)"
-        alt="Front"
-      >
+<img
+  class="active"
+  src="./file_00000000c58482078d28ede43bb0cffb.png"
+  onclick="changeImage(this)"
+  alt="Front"
+>
 
-      <img
-        src="./file_0000000084380211b06359360a1effe5.png"
-        onclick="changeImage(this)"
-        alt="Back"
-      >
+<img
+  src="./file_0000000084388211b06359360a1effe5.png"
+  onclick="changeImage(this)"
+  alt="Back"
+>
 
-      <img
-        src="./file_00000000d8608207ba913d1d8ef96594.png"
-        onclick="changeImage(this)"
-        alt="Side"
-      >
+<img
+  src="./file_00000000d8608207ba913d1d8ef96594.png"
+  onclick="changeImage(this)"
+  alt="Side"
+>
 
-      <img
-        src="./file_00000000a22c8207a780e8c9148ff6d.png"
-        onclick="changeImage(this)"
-        alt="Details"
-      >
-
-    </div>
-  </div>
-
-  <!-- PRODUCT DETAILS -->
-  <div>
-
-    <span class="badge">REDLEX COLLECTION</span>
-
-    <h1>Premium Printed Polo T-Shirt</h1>
-
-    <p class="description">
-      Stylish premium polo T-shirt designed for a clean and comfortable
-      everyday look. Perfect for both casual and smart styling.
-    </p>
-
-    <div class="price-box">
-      <span class="price">₹499</span>
-      <span class="mrp">₹999</span>
-      <span class="save">SAVE ₹500</span>
-    </div>
-
-    <div class="info">
-      <div>🚚<br><b>3–10 Days</b><br>Delivery</div>
-      <div>💵<br><b>COD</b><br>Available</div>
-      <div>✨<br><b>Premium</b><br>Quality</div>
-    </div>
-
-    <div class="label">Select Size</div>
-
-    <div class="sizes">
-      <button class="size" onclick="selectSize('M',this)">M</button>
-      <button class="size" onclick="selectSize('L',this)">L</button>
-      <button class="size" onclick="selectSize('XL',this)">XL</button>
-    </div>
-
-    <div class="label">Quantity</div>
-
-    <div class="quantity">
-      <button class="qty-btn" onclick="changeQty(-1)">−</button>
-      <span id="qty">1</span>
-      <button class="qty-btn" onclick="changeQty(1)">+</button>
-    </div>
-
-    <button class="buy-btn" onclick="openOrder()">
-      🛍️ BUY NOW
-    </button>
-
-    <div class="delivery">
-      Cash on Delivery • Estimated delivery 3–10 days
-    </div>
-
-  </div>
+<img
+  src="./file_00000000a22c8207a780e8c914f8ff6d.png"
+  onclick="changeImage(this)"
+  alt="Details"
+>
 
 </div>
+</div>
 
+<div>
+
+<span class="badge">REDLEX COLLECTION</span>
+
+<h1>Premium Printed Polo T-Shirt</h1>
+
+<p class="description">
+Stylish premium polo T-shirt designed for a clean and comfortable
+everyday look. Perfect for both casual and smart styling.
+</p>
+
+<div class="price-box">
+<span class="price">₹499</span>
+<span class="mrp">₹999</span>
+<span class="save">SAVE ₹500</span>
+</div>
+
+<div class="info">
+<div>🚚<br><b>3–10 Days</b><br>Delivery</div>
+<div>💵<br><b>COD</b><br>Available</div>
+<div>✨<br><b>Premium</b><br>Quality</div>
+</div>
+
+<div class="label">Select Size</div>
+
+<div class="sizes">
+<button class="size" onclick="selectSize('M',this)">M</button>
+<button class="size" onclick="selectSize('L',this)">L</button>
+<button class="size" onclick="selectSize('XL',this)">XL</button>
+</div>
+
+<div class="label">Quantity</div>
+
+<div class="quantity">
+<button class="qty-btn" onclick="changeQty(-1)">−</button>
+<span id="qty">1</span>
+<button class="qty-btn" onclick="changeQty(1)">+</button>
+</div>
+
+<button class="buy-btn" onclick="openOrder()">
+🛍️ BUY NOW
+</button>
+
+<div class="delivery">
+Cash on Delivery • Estimated delivery 3–10 days
+</div>
+
+</div>
+</div>
 </main>
 
 <section>
 
-  <h2 class="section-title">Why Choose REDLEX?</h2>
+<h2 class="section-title">Why Choose REDLEX?</h2>
 
-  <div class="features">
+<div class="features">
 
-    <div class="feature">
-      <h3>Premium Look</h3>
-      <p>Clean and stylish design made for everyday fashion.</p>
-    </div>
+<div class="feature">
+<h3>Premium Look</h3>
+<p>Clean and stylish design made for everyday fashion.</p>
+</div>
 
-    <div class="feature">
-      <h3>Easy COD</h3>
-      <p>Place your order easily with Cash on Delivery.</p>
-    </div>
+<div class="feature">
+<h3>Easy COD</h3>
+<p>Place your order easily with Cash on Delivery.</p>
+</div>
 
-    <div class="feature">
-      <h3>Fast Delivery</h3>
-      <p>Your order is expected to arrive within 3–10 days.</p>
-    </div>
+<div class="feature">
+<h3>Fast Delivery</h3>
+<p>Your order is expected to arrive within 3–10 days.</p>
+</div>
 
-  </div>
-
+</div>
 </section>
 
 <footer>
-  © 2026 REDLEX. All Rights Reserved.
+© 2026 REDLEX. All Rights Reserved.
 </footer>
 
 
-<!-- ORDER MODAL -->
-
 <div class="modal" id="orderModal">
 
-  <div class="modal-box">
+<div class="modal-box">
 
-    <span class="close" onclick="closeOrder()">×</span>
+<span class="close" onclick="closeOrder()">×</span>
 
-    <div id="orderFormArea">
+<div id="orderFormArea">
 
-      <h2>Complete Your Order</h2>
+<h2>Complete Your Order</h2>
 
-      <p class="modal-sub">
-        Enter your details. Your order will be sent to REDLEX on WhatsApp.
-      </p>
+<p class="modal-sub">
+Enter your details. Your order will be sent to REDLEX on WhatsApp.
+</p>
 
-      <form id="orderForm">
+<form id="orderForm">
 
-        <label>Full Name *</label>
-        <input id="name" required placeholder="Enter your name">
+<label>Full Name *</label>
+<input id="name" required placeholder="Enter your name">
 
-        <label>Mobile Number *</label>
-        <input
-          id="phone"
-          type="tel"
-          inputmode="numeric"
-          maxlength="10"
-          required
-          placeholder="10-digit mobile number"
-        >
+<label>Mobile Number *</label>
+<input
+id="phone"
+type="tel"
+inputmode="numeric"
+maxlength="10"
+required
+placeholder="10-digit mobile number"
+>
 
-        <label>Full Address *</label>
-        <textarea id="address" required placeholder="House no., street, area"></textarea>
+<label>Full Address *</label>
+<textarea
+id="address"
+required
+placeholder="House no., street, area"
+></textarea>
 
-        <div class="two">
+<div class="two">
 
-          <div>
-            <label>City *</label>
-            <input id="city" required placeholder="City">
-          </div>
+<div>
+<label>City *</label>
+<input id="city" required placeholder="City">
+</div>
 
-          <div>
-            <label>State *</label>
-            <input id="state" required placeholder="State">
-          </div>
+<div>
+<label>State *</label>
+<input id="state" required placeholder="State">
+</div>
 
-        </div>
+</div>
 
-        <label>Pincode *</label>
-        <input
-          id="pincode"
-          type="text"
-          inputmode="numeric"
-          maxlength="6"
-          required
-          placeholder="6-digit pincode"
-        >
+<label>Pincode *</label>
+<input
+id="pincode"
+type="text"
+inputmode="numeric"
+maxlength="6"
+required
+placeholder="6-digit pincode"
+>
 
-        <label>Size *</label>
-        <select id="orderSize" required>
-          <option value="">Select size</option>
-          <option value="M">M</option>
-          <option value="L">L</option>
-          <option value="XL">XL</option>
-        </select>
+<label>Size *</label>
 
-        <div class="order-summary">
-          <b>Product:</b> Premium Printed Polo T-Shirt<br>
-          <b>Price:</b> ₹499<br>
-          <b>Quantity:</b> <span id="summaryQty">1</span><br>
-          <b>Total:</b> ₹<span id="summaryTotal">499</span><br>
-          <b>Payment:</b> Cash on Delivery
-        </div>
+<select id="orderSize" required>
+<option value="">Select size</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
 
-        <button class="submit-btn" type="submit">
-          Confirm Order on WhatsApp
-        </button>
+<div class="order-summary">
+<b>Product:</b> Premium Printed Polo T-Shirt<br>
+<b>Price:</b> ₹499<br>
+<b>Quantity:</b> <span id="summaryQty">1</span><br>
+<b>Total:</b> ₹<span id="summaryTotal">499</span><br>
+<b>Payment:</b> Cash on Delivery
+</div>
 
-      </form>
+<button class="submit-btn" type="submit">
+Confirm Order
+</button>
 
-    </div>
+</form>
+</div>
 
 
-    <div class="success" id="successArea">
+<div class="success" id="successArea">
 
-      <div class="success-icon">✓</div>
+<div class="success-icon">✓</div>
 
-      <h2>Congratulations! 🎉</h2>
+<h2>Congratulations! 🎉</h2>
 
-      <p>Your order details are ready.</p>
+<p>Your order details are ready.</p>
 
-      <div class="order-id">
-        Order ID: <span id="orderId"></span>
-      </div>
+<div class="order-id">
+Order ID: <span id="orderId"></span>
+</div>
 
-      <p>
-        Delivery: <b>3–10 days</b><br>
-        Payment: <b>Cash on Delivery</b>
-      </p>
+<p>
+Delivery: <b>3–10 days</b><br>
+Payment: <b>Cash on Delivery</b>
+</p>
 
-      <br>
+<br>
 
-      <button class="submit-btn" onclick="sendWhatsApp()">
-        📱 Send Order on WhatsApp
-      </button>
+<button class="submit-btn" onclick="sendWhatsApp()">
+📱 Send Order on WhatsApp
+</button>
 
-    </div>
+</div>
 
-  </div>
-
+</div>
 </div>
 
 
@@ -709,27 +675,31 @@ let currentOrder = null;
 
 function changeImage(img){
 
-  document.getElementById("mainImage").src = img.src;
+document.getElementById("mainImage").src = img.src;
 
-  document.querySelectorAll(".thumbnails img")
-    .forEach(x => x.classList.remove("active"));
+document.querySelectorAll(".thumbnails img")
+.forEach(function(x){
+x.classList.remove("active");
+});
 
-  img.classList.add("active");
+img.classList.add("active");
 }
 
 
 /* SIZE */
 
-function selectSize(size, button){
+function selectSize(size,button){
 
-  selectedSize = size;
+selectedSize = size;
 
-  document.querySelectorAll(".size")
-    .forEach(x => x.classList.remove("selected"));
+document.querySelectorAll(".size")
+.forEach(function(x){
+x.classList.remove("selected");
+});
 
-  button.classList.add("selected");
+button.classList.add("selected");
 
-  document.getElementById("orderSize").value = size;
+document.getElementById("orderSize").value = size;
 }
 
 
@@ -737,14 +707,16 @@ function selectSize(size, button){
 
 function changeQty(amount){
 
-  quantity += amount;
+quantity += amount;
 
-  if(quantity < 1) quantity = 1;
-  if(quantity > 10) quantity = 10;
+if(quantity < 1) quantity = 1;
+if(quantity > 10) quantity = 10;
 
-  document.getElementById("qty").textContent = quantity;
-  document.getElementById("summaryQty").textContent = quantity;
-  document.getElementById("summaryTotal").textContent = 499 * quantity;
+document.getElementById("qty").textContent = quantity;
+
+document.getElementById("summaryQty").textContent = quantity;
+
+document.getElementById("summaryTotal").textContent = 499 * quantity;
 }
 
 
@@ -752,17 +724,16 @@ function changeQty(amount){
 
 function openOrder(){
 
-  if(!selectedSize){
+if(!selectedSize){
+alert("Please select your size: M, L or XL.");
+return;
+}
 
-    alert("Please select your size: M, L or XL.");
-    return;
-  }
+document.getElementById("orderSize").value = selectedSize;
 
-  document.getElementById("orderSize").value = selectedSize;
+document.getElementById("orderModal").style.display = "block";
 
-  document.getElementById("orderModal").style.display = "block";
-
-  document.body.style.overflow = "hidden";
+document.body.style.overflow = "hidden";
 }
 
 
@@ -770,108 +741,120 @@ function openOrder(){
 
 function closeOrder(){
 
-  document.getElementById("orderModal").style.display = "none";
+document.getElementById("orderModal").style.display = "none";
 
-  document.body.style.overflow = "auto";
+document.body.style.overflow = "auto";
 }
 
 
-/* CREATE ORDER ID */
+/* ORDER ID */
 
 function createOrderId(){
 
-  const now = new Date();
+const now = new Date();
 
-  const date =
-    now.getFullYear().toString().slice(-2) +
-    String(now.getMonth()+1).padStart(2,"0") +
-    String(now.getDate()).padStart(2,"0");
+const date =
+now.getFullYear().toString().slice(-2) +
+String(now.getMonth()+1).padStart(2,"0") +
+String(now.getDate()).padStart(2,"0");
 
-  const random =
-    Math.floor(1000 + Math.random() * 9000);
+const random =
+Math.floor(1000 + Math.random() * 9000);
 
-  return "RED" + date + random;
+return "RED" + date + random;
 }
 
 
-/* FORM SUBMIT */
+/* FORM */
 
-document.getElementById("orderForm").addEventListener("submit", function(e){
+document.getElementById("orderForm").addEventListener(
+"submit",
+function(e){
 
-  e.preventDefault();
+e.preventDefault();
 
-  const name =
-    document.getElementById("name").value.trim();
+const name =
+document.getElementById("name").value.trim();
 
-  const phone =
-    document.getElementById("phone").value.trim();
+const phone =
+document.getElementById("phone").value.trim();
 
-  const address =
-    document.getElementById("address").value.trim();
+const address =
+document.getElementById("address").value.trim();
 
-  const city =
-    document.getElementById("city").value.trim();
+const city =
+document.getElementById("city").value.trim();
 
-  const state =
-    document.getElementById("state").value.trim();
+const state =
+document.getElementById("state").value.trim();
 
-  const pincode =
-    document.getElementById("pincode").value.trim();
+const pincode =
+document.getElementById("pincode").value.trim();
 
-  const size =
-    document.getElementById("orderSize").value;
+const size =
+document.getElementById("orderSize").value;
 
-  if(phone.length !== 10 || !/^[0-9]+$/.test(phone)){
 
-    alert("Please enter a valid 10-digit mobile number.");
-    return;
-  }
+if(phone.length !== 10 || !/^[0-9]+$/.test(phone)){
 
-  if(pincode.length !== 6 || !/^[0-9]+$/.test(pincode)){
+alert("Please enter a valid 10-digit mobile number.");
 
-    alert("Please enter a valid 6-digit pincode.");
-    return;
-  }
+return;
+}
 
-  if(!size){
 
-    alert("Please select a size.");
-    return;
-  }
+if(pincode.length !== 6 || !/^[0-9]+$/.test(pincode)){
 
-  const orderId = createOrderId();
+alert("Please enter a valid 6-digit pincode.");
 
-  currentOrder = {
-    orderId,
-    name,
-    phone,
-    address,
-    city,
-    state,
-    pincode,
-    size,
-    quantity,
-    amount: 499 * quantity
-  };
+return;
+}
 
-  document.getElementById("orderId").textContent = orderId;
 
-  document.getElementById("orderFormArea").style.display = "none";
+if(!size){
 
-  document.getElementById("successArea").style.display = "block";
+alert("Please select a size.");
 
-});
+return;
+}
+
+
+const orderId = createOrderId();
+
+
+currentOrder = {
+orderId:orderId,
+name:name,
+phone:phone,
+address:address,
+city:city,
+state:state,
+pincode:pincode,
+size:size,
+quantity:quantity,
+amount:499 * quantity
+};
+
+
+document.getElementById("orderId").textContent = orderId;
+
+document.getElementById("orderFormArea").style.display = "none";
+
+document.getElementById("successArea").style.display = "block";
+
+}
+);
 
 
 /* WHATSAPP */
 
 function sendWhatsApp(){
 
-  if(!currentOrder) return;
+if(!currentOrder) return;
 
-  const o = currentOrder;
+const o = currentOrder;
 
-  const message =
+const message =
 `🛍️ *REDLEX NEW ORDER*
 
 Order ID: ${o.orderId}
@@ -897,28 +880,36 @@ Quantity: ${o.quantity}
 
 Please confirm my REDLEX order.`;
 
-  const whatsappNumber = "918602720758";
 
-  const whatsappURL =
-    "https://wa.me/" +
-    whatsappNumber +
-    "?text=" +
-    encodeURIComponent(message);
+/*
+  Customer ke phone me WhatsApp khulega
+  aur message REDLEX ke number par ready hoga.
+*/
 
-  window.location.href = whatsappURL;
+const whatsappNumber = "918602720758";
 
+const whatsappURL =
+"https://wa.me/" +
+whatsappNumber +
+"?text=" +
+encodeURIComponent(message);
+
+window.location.href = whatsappURL;
 }
 
 
-/* CLOSE MODAL BY CLICKING OUTSIDE */
+/* OUTSIDE CLICK */
 
-window.addEventListener("click", function(e){
+window.addEventListener("click",function(e){
 
-  const modal = document.getElementById("orderModal");
+const modal =
+document.getElementById("orderModal");
 
-  if(e.target === modal){
-    closeOrder();
-  }
+if(e.target === modal){
+
+closeOrder();
+
+}
 
 });
 
