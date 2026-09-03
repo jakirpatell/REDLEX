@@ -9,495 +9,579 @@
 *{box-sizing:border-box;margin:0;padding:0}
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#fffdf8;
-  color:#252525;
+font-family:Arial,Helvetica,sans-serif;
+background:#fffdf8;
+color:#252525;
 }
 
 header{
-  background:#fff;
-  padding:18px 6%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid #eee5d3;
-  position:sticky;
-  top:0;
-  z-index:100;
+background:#fff;
+padding:18px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #eee5d3;
+position:sticky;
+top:0;
+z-index:100;
 }
 
 .logo{
-  font-size:28px;
-  font-weight:800;
-  letter-spacing:2px;
-  color:#b28a3e;
+font-size:28px;
+font-weight:800;
+letter-spacing:2px;
+color:#b28a3e;
 }
 
 .header-tag{
-  font-size:13px;
-  color:#777;
+font-size:13px;
+color:#777;
 }
 
 .hero{
-  padding:45px 6% 60px;
-  max-width:1200px;
-  margin:auto;
+padding:45px 6% 60px;
+max-width:1200px;
+margin:auto;
 }
 
 .product{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:55px;
-  align-items:start;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:55px;
+align-items:start;
 }
 
 .gallery{
-  position:sticky;
-  top:95px;
+position:sticky;
+top:95px;
 }
 
 .main-image{
-  width:100%;
-  aspect-ratio:1/1;
-  object-fit:contain;
-  background:#fff;
-  border:1px solid #eee5d3;
-  border-radius:20px;
-  padding:15px;
+width:100%;
+aspect-ratio:1/1;
+object-fit:contain;
+background:#fff;
+border:1px solid #eee5d3;
+border-radius:20px;
+padding:15px;
 }
 
 .thumbnails{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  margin-top:12px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-top:12px;
 }
 
 .thumbnails img{
-  width:100%;
-  aspect-ratio:1/1;
-  object-fit:cover;
-  background:#fff;
-  border:2px solid transparent;
-  border-radius:12px;
-  cursor:pointer;
-  padding:3px;
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+background:#fff;
+border:2px solid transparent;
+border-radius:12px;
+cursor:pointer;
+padding:3px;
 }
 
 .thumbnails img.active{
-  border-color:#c7a45b;
+border-color:#c7a45b;
 }
 
 .badge{
-  display:inline-block;
-  background:#f8efd9;
-  color:#9a742e;
-  padding:8px 14px;
-  border-radius:30px;
-  font-size:12px;
-  font-weight:bold;
-  letter-spacing:1px;
-  margin-bottom:15px;
+display:inline-block;
+background:#f8efd9;
+color:#9a742e;
+padding:8px 14px;
+border-radius:30px;
+font-size:12px;
+font-weight:bold;
+letter-spacing:1px;
+margin-bottom:15px;
 }
 
 h1{
-  font-size:42px;
-  line-height:1.1;
-  margin-bottom:14px;
+font-size:42px;
+line-height:1.1;
+margin-bottom:14px;
 }
 
 .description{
-  color:#666;
-  line-height:1.7;
-  margin-bottom:22px;
+color:#666;
+line-height:1.7;
+margin-bottom:22px;
 }
 
 .price-box{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  margin:20px 0;
-  flex-wrap:wrap;
+display:flex;
+align-items:center;
+gap:14px;
+margin:20px 0;
+flex-wrap:wrap;
 }
 
 .price{
-  font-size:34px;
-  font-weight:800;
-  color:#a47b32;
+font-size:34px;
+font-weight:800;
+color:#a47b32;
 }
 
 .mrp{
-  color:#999;
-  text-decoration:line-through;
-  font-size:18px;
+color:#999;
+text-decoration:line-through;
+font-size:18px;
 }
 
 .save{
-  background:#f3ead7;
-  color:#8d6a2c;
-  padding:6px 10px;
-  border-radius:8px;
-  font-size:12px;
-  font-weight:bold;
+background:#f3ead7;
+color:#8d6a2c;
+padding:6px 10px;
+border-radius:8px;
+font-size:12px;
+font-weight:bold;
 }
 
 .info{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-  margin:22px 0;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+margin:22px 0;
 }
 
 .info div{
-  background:#fff;
-  border:1px solid #eee5d3;
-  padding:13px 8px;
-  text-align:center;
-  border-radius:12px;
-  font-size:12px;
+background:#fff;
+border:1px solid #eee5d3;
+padding:13px 8px;
+text-align:center;
+border-radius:12px;
+font-size:12px;
 }
 
 .label{
-  font-weight:bold;
-  margin:20px 0 10px;
+font-weight:bold;
+margin:20px 0 10px;
 }
 
 .sizes{
-  display:flex;
-  gap:10px;
+display:flex;
+gap:10px;
 }
 
 .size{
-  width:58px;
-  height:45px;
-  border:1px solid #d8c7a6;
-  background:#fff;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:bold;
+width:58px;
+height:45px;
+border:1px solid #d8c7a6;
+background:#fff;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
 }
 
 .size.selected{
-  background:#c7a45b;
-  color:#fff;
-  border-color:#c7a45b;
+background:#c7a45b;
+color:#fff;
+border-color:#c7a45b;
 }
 
 .quantity{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  margin:15px 0 25px;
+display:flex;
+align-items:center;
+gap:15px;
+margin:15px 0 25px;
 }
 
 .qty-btn{
-  width:40px;
-  height:40px;
-  border:1px solid #d8c7a6;
-  background:#fff;
-  border-radius:9px;
-  font-size:20px;
-  cursor:pointer;
+width:40px;
+height:40px;
+border:1px solid #d8c7a6;
+background:#fff;
+border-radius:9px;
+font-size:20px;
+cursor:pointer;
 }
 
-#qty{font-weight:bold}
+#qty{
+font-weight:bold;
+}
 
 .buy-btn{
-  width:100%;
-  padding:17px;
-  border:0;
-  border-radius:13px;
-  background:linear-gradient(135deg,#d1b16a,#b88d3e);
-  color:#fff;
-  font-size:17px;
-  font-weight:bold;
-  cursor:pointer;
-  box-shadow:0 8px 20px rgba(170,130,55,.18);
+width:100%;
+padding:17px;
+border:0;
+border-radius:13px;
+background:linear-gradient(135deg,#d1b16a,#b88d3e);
+color:#fff;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 8px 20px rgba(170,130,55,.18);
 }
 
-.buy-btn:hover{opacity:.92}
-
-.delivery{
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#666;
+.buy-btn:hover{
+opacity:.92;
 }
 
 .action-links{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin-top:15px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:15px;
 }
 
 .action-btn{
-  padding:13px;
-  border-radius:11px;
-  border:1px solid #dcccae;
-  background:#fff;
-  color:#8d6a2c;
-  font-weight:bold;
-  cursor:pointer;
+padding:13px;
+border-radius:11px;
+border:1px solid #dcccae;
+background:#fff;
+color:#8d6a2c;
+font-weight:bold;
+cursor:pointer;
+}
+
+.delivery{
+margin-top:15px;
+text-align:center;
+font-size:13px;
+color:#666;
 }
 
 section{
-  max-width:1100px;
-  margin:20px auto 60px;
-  padding:0 6%;
+max-width:1100px;
+margin:20px auto 60px;
+padding:0 6%;
 }
 
 .section-title{
-  text-align:center;
-  font-size:28px;
-  margin-bottom:25px;
+text-align:center;
+font-size:28px;
+margin-bottom:25px;
 }
 
 .features{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
 }
 
 .feature{
-  background:#fff;
-  border:1px solid #eee5d3;
-  border-radius:16px;
-  padding:22px;
-  text-align:center;
+background:#fff;
+border:1px solid #eee5d3;
+border-radius:16px;
+padding:22px;
+text-align:center;
 }
 
 .feature h3{
-  margin-bottom:8px;
-  color:#a47b32;
+margin-bottom:8px;
+color:#a47b32;
 }
 
 .feature p{
-  color:#777;
-  font-size:14px;
-  line-height:1.5;
+color:#777;
+font-size:14px;
+line-height:1.5;
+}
+
+
+/* REVIEWS */
+
+.rating-summary{
+background:#fff;
+border:1px solid #eee5d3;
+border-radius:18px;
+padding:25px;
+text-align:center;
+margin-bottom:25px;
+}
+
+.rating-number{
+font-size:42px;
+font-weight:800;
+color:#a47b32;
+}
+
+.rating-stars{
+font-size:24px;
+color:#c29a4d;
+margin:8px 0;
+}
+
+.demo-note{
+display:inline-block;
+background:#fff5d9;
+color:#99752f;
+font-size:11px;
+font-weight:bold;
+padding:5px 9px;
+border-radius:20px;
+margin-bottom:10px;
 }
 
 .reviews{
-  display:grid;
-  gap:14px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
 }
 
 .review{
-  background:#fff;
-  border:1px solid #eee5d3;
-  border-radius:15px;
-  padding:18px;
+background:#fff;
+border:1px solid #eee5d3;
+border-radius:15px;
+padding:18px;
 }
 
-.stars{
-  color:#c29a4d;
-  letter-spacing:2px;
-  margin-bottom:8px;
+.review-stars{
+color:#c29a4d;
+letter-spacing:2px;
+margin-bottom:8px;
 }
 
 .review-name{
-  font-weight:bold;
-  margin-bottom:6px;
+font-weight:bold;
+margin-bottom:5px;
 }
 
 .review-text{
-  color:#666;
-  font-size:14px;
-  line-height:1.5;
+color:#666;
+font-size:14px;
+line-height:1.5;
 }
 
-.review-note{
-  text-align:center;
-  color:#888;
-  font-size:12px;
-  margin-top:18px;
+.review-label{
+font-size:10px;
+color:#aa8a4c;
+margin-top:10px;
+font-weight:bold;
 }
+
+
+/* MODALS */
 
 .modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.55);
-  z-index:999;
-  padding:20px;
-  overflow:auto;
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.55);
+z-index:999;
+padding:20px;
+overflow:auto;
 }
 
 .modal-box{
-  max-width:520px;
-  background:#fff;
-  margin:30px auto;
-  border-radius:20px;
-  padding:25px;
-  position:relative;
+max-width:520px;
+background:#fff;
+margin:30px auto;
+border-radius:20px;
+padding:25px;
+position:relative;
 }
 
 .close{
-  position:absolute;
-  right:18px;
-  top:14px;
-  font-size:28px;
-  cursor:pointer;
-  color:#777;
+position:absolute;
+right:18px;
+top:14px;
+font-size:28px;
+cursor:pointer;
+color:#777;
 }
 
-.modal-box h2{margin-bottom:6px}
+.modal-box h2{
+margin-bottom:6px;
+}
 
 .modal-sub{
-  color:#777;
-  font-size:13px;
-  margin-bottom:20px;
+color:#777;
+font-size:13px;
+margin-bottom:20px;
 }
 
 form label{
-  display:block;
-  font-size:13px;
-  font-weight:bold;
-  margin:12px 0 6px;
+display:block;
+font-size:13px;
+font-weight:bold;
+margin:12px 0 6px;
 }
 
 form input,
 form textarea,
 form select{
-  width:100%;
-  padding:13px;
-  border:1px solid #ddd2bd;
-  border-radius:10px;
-  outline:none;
-  font-size:14px;
-  background:#fffdf9;
+width:100%;
+padding:13px;
+border:1px solid #ddd2bd;
+border-radius:10px;
+outline:none;
+font-size:14px;
+background:#fffdf9;
 }
 
 form textarea{
-  min-height:80px;
-  resize:vertical;
+min-height:80px;
+resize:vertical;
 }
 
 .two{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
 }
 
 .order-summary{
-  margin:18px 0;
-  padding:15px;
-  background:#fbf6ea;
-  border-radius:12px;
-  font-size:14px;
-  line-height:1.8;
+margin:18px 0;
+padding:15px;
+background:#fbf6ea;
+border-radius:12px;
+font-size:14px;
+line-height:1.8;
 }
 
 .submit-btn{
-  width:100%;
-  border:0;
-  background:#c29a4d;
-  color:#fff;
-  padding:15px;
-  border-radius:11px;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
-  margin-top:10px;
+width:100%;
+border:0;
+background:#c29a4d;
+color:#fff;
+padding:15px;
+border-radius:11px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+margin-top:10px;
 }
 
 .return-info{
-  background:#fbf6ea;
-  border-radius:12px;
-  padding:14px;
-  margin:15px 0;
-  color:#666;
-  font-size:13px;
-  line-height:1.6;
+background:#fbf6ea;
+border-radius:12px;
+padding:14px;
+margin:15px 0;
+color:#666;
+font-size:13px;
+line-height:1.6;
 }
 
 .success{
-  display:none;
-  text-align:center;
-  padding:20px 5px;
+display:none;
+text-align:center;
+padding:20px 5px;
 }
 
 .success-icon{
-  width:70px;
-  height:70px;
-  margin:0 auto 15px;
-  border-radius:50%;
-  background:#f5ead0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:35px;
+width:70px;
+height:70px;
+margin:0 auto 15px;
+border-radius:50%;
+background:#f5ead0;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:35px;
 }
 
 .success h2{
-  color:#a47b32;
-  margin-bottom:10px;
+color:#a47b32;
+margin-bottom:10px;
 }
 
 .order-id{
-  background:#faf4e6;
-  padding:12px;
-  border-radius:10px;
-  margin:15px 0;
-  font-weight:bold;
+background:#faf4e6;
+padding:12px;
+border-radius:10px;
+margin:15px 0;
+font-weight:bold;
 }
 
 footer{
-  background:#fff;
-  border-top:1px solid #eee5d3;
-  text-align:center;
-  padding:25px;
-  color:#888;
-  font-size:13px;
+background:#fff;
+border-top:1px solid #eee5d3;
+text-align:center;
+padding:25px;
+color:#888;
+font-size:13px;
 }
+
 
 @media(max-width:800px){
-  .product{
-    grid-template-columns:1fr;
-    gap:30px;
-  }
 
-  .gallery{position:static}
-
-  h1{font-size:32px}
-
-  .features{grid-template-columns:1fr}
+.product{
+grid-template-columns:1fr;
+gap:30px;
 }
+
+.gallery{
+position:static;
+}
+
+h1{
+font-size:32px;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.reviews{
+grid-template-columns:1fr;
+}
+
+}
+
 
 @media(max-width:500px){
-  header{padding:15px 5%}
 
-  .logo{font-size:24px}
-
-  .header-tag{font-size:11px}
-
-  .hero{padding:25px 5% 40px}
-
-  .info{grid-template-columns:1fr 1fr 1fr}
-
-  .two{
-    grid-template-columns:1fr;
-    gap:0;
-  }
-
-  .action-links{
-    grid-template-columns:1fr;
-  }
+header{
+padding:15px 5%;
 }
+
+.logo{
+font-size:24px;
+}
+
+.header-tag{
+font-size:11px;
+}
+
+.hero{
+padding:25px 5% 40px;
+}
+
+.info{
+grid-template-columns:1fr 1fr 1fr;
+}
+
+.two{
+grid-template-columns:1fr;
+gap:0;
+}
+
+.action-links{
+grid-template-columns:1fr;
+}
+
+}
+
 </style>
 </head>
 
+
 <body>
 
+
 <header>
-  <div class="logo">REDLEX</div>
-  <div class="header-tag">Premium Everyday Wear</div>
+
+<div class="logo">REDLEX</div>
+
+<div class="header-tag">
+Premium Everyday Wear
+</div>
+
 </header>
+
+
 
 <main class="hero">
 
 <div class="product">
+
+
+<!-- PRODUCT IMAGES -->
 
 <div class="gallery">
 
@@ -536,123 +620,419 @@ alt="Details"
 >
 
 </div>
+
 </div>
+
+
+
+<!-- PRODUCT DETAILS -->
 
 <div>
 
-<span class="badge">REDLEX COLLECTION</span>
+<span class="badge">
+REDLEX COLLECTION
+</span>
 
-<h1>Premium Printed Polo T-Shirt</h1>
+<h1>
+Premium Printed Polo T-Shirt
+</h1>
 
 <p class="description">
 Stylish premium polo T-shirt designed for a clean and comfortable
 everyday look. Perfect for both casual and smart styling.
 </p>
 
+
 <div class="price-box">
+
 <span class="price">₹499</span>
+
 <span class="mrp">₹999</span>
+
 <span class="save">SAVE ₹500</span>
+
 </div>
+
 
 <div class="info">
-<div>🚚<br><b>3–10 Days</b><br>Delivery</div>
-<div>💵<br><b>COD</b><br>Available</div>
-<div>✨<br><b>Premium</b><br>Quality</div>
+
+<div>
+🚚<br>
+<b>3–10 Days</b><br>
+Delivery
 </div>
 
-<div class="label">Select Size</div>
+<div>
+💵<br>
+<b>COD</b><br>
+Available
+</div>
+
+<div>
+✨<br>
+<b>Premium</b><br>
+Quality
+</div>
+
+</div>
+
+
+<div class="label">
+Select Size
+</div>
+
 
 <div class="sizes">
-<button class="size" onclick="selectSize('M',this)">M</button>
-<button class="size" onclick="selectSize('L',this)">L</button>
-<button class="size" onclick="selectSize('XL',this)">XL</button>
+
+<button
+class="size"
+onclick="selectSize('M',this)"
+>
+M
+</button>
+
+<button
+class="size"
+onclick="selectSize('L',this)"
+>
+L
+</button>
+
+<button
+class="size"
+onclick="selectSize('XL',this)"
+>
+XL
+</button>
+
 </div>
 
-<div class="label">Quantity</div>
+
+<div class="label">
+Quantity
+</div>
+
 
 <div class="quantity">
-<button class="qty-btn" onclick="changeQty(-1)">−</button>
+
+<button
+class="qty-btn"
+onclick="changeQty(-1)"
+>
+−
+</button>
+
 <span id="qty">1</span>
-<button class="qty-btn" onclick="changeQty(1)">+</button>
+
+<button
+class="qty-btn"
+onclick="changeQty(1)"
+>
++
+</button>
+
 </div>
 
-<button class="buy-btn" onclick="openOrder()">
+
+<button
+class="buy-btn"
+onclick="openOrder()"
+>
 🛍️ BUY NOW
 </button>
 
+
 <div class="action-links">
-<button class="action-btn" onclick="openReturn()">
+
+<button
+class="action-btn"
+onclick="openReturn()"
+>
 ↩️ Return / Exchange
 </button>
 
-<button class="action-btn" onclick="scrollToReviews()">
-⭐ Customer Reviews
+<button
+class="action-btn"
+onclick="scrollToReviews()"
+>
+⭐ Reviews
 </button>
+
 </div>
+
 
 <div class="delivery">
 Cash on Delivery • Estimated delivery 3–10 days
 </div>
 
 </div>
+
 </div>
+
 </main>
 
 
+
+<!-- WHY REDLEX -->
+
 <section>
 
-<h2 class="section-title">Why Choose REDLEX?</h2>
+<h2 class="section-title">
+Why Choose REDLEX?
+</h2>
 
 <div class="features">
 
 <div class="feature">
 <h3>Premium Look</h3>
-<p>Clean and stylish design made for everyday fashion.</p>
+<p>
+Clean and stylish design made for everyday fashion.
+</p>
 </div>
 
 <div class="feature">
 <h3>Easy COD</h3>
-<p>Place your order easily with Cash on Delivery.</p>
+<p>
+Place your order easily with Cash on Delivery.
+</p>
 </div>
 
 <div class="feature">
 <h3>Fast Delivery</h3>
-<p>Your order is expected to arrive within 3–10 days.</p>
+<p>
+Your order is expected to arrive within 3–10 days.
+</p>
 </div>
 
 </div>
+
 </section>
 
+
+
+<!-- REVIEWS -->
 
 <section id="reviews">
 
-<h2 class="section-title">Customer Reviews</h2>
+<h2 class="section-title">
+Customer Reviews
+</h2>
+
+
+<div class="rating-summary">
+
+<div class="demo-note">
+DEMO / TEST REVIEWS
+</div>
+
+<div class="rating-number">
+4.0
+</div>
+
+<div class="rating-stars">
+★★★★☆
+</div>
+
+<p>
+Demo reviews for website testing
+</p>
+
+</div>
+
 
 <div class="reviews">
 
-<!-- Yahan sirf genuine customer reviews add karna -->
 
 <div class="review">
-<div class="stars">★★★★★</div>
-<div class="review-name">Verified Customer</div>
-<div class="review-text">
-“Customer review will appear here.”
-</div>
-</div>
-
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★★</div>
+<div class="review-name">Rahul Sharma</div>
+<div class="review-text">Nice looking product and clean design.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
 </div>
 
-<div class="review-note">
-Reviews are shown from genuine customer feedback.
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★☆</div>
+<div class="review-name">Aman Verma</div>
+<div class="review-text">The polo style looks very premium.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★★</div>
+<div class="review-name">Rohit Patel</div>
+<div class="review-text">Good design and attractive colour combination.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★☆</div>
+<div class="review-name">Arjun Singh</div>
+<div class="review-text">Looks stylish for everyday wear.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★★</div>
+<div class="review-name">Kunal Mehta</div>
+<div class="review-text">Simple and premium looking product.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★☆</div>
+<div class="review-name">Aditya Gupta</div>
+<div class="review-text">Nice style and good overall appearance.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★★</div>
+<div class="review-name">Yash Thakur</div>
+<div class="review-text">Very attractive polo shirt design.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★☆</div>
+<div class="review-name">Vivek Joshi</div>
+<div class="review-text">Looks comfortable and fashionable.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★★</div>
+<div class="review-name">Saurabh Mishra</div>
+<div class="review-text">Premium style at an attractive price.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★☆</div>
+<div class="review-name">Rohan Shah</div>
+<div class="review-text">The product presentation looks excellent.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★★</div>
+<div class="review-name">Nikhil Jain</div>
+<div class="review-text">Smart and clean polo design.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★☆</div>
+<div class="review-name">Akash Yadav</div>
+<div class="review-text">Good looking everyday fashion option.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★★</div>
+<div class="review-name">Harsh Agarwal</div>
+<div class="review-text">The overall product look is impressive.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★☆</div>
+<div class="review-name">Manish Kumar</div>
+<div class="review-text">Nice premium appearance and styling.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★★</div>
+<div class="review-name">Deepak Soni</div>
+<div class="review-text">Looks classy and easy to style.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★☆</div>
+<div class="review-name">Varun Kapoor</div>
+<div class="review-text">Good choice for a casual outfit.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★★</div>
+<div class="review-name">Mohit Malhotra</div>
+<div class="review-text">Very clean and attractive product design.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★☆</div>
+<div class="review-name">Ankit Rajput</div>
+<div class="review-text">The polo looks stylish and premium.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★★</div>
+<div class="review-name">Abhishek Tiwari</div>
+<div class="review-text">Nice overall presentation and fashion look.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
+<div class="review">
+<div class="demo-note">DEMO</div>
+<div class="review-stars">★★★★☆</div>
+<div class="review-name">Pranav Desai</div>
+<div class="review-text">Simple, smart and premium-looking style.</div>
+<div class="review-label">TEST REVIEW — NOT A REAL CUSTOMER REVIEW</div>
+</div>
+
+
 </div>
 
 </section>
+
 
 
 <footer>
 © 2026 REDLEX. All Rights Reserved.
 </footer>
+
 
 
 <!-- ORDER MODAL -->
@@ -665,18 +1045,28 @@ Reviews are shown from genuine customer feedback.
 
 <div id="orderFormArea">
 
-<h2>Complete Your Order</h2>
+<h2>
+Complete Your Order
+</h2>
 
 <p class="modal-sub">
-Enter your details and continue to WhatsApp.
+Enter your details. Your order will be sent to REDLEX on WhatsApp.
 </p>
+
 
 <form id="orderForm">
 
 <label>Full Name *</label>
-<input id="name" required placeholder="Enter your name">
+
+<input
+id="name"
+required
+placeholder="Enter your name"
+>
+
 
 <label>Mobile Number *</label>
+
 <input
 id="phone"
 type="tel"
@@ -686,28 +1076,48 @@ required
 placeholder="10-digit mobile number"
 >
 
+
 <label>Full Address *</label>
+
 <textarea
 id="address"
 required
 placeholder="House no., street, area"
 ></textarea>
 
+
 <div class="two">
 
 <div>
+
 <label>City *</label>
-<input id="city" required placeholder="City">
+
+<input
+id="city"
+required
+placeholder="City"
+>
+
 </div>
+
 
 <div>
+
 <label>State *</label>
-<input id="state" required placeholder="State">
+
+<input
+id="state"
+required
+placeholder="State"
+>
+
 </div>
 
 </div>
+
 
 <label>Pincode *</label>
+
 <input
 id="pincode"
 type="text"
@@ -717,25 +1127,51 @@ required
 placeholder="6-digit pincode"
 >
 
+
 <label>Size *</label>
 
 <select id="orderSize" required>
-<option value="">Select size</option>
+
+<option value="">
+Select size
+</option>
+
 <option value="M">M</option>
 <option value="L">L</option>
 <option value="XL">XL</option>
+
 </select>
 
+
 <div class="order-summary">
-<b>Product:</b> Premium Printed Polo T-Shirt<br>
-<b>Price:</b> ₹499<br>
-<b>Quantity:</b> <span id="summaryQty">1</span><br>
-<b>Total:</b> ₹<span id="summaryTotal">499</span><br>
-<b>Payment:</b> Cash on Delivery
+
+<b>Product:</b>
+Premium Printed Polo T-Shirt
+<br>
+
+<b>Price:</b>
+₹499
+<br>
+
+<b>Quantity:</b>
+<span id="summaryQty">1</span>
+<br>
+
+<b>Total:</b>
+₹<span id="summaryTotal">499</span>
+<br>
+
+<b>Payment:</b>
+Cash on Delivery
+
 </div>
 
-<button class="submit-btn" type="submit">
-Confirm Order
+
+<button
+class="submit-btn"
+type="submit"
+>
+Confirm Order & Continue
 </button>
 
 </form>
@@ -743,33 +1179,47 @@ Confirm Order
 </div>
 
 
+
 <div class="success" id="successArea">
 
-<div class="success-icon">✓</div>
+<div class="success-icon">
+✓
+</div>
 
-<h2>Congratulations! 🎉</h2>
+<h2>
+Congratulations! 🎉
+</h2>
 
-<p>Your order details are ready.</p>
+<p>
+Your order details are ready.
+</p>
 
 <div class="order-id">
-Order ID: <span id="orderId"></span>
+Order ID:
+<span id="orderId"></span>
 </div>
 
 <p>
-Delivery: <b>3–10 days</b><br>
+Delivery: <b>3–10 days</b>
+<br>
 Payment: <b>Cash on Delivery</b>
 </p>
 
 <br>
 
-<button class="submit-btn" onclick="sendWhatsApp()">
-📱 Continue to WhatsApp
+<button
+class="submit-btn"
+onclick="sendWhatsApp()"
+>
+📱 Send Order on WhatsApp
 </button>
 
 </div>
 
 </div>
+
 </div>
+
 
 
 <!-- RETURN MODAL -->
@@ -782,34 +1232,42 @@ Payment: <b>Cash on Delivery</b>
 
 <div id="returnFormArea">
 
-<h2>Return / Exchange</h2>
+<h2>
+Return / Exchange
+</h2>
 
 <p class="modal-sub">
-Submit your return or exchange request.
+Return or exchange request for an existing order.
 </p>
 
 <div class="return-info">
-Return/exchange requests are subject to REDLEX's applicable return policy.
-Please provide your order details correctly.
+Return / Exchange is available after an order has been placed.
+Please enter your order details correctly.
 </div>
+
 
 <form id="returnForm">
 
 <label>Order ID *</label>
+
 <input
 id="returnOrderId"
 required
-placeholder="Example: RED2609011234"
+placeholder="Example: RED2609031234"
 >
 
+
 <label>Full Name *</label>
+
 <input
 id="returnName"
 required
 placeholder="Enter your name"
 >
 
+
 <label>Mobile Number *</label>
+
 <input
 id="returnPhone"
 type="tel"
@@ -819,13 +1277,25 @@ required
 placeholder="10-digit mobile number"
 >
 
+
 <label>Request Type *</label>
 
 <select id="returnType" required>
-<option value="">Select</option>
-<option value="Return">Return</option>
-<option value="Exchange">Exchange</option>
+
+<option value="">
+Select
+</option>
+
+<option value="Return">
+Return
+</option>
+
+<option value="Exchange">
+Exchange
+</option>
+
 </select>
+
 
 <label>Reason *</label>
 
@@ -835,7 +1305,11 @@ required
 placeholder="Tell us the reason"
 ></textarea>
 
-<button class="submit-btn" type="submit">
+
+<button
+class="submit-btn"
+type="submit"
+>
 Submit Request
 </button>
 
@@ -846,22 +1320,33 @@ Submit Request
 
 <div class="success" id="returnSuccess">
 
-<div class="success-icon">✓</div>
+<div class="success-icon">
+✓
+</div>
 
-<h2>Request Ready</h2>
+<h2>
+Request Ready
+</h2>
 
-<p>Your request details are ready to send.</p>
+<p>
+Your request details are ready to send.
+</p>
 
 <br>
 
-<button class="submit-btn" onclick="sendReturnWhatsApp()">
+<button
+class="submit-btn"
+onclick="sendReturnWhatsApp()"
+>
 📱 Send Request on WhatsApp
 </button>
 
 </div>
 
 </div>
+
 </div>
+
 
 
 <script>
@@ -884,6 +1369,7 @@ x.classList.remove("active");
 });
 
 img.classList.add("active");
+
 }
 
 
@@ -901,6 +1387,7 @@ x.classList.remove("selected");
 button.classList.add("selected");
 
 document.getElementById("orderSize").value = size;
+
 }
 
 
@@ -910,18 +1397,24 @@ function changeQty(amount){
 
 quantity += amount;
 
-if(quantity < 1) quantity = 1;
-if(quantity > 10) quantity = 10;
+if(quantity < 1){
+quantity = 1;
+}
+
+if(quantity > 10){
+quantity = 10;
+}
 
 document.getElementById("qty").textContent = quantity;
 
 document.getElementById("summaryQty").textContent = quantity;
 
 document.getElementById("summaryTotal").textContent = 499 * quantity;
+
 }
 
 
-/* ORDER OPEN */
+/* OPEN ORDER */
 
 function openOrder(){
 
@@ -930,6 +1423,7 @@ if(!selectedSize){
 alert("Please select your size: M, L or XL.");
 
 return;
+
 }
 
 document.getElementById("orderSize").value = selectedSize;
@@ -937,16 +1431,18 @@ document.getElementById("orderSize").value = selectedSize;
 document.getElementById("orderModal").style.display = "block";
 
 document.body.style.overflow = "hidden";
+
 }
 
 
-/* ORDER CLOSE */
+/* CLOSE ORDER */
 
 function closeOrder(){
 
 document.getElementById("orderModal").style.display = "none";
 
 document.body.style.overflow = "auto";
+
 }
 
 
@@ -965,16 +1461,17 @@ const random =
 Math.floor(1000 + Math.random() * 9000);
 
 return "RED" + date + random;
+
 }
 
 
-/* ORDER FORM */
+/* ORDER SUBMIT */
 
-document.getElementById("orderForm").addEventListener(
-"submit",
-function(e){
+document.getElementById("orderForm")
+.addEventListener("submit",function(e){
 
 e.preventDefault();
+
 
 const name =
 document.getElementById("name").value.trim();
@@ -998,19 +1495,23 @@ const size =
 document.getElementById("orderSize").value;
 
 
-if(phone.length !== 10 || !/^[0-9]+$/.test(phone)){
+if(phone.length !== 10 ||
+!/^[0-9]+$/.test(phone)){
 
 alert("Please enter a valid 10-digit mobile number.");
 
 return;
+
 }
 
 
-if(pincode.length !== 6 || !/^[0-9]+$/.test(pincode)){
+if(pincode.length !== 6 ||
+!/^[0-9]+$/.test(pincode)){
 
 alert("Please enter a valid 6-digit pincode.");
 
 return;
+
 }
 
 
@@ -1019,6 +1520,7 @@ if(!size){
 alert("Please select a size.");
 
 return;
+
 }
 
 
@@ -1026,6 +1528,7 @@ const orderId = createOrderId();
 
 
 currentOrder = {
+
 orderId:orderId,
 name:name,
 phone:phone,
@@ -1036,26 +1539,64 @@ pincode:pincode,
 size:size,
 quantity:quantity,
 amount:499 * quantity
+
 };
 
 
-document.getElementById("orderId").textContent = orderId;
+document.getElementById("orderId")
+.textContent = orderId;
 
-document.getElementById("orderFormArea").style.display = "none";
 
-document.getElementById("successArea").style.display = "block";
+/*
+Save order date locally.
+This is only for this device/browser.
+*/
 
-}
+localStorage.setItem(
+"redlex_last_order",
+JSON.stringify({
+orderId:orderId,
+date:new Date().toISOString()
+})
 );
+
+
+/*
+Enable return only after order.
+*/
+
+localStorage.setItem(
+"redlex_order_placed",
+"yes"
+);
+
+
+/*
+OPEN WHATSAPP DIRECTLY
+*/
+
+sendWhatsApp();
+
+});
 
 
 /* WHATSAPP ORDER */
 
 function sendWhatsApp(){
 
-if(!currentOrder) return;
+if(!currentOrder){
+
+/*
+If currentOrder isn't available, don't continue.
+*/
+
+return;
+
+}
+
 
 const o = currentOrder;
+
 
 const message =
 `🛍️ *REDLEX NEW ORDER*
@@ -1083,7 +1624,10 @@ Quantity: ${o.quantity}
 
 Please confirm my REDLEX order.`;
 
-const whatsappNumber = "917869290591";
+
+const whatsappNumber =
+"917869290591";
+
 
 const whatsappURL =
 "https://wa.me/" +
@@ -1091,7 +1635,13 @@ whatsappNumber +
 "?text=" +
 encodeURIComponent(message);
 
+
+/*
+Try opening WhatsApp.
+*/
+
 window.location.href = whatsappURL;
+
 }
 
 
@@ -1099,9 +1649,26 @@ window.location.href = whatsappURL;
 
 function openReturn(){
 
-document.getElementById("returnModal").style.display = "block";
+const orderPlaced =
+localStorage.getItem("redlex_order_placed");
+
+
+if(orderPlaced !== "yes"){
+
+alert(
+"Return / Exchange is available only after placing an order."
+);
+
+return;
+
+}
+
+
+document.getElementById("returnModal")
+.style.display = "block";
 
 document.body.style.overflow = "hidden";
+
 }
 
 
@@ -1109,68 +1676,84 @@ document.body.style.overflow = "hidden";
 
 function closeReturn(){
 
-document.getElementById("returnModal").style.display = "none";
+document.getElementById("returnModal")
+.style.display = "none";
 
 document.body.style.overflow = "auto";
+
 }
 
 
 /* RETURN FORM */
 
-document.getElementById("returnForm").addEventListener(
-"submit",
-function(e){
+document.getElementById("returnForm")
+.addEventListener("submit",function(e){
 
 e.preventDefault();
 
+
 const orderId =
-document.getElementById("returnOrderId").value.trim();
+document.getElementById("returnOrderId")
+.value.trim();
 
 const name =
-document.getElementById("returnName").value.trim();
+document.getElementById("returnName")
+.value.trim();
 
 const phone =
-document.getElementById("returnPhone").value.trim();
+document.getElementById("returnPhone")
+.value.trim();
 
 const type =
-document.getElementById("returnType").value;
+document.getElementById("returnType")
+.value;
 
 const reason =
-document.getElementById("returnReason").value.trim();
+document.getElementById("returnReason")
+.value.trim();
 
 
-if(phone.length !== 10 || !/^[0-9]+$/.test(phone)){
+if(phone.length !== 10 ||
+!/^[0-9]+$/.test(phone)){
 
 alert("Please enter a valid 10-digit mobile number.");
 
 return;
+
 }
 
 
 currentReturn = {
+
 orderId:orderId,
 name:name,
 phone:phone,
 type:type,
 reason:reason
+
 };
 
 
-document.getElementById("returnFormArea").style.display = "none";
+document.getElementById("returnFormArea")
+.style.display = "none";
 
-document.getElementById("returnSuccess").style.display = "block";
+document.getElementById("returnSuccess")
+.style.display = "block";
 
-}
-);
+});
 
 
 /* RETURN WHATSAPP */
 
 function sendReturnWhatsApp(){
 
-if(!currentReturn) return;
+if(!currentReturn){
+return;
+}
+
 
 const r = currentReturn;
+
 
 const message =
 `↩️ *REDLEX RETURN / EXCHANGE REQUEST*
@@ -1187,7 +1770,10 @@ ${r.reason}
 
 Please review my request.`;
 
-const whatsappNumber = "917869290591";
+
+const whatsappNumber =
+"917869290591";
+
 
 const whatsappURL =
 "https://wa.me/" +
@@ -1195,11 +1781,13 @@ whatsappNumber +
 "?text=" +
 encodeURIComponent(message);
 
+
 window.location.href = whatsappURL;
+
 }
 
 
-/* REVIEWS */
+/* REVIEWS SCROLL */
 
 function scrollToReviews(){
 
@@ -1221,11 +1809,13 @@ document.getElementById("orderModal");
 const returnModal =
 document.getElementById("returnModal");
 
+
 if(e.target === orderModal){
 
 closeOrder();
 
 }
+
 
 if(e.target === returnModal){
 
