@@ -117,6 +117,7 @@ h1{
   align-items:center;
   gap:14px;
   margin:20px 0;
+  flex-wrap:wrap;
 }
 
 .price{
@@ -223,6 +224,23 @@ h1{
   color:#666;
 }
 
+.action-links{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:15px;
+}
+
+.action-btn{
+  padding:13px;
+  border-radius:11px;
+  border:1px solid #dcccae;
+  background:#fff;
+  color:#8d6a2c;
+  font-weight:bold;
+  cursor:pointer;
+}
+
 section{
   max-width:1100px;
   margin:20px auto 60px;
@@ -258,6 +276,42 @@ section{
   color:#777;
   font-size:14px;
   line-height:1.5;
+}
+
+.reviews{
+  display:grid;
+  gap:14px;
+}
+
+.review{
+  background:#fff;
+  border:1px solid #eee5d3;
+  border-radius:15px;
+  padding:18px;
+}
+
+.stars{
+  color:#c29a4d;
+  letter-spacing:2px;
+  margin-bottom:8px;
+}
+
+.review-name{
+  font-weight:bold;
+  margin-bottom:6px;
+}
+
+.review-text{
+  color:#666;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.review-note{
+  text-align:center;
+  color:#888;
+  font-size:12px;
+  margin-top:18px;
 }
 
 .modal{
@@ -348,6 +402,16 @@ form textarea{
   margin-top:10px;
 }
 
+.return-info{
+  background:#fbf6ea;
+  border-radius:12px;
+  padding:14px;
+  margin:15px 0;
+  color:#666;
+  font-size:13px;
+  line-height:1.6;
+}
+
 .success{
   display:none;
   text-align:center;
@@ -416,6 +480,10 @@ footer{
     grid-template-columns:1fr;
     gap:0;
   }
+
+  .action-links{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
@@ -434,37 +502,37 @@ footer{
 <div class="gallery">
 
 <img
-  id="mainImage"
-  class="main-image"
-  src="./file_00000000c58482078d28ede43bb0cffb.png"
-  alt="REDLEX Premium Polo T-Shirt"
+id="mainImage"
+class="main-image"
+src="./file_00000000c58482078d28ede43bb0cffb.png"
+alt="REDLEX Premium Polo T-Shirt"
 >
 
 <div class="thumbnails">
 
 <img
-  class="active"
-  src="./file_00000000c58482078d28ede43bb0cffb.png"
-  onclick="changeImage(this)"
-  alt="Front"
+class="active"
+src="./file_00000000c58482078d28ede43bb0cffb.png"
+onclick="changeImage(this)"
+alt="Front"
 >
 
 <img
-  src="./file_0000000084388211b06359360a1effe5.png"
-  onclick="changeImage(this)"
-  alt="Back"
+src="./file_0000000084388211b06359360a1effe5.png"
+onclick="changeImage(this)"
+alt="Back"
 >
 
 <img
-  src="./file_00000000d8608207ba913d1d8ef96594.png"
-  onclick="changeImage(this)"
-  alt="Side"
+src="./file_00000000d8608207ba913d1d8ef96594.png"
+onclick="changeImage(this)"
+alt="Side"
 >
 
 <img
-  src="./file_00000000a22c8207a780e8c914f8ff6d.png"
-  onclick="changeImage(this)"
-  alt="Details"
+src="./file_00000000a22c8207a780e8c914f8ff6d.png"
+onclick="changeImage(this)"
+alt="Details"
 >
 
 </div>
@@ -513,6 +581,16 @@ everyday look. Perfect for both casual and smart styling.
 🛍️ BUY NOW
 </button>
 
+<div class="action-links">
+<button class="action-btn" onclick="openReturn()">
+↩️ Return / Exchange
+</button>
+
+<button class="action-btn" onclick="scrollToReviews()">
+⭐ Customer Reviews
+</button>
+</div>
+
 <div class="delivery">
 Cash on Delivery • Estimated delivery 3–10 days
 </div>
@@ -520,6 +598,7 @@ Cash on Delivery • Estimated delivery 3–10 days
 </div>
 </div>
 </main>
+
 
 <section>
 
@@ -545,10 +624,38 @@ Cash on Delivery • Estimated delivery 3–10 days
 </div>
 </section>
 
+
+<section id="reviews">
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="reviews">
+
+<!-- Yahan sirf genuine customer reviews add karna -->
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<div class="review-name">Verified Customer</div>
+<div class="review-text">
+“Customer review will appear here.”
+</div>
+</div>
+
+</div>
+
+<div class="review-note">
+Reviews are shown from genuine customer feedback.
+</div>
+
+</section>
+
+
 <footer>
 © 2026 REDLEX. All Rights Reserved.
 </footer>
 
+
+<!-- ORDER MODAL -->
 
 <div class="modal" id="orderModal">
 
@@ -561,7 +668,7 @@ Cash on Delivery • Estimated delivery 3–10 days
 <h2>Complete Your Order</h2>
 
 <p class="modal-sub">
-Enter your details. Your order will be sent to REDLEX on WhatsApp.
+Enter your details and continue to WhatsApp.
 </p>
 
 <form id="orderForm">
@@ -632,6 +739,7 @@ Confirm Order
 </button>
 
 </form>
+
 </div>
 
 
@@ -655,7 +763,99 @@ Payment: <b>Cash on Delivery</b>
 <br>
 
 <button class="submit-btn" onclick="sendWhatsApp()">
-📱 Send Order on WhatsApp
+📱 Continue to WhatsApp
+</button>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- RETURN MODAL -->
+
+<div class="modal" id="returnModal">
+
+<div class="modal-box">
+
+<span class="close" onclick="closeReturn()">×</span>
+
+<div id="returnFormArea">
+
+<h2>Return / Exchange</h2>
+
+<p class="modal-sub">
+Submit your return or exchange request.
+</p>
+
+<div class="return-info">
+Return/exchange requests are subject to REDLEX's applicable return policy.
+Please provide your order details correctly.
+</div>
+
+<form id="returnForm">
+
+<label>Order ID *</label>
+<input
+id="returnOrderId"
+required
+placeholder="Example: RED2609011234"
+>
+
+<label>Full Name *</label>
+<input
+id="returnName"
+required
+placeholder="Enter your name"
+>
+
+<label>Mobile Number *</label>
+<input
+id="returnPhone"
+type="tel"
+inputmode="numeric"
+maxlength="10"
+required
+placeholder="10-digit mobile number"
+>
+
+<label>Request Type *</label>
+
+<select id="returnType" required>
+<option value="">Select</option>
+<option value="Return">Return</option>
+<option value="Exchange">Exchange</option>
+</select>
+
+<label>Reason *</label>
+
+<textarea
+id="returnReason"
+required
+placeholder="Tell us the reason"
+></textarea>
+
+<button class="submit-btn" type="submit">
+Submit Request
+</button>
+
+</form>
+
+</div>
+
+
+<div class="success" id="returnSuccess">
+
+<div class="success-icon">✓</div>
+
+<h2>Request Ready</h2>
+
+<p>Your request details are ready to send.</p>
+
+<br>
+
+<button class="submit-btn" onclick="sendReturnWhatsApp()">
+📱 Send Request on WhatsApp
 </button>
 
 </div>
@@ -669,9 +869,10 @@ Payment: <b>Cash on Delivery</b>
 let selectedSize = "";
 let quantity = 1;
 let currentOrder = null;
+let currentReturn = null;
 
 
-/* IMAGE GALLERY */
+/* IMAGE */
 
 function changeImage(img){
 
@@ -720,12 +921,14 @@ document.getElementById("summaryTotal").textContent = 499 * quantity;
 }
 
 
-/* OPEN ORDER */
+/* ORDER OPEN */
 
 function openOrder(){
 
 if(!selectedSize){
+
 alert("Please select your size: M, L or XL.");
+
 return;
 }
 
@@ -737,7 +940,7 @@ document.body.style.overflow = "hidden";
 }
 
 
-/* CLOSE ORDER */
+/* ORDER CLOSE */
 
 function closeOrder(){
 
@@ -765,7 +968,7 @@ return "RED" + date + random;
 }
 
 
-/* FORM */
+/* ORDER FORM */
 
 document.getElementById("orderForm").addEventListener(
 "submit",
@@ -846,7 +1049,7 @@ document.getElementById("successArea").style.display = "block";
 );
 
 
-/* WHATSAPP */
+/* WHATSAPP ORDER */
 
 function sendWhatsApp(){
 
@@ -880,13 +1083,7 @@ Quantity: ${o.quantity}
 
 Please confirm my REDLEX order.`;
 
-
-/*
-  Customer ke phone me WhatsApp khulega
-  aur message REDLEX ke number par ready hoga.
-*/
-
-const whatsappNumber = "918602720758";
+const whatsappNumber = "917869290591";
 
 const whatsappURL =
 "https://wa.me/" +
@@ -898,16 +1095,141 @@ window.location.href = whatsappURL;
 }
 
 
+/* RETURN OPEN */
+
+function openReturn(){
+
+document.getElementById("returnModal").style.display = "block";
+
+document.body.style.overflow = "hidden";
+}
+
+
+/* RETURN CLOSE */
+
+function closeReturn(){
+
+document.getElementById("returnModal").style.display = "none";
+
+document.body.style.overflow = "auto";
+}
+
+
+/* RETURN FORM */
+
+document.getElementById("returnForm").addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+const orderId =
+document.getElementById("returnOrderId").value.trim();
+
+const name =
+document.getElementById("returnName").value.trim();
+
+const phone =
+document.getElementById("returnPhone").value.trim();
+
+const type =
+document.getElementById("returnType").value;
+
+const reason =
+document.getElementById("returnReason").value.trim();
+
+
+if(phone.length !== 10 || !/^[0-9]+$/.test(phone)){
+
+alert("Please enter a valid 10-digit mobile number.");
+
+return;
+}
+
+
+currentReturn = {
+orderId:orderId,
+name:name,
+phone:phone,
+type:type,
+reason:reason
+};
+
+
+document.getElementById("returnFormArea").style.display = "none";
+
+document.getElementById("returnSuccess").style.display = "block";
+
+}
+);
+
+
+/* RETURN WHATSAPP */
+
+function sendReturnWhatsApp(){
+
+if(!currentReturn) return;
+
+const r = currentReturn;
+
+const message =
+`↩️ *REDLEX RETURN / EXCHANGE REQUEST*
+
+Order ID: ${r.orderId}
+
+👤 Customer Name: ${r.name}
+📱 Mobile: ${r.phone}
+
+📦 Request: ${r.type}
+
+📝 Reason:
+${r.reason}
+
+Please review my request.`;
+
+const whatsappNumber = "917869290591";
+
+const whatsappURL =
+"https://wa.me/" +
+whatsappNumber +
+"?text=" +
+encodeURIComponent(message);
+
+window.location.href = whatsappURL;
+}
+
+
+/* REVIEWS */
+
+function scrollToReviews(){
+
+document.getElementById("reviews")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
 /* OUTSIDE CLICK */
 
 window.addEventListener("click",function(e){
 
-const modal =
+const orderModal =
 document.getElementById("orderModal");
 
-if(e.target === modal){
+const returnModal =
+document.getElementById("returnModal");
+
+if(e.target === orderModal){
 
 closeOrder();
+
+}
+
+if(e.target === returnModal){
+
+closeReturn();
 
 }
 
