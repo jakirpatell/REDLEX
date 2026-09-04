@@ -8,15 +8,11 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 
-html{scroll-behavior:smooth}
-
 body{
   font-family:Arial,Helvetica,sans-serif;
   background:#fffdf8;
   color:#252525;
 }
-
-button,input,select,textarea{font:inherit}
 
 header{
   background:#fff;
@@ -204,7 +200,9 @@ h1{
   cursor:pointer;
 }
 
-#qty{font-weight:bold}
+#qty{
+  font-weight:bold;
+}
 
 .buy-btn{
   width:100%;
@@ -219,7 +217,9 @@ h1{
   box-shadow:0 8px 20px rgba(170,130,55,.18);
 }
 
-.buy-btn:hover{opacity:.92}
+.buy-btn:hover{
+  opacity:.92;
+}
 
 .delivery{
   margin-top:15px;
@@ -243,11 +243,6 @@ h1{
   color:#8d6a2c;
   font-weight:bold;
   cursor:pointer;
-}
-
-.action-btn:disabled{
-  opacity:.45;
-  cursor:not-allowed;
 }
 
 section{
@@ -288,111 +283,72 @@ section{
 }
 
 
-/* ================= REVIEW BOARD ================= */
+/* =========================
+   CUSTOMER REVIEWS
+========================= */
 
-.review-board{
-  max-width:1200px;
-  margin:30px auto 70px;
-  padding:0 5%;
-}
-
-.review-heading{
-  text-align:center;
-  margin-bottom:30px;
-}
-
-.review-heading .small-title{
-  color:#b28a3e;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:2px;
-  margin-bottom:8px;
-}
-
-.review-heading h2{
-  font-size:32px;
-  margin-bottom:8px;
-}
-
-.review-heading p{
-  color:#777;
-  font-size:14px;
-}
-
-.review-grid{
+.reviews{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
 }
 
-.review-card{
+.review{
   background:#fff;
   border:1px solid #eee5d3;
   border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 7px 22px rgba(100,80,40,.07);
-  transition:.25s ease;
-}
-
-.review-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 28px rgba(100,80,40,.12);
-}
-
-.review-photo-wrap{
-  width:100%;
-  height:270px;
-  background:#f7f4ed;
+  padding:16px;
+  box-shadow:0 5px 18px rgba(170,130,55,.08);
   overflow:hidden;
 }
 
 .review-photo{
   width:100%;
-  height:100%;
-  display:block;
+  height:280px;
   object-fit:cover;
+  border-radius:14px;
+  display:block;
+  margin-bottom:14px;
+  background:#faf7f0;
 }
 
-.review-body{
-  padding:17px;
-}
-
-.review-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:8px;
-}
-
-.review-name{
-  font-size:15px;
-  font-weight:800;
-  color:#252525;
-}
-
-.review-stars{
+.stars{
   color:#c29a4d;
-  font-size:16px;
-  letter-spacing:1px;
-  white-space:nowrap;
+  font-size:19px;
+  letter-spacing:2px;
+  margin-bottom:7px;
 }
 
 .review-rating{
-  color:#a47b32;
-  font-size:12px;
-  font-weight:800;
-  margin-top:5px;
+  font-size:13px;
+  color:#8d6a2c;
+  font-weight:bold;
+  margin-bottom:7px;
+}
+
+.review-name{
+  font-weight:bold;
+  font-size:16px;
+  margin-bottom:7px;
 }
 
 .review-text{
   color:#666;
-  font-size:13px;
-  line-height:1.6;
-  margin-top:9px;
+  font-size:14px;
+  line-height:1.55;
+}
+
+.review-note{
+  text-align:center;
+  color:#888;
+  font-size:12px;
+  margin-top:20px;
 }
 
 
-/* ================= MODAL ================= */
+/* =========================
+   MODALS
+========================= */
 
 .modal{
   display:none;
@@ -422,7 +378,9 @@ section{
   color:#777;
 }
 
-.modal-box h2{margin-bottom:6px}
+.modal-box h2{
+  margin-bottom:6px;
+}
 
 .modal-sub{
   color:#777;
@@ -533,7 +491,11 @@ footer{
 }
 
 
-@media(max-width:900px){
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
 
   .product{
     grid-template-columns:1fr;
@@ -544,19 +506,27 @@ footer{
     position:static;
   }
 
-  .review-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
   h1{
-    font-size:34px;
+    font-size:32px;
   }
 
   .features{
     grid-template-columns:1fr;
   }
+
 }
 
+@media(max-width:600px){
+
+  .reviews{
+    grid-template-columns:1fr;
+  }
+
+  .review-photo{
+    height:320px;
+  }
+
+}
 
 @media(max-width:500px){
 
@@ -589,19 +559,11 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .review-grid{
-    grid-template-columns:1fr;
-  }
-
-  .review-photo-wrap{
-    height:300px;
-  }
 }
 </style>
 </head>
 
 <body>
-
 
 <header>
   <div class="logo">REDLEX</div>
@@ -612,6 +574,11 @@ footer{
 <main class="hero">
 
 <div class="product">
+
+
+<!-- =========================
+     PRODUCT GALLERY
+========================= -->
 
 <div class="gallery">
 
@@ -650,8 +617,13 @@ alt="Details"
 >
 
 </div>
+
 </div>
 
+
+<!-- =========================
+     PRODUCT DETAILS
+========================= -->
 
 <div>
 
@@ -664,11 +636,17 @@ Stylish premium polo T-shirt designed for a clean and comfortable
 everyday look. Perfect for both casual and smart styling.
 </p>
 
+
 <div class="price-box">
+
 <span class="price">₹499</span>
+
 <span class="mrp">₹999</span>
+
 <span class="save">SAVE ₹500</span>
+
 </div>
+
 
 <div class="info">
 
@@ -693,43 +671,59 @@ Quality
 </div>
 
 
-<div class="label">Select Size</div>
+<div class="label">
+Select Size
+</div>
 
 <div class="sizes">
 
-<button class="size" onclick="selectSize('M',this)">
+<button
+class="size"
+onclick="selectSize('M',this)">
 M
 </button>
 
-<button class="size" onclick="selectSize('L',this)">
+<button
+class="size"
+onclick="selectSize('L',this)">
 L
 </button>
 
-<button class="size" onclick="selectSize('XL',this)">
+<button
+class="size"
+onclick="selectSize('XL',this)">
 XL
 </button>
 
 </div>
 
 
-<div class="label">Quantity</div>
+<div class="label">
+Quantity
+</div>
 
 <div class="quantity">
 
-<button class="qty-btn" onclick="changeQty(-1)">
+<button
+class="qty-btn"
+onclick="changeQty(-1)">
 −
 </button>
 
 <span id="qty">1</span>
 
-<button class="qty-btn" onclick="changeQty(1)">
+<button
+class="qty-btn"
+onclick="changeQty(1)">
 +
 </button>
 
 </div>
 
 
-<button class="buy-btn" onclick="openOrder()">
+<button
+class="buy-btn"
+onclick="openOrder()">
 🛍️ BUY NOW
 </button>
 
@@ -737,18 +731,14 @@ XL
 <div class="action-links">
 
 <button
-id="returnButton"
 class="action-btn"
-onclick="openReturn()"
-disabled
->
+onclick="openReturn()">
 ↩️ Return / Exchange
 </button>
 
 <button
 class="action-btn"
-onclick="scrollToReviews()"
->
+onclick="scrollToReviews()">
 ⭐ Customer Reviews
 </button>
 
@@ -760,10 +750,16 @@ Cash on Delivery • Estimated delivery 3–10 days
 </div>
 
 </div>
+
 </div>
 
 </main>
 
+
+
+<!-- =========================
+     WHY CHOOSE REDLEX
+========================= -->
 
 <section>
 
@@ -774,24 +770,41 @@ Why Choose REDLEX?
 <div class="features">
 
 <div class="feature">
-<h3>Premium Look</h3>
+
+<h3>
+Premium Look
+</h3>
+
 <p>
 Clean and stylish design made for everyday fashion.
 </p>
+
 </div>
 
+
 <div class="feature">
-<h3>Easy COD</h3>
+
+<h3>
+Easy COD
+</h3>
+
 <p>
 Place your order easily with Cash on Delivery.
 </p>
+
 </div>
 
+
 <div class="feature">
-<h3>Fast Delivery</h3>
+
+<h3>
+Fast Delivery
+</h3>
+
 <p>
 Your order is expected to arrive within 3–10 days.
 </p>
+
 </div>
 
 </div>
@@ -800,320 +813,243 @@ Your order is expected to arrive within 3–10 days.
 
 
 
-<!-- ================= REVIEW BOARD ================= -->
+<!-- =========================
+     CUSTOMER REVIEWS
+========================= -->
 
-<section class="review-board" id="reviews">
+<section id="reviews">
 
-<div class="review-heading">
-
-<div class="small-title">
-CUSTOMER FEEDBACK
-</div>
-
-<h2>Customer Reviews</h2>
-
-<p>
-See what customers are saying about REDLEX.
-</p>
-
-</div>
+<h2 class="section-title">
+Customer Reviews
+</h2>
 
 
-<div class="review-grid">
+<div class="reviews">
 
 
 <!-- REVIEW 1 -->
 
-<div class="review-card">
+<div class="review">
 
-<div class="review-photo-wrap">
 <img
 class="review-photo"
 src="./review_6368792774_6402177868_65a0d1b947c76.jpeg.jpg"
-alt="Customer review"
-loading="lazy"
+alt="Customer review photo"
 >
-</div>
 
-<div class="review-body">
-
-<div class="review-top">
-<span class="review-name">Rahul Sharma</span>
-<span class="review-stars">★★★★★</span>
+<div class="stars">
+★★★★★
 </div>
 
 <div class="review-rating">
 5.0 / 5
 </div>
 
-<p class="review-text">
-Product ka look aur quality dono achhe lage.
-</p>
+<div class="review-name">
+Customer 1
+</div>
+
+<div class="review-text">
+“Product ka look premium hai aur overall quality achhi lagi.”
+</div>
 
 </div>
-</div>
+
 
 
 <!-- REVIEW 2 -->
 
-<div class="review-card">
+<div class="review">
 
-<div class="review-photo-wrap">
 <img
 class="review-photo"
-src="./review_7886974344_7926290795_10b339878ad38.jpeg.jpg"
-alt="Customer review"
-loading="lazy"
+src="./review_8597593370_8640228839_3e3c1e586f4e0.jpeg.jpg"
+alt="Customer review photo"
 >
-</div>
 
-<div class="review-body">
-
-<div class="review-top">
-<span class="review-name">Priya Verma</span>
-<span class="review-stars">★★★★½</span>
+<div class="stars">
+★★★★½
 </div>
 
 <div class="review-rating">
 4.5 / 5
 </div>
 
-<p class="review-text">
-Design stylish hai aur fitting bhi achhi lagi.
-</p>
+<div class="review-name">
+Customer 2
+</div>
+
+<div class="review-text">
+“Fitting comfortable hai aur design bhi stylish hai.”
+</div>
 
 </div>
-</div>
+
 
 
 <!-- REVIEW 3 -->
 
-<div class="review-card">
+<div class="review">
 
-<div class="review-photo-wrap">
 <img
 class="review-photo"
-src="./review_6403311537_6436851587_c3110d6fb887.jpeg.jpg"
-alt="Customer review"
-loading="lazy"
+src="./review_6403311537_6436851587_c3110d6b8887.jpeg.jpg"
+alt="Customer review photo"
 >
-</div>
 
-<div class="review-body">
-
-<div class="review-top">
-<span class="review-name">Amit Patel</span>
-<span class="review-stars">★★★★</span>
+<div class="stars">
+★★★★☆
 </div>
 
 <div class="review-rating">
 4.0 / 5
 </div>
 
-<p class="review-text">
-Overall experience achha raha aur product pasand aaya.
-</p>
+<div class="review-name">
+Customer 3
+</div>
+
+<div class="review-text">
+“Daily wear ke liye achha product laga. Look kaafi clean hai.”
+</div>
 
 </div>
-</div>
+
 
 
 <!-- REVIEW 4 -->
 
-<div class="review-card">
+<div class="review">
 
-<div class="review-photo-wrap">
 <img
 class="review-photo"
-src="./review_8179078694_8219545263_27be6ffa1bcc7.jpeg.jpg"
-alt="Customer review"
-loading="lazy"
+src="./review_7886974344_7926290795_10b339878d38.jpeg.jpg"
+alt="Customer review photo"
 >
-</div>
 
-<div class="review-body">
-
-<div class="review-top">
-<span class="review-name">Neha Singh</span>
-<span class="review-stars">★★★½</span>
+<div class="stars">
+★★★½☆
 </div>
 
 <div class="review-rating">
 3.5 / 5
 </div>
 
-<p class="review-text">
-Design achha hai aur overall product decent laga.
-</p>
+<div class="review-name">
+Customer 4
+</div>
+
+<div class="review-text">
+“Overall product decent hai aur material comfortable hai.”
+</div>
 
 </div>
-</div>
+
 
 
 <!-- REVIEW 5 -->
 
-<div class="review-card">
+<div class="review">
 
-<div class="review-photo-wrap">
 <img
 class="review-photo"
-src="./review_5735736659_5766090586_6d74db69dd1aa.jpeg.jpg"
-alt="Customer review"
-loading="lazy"
+src="./review_8179078694_8219545263_27be6ffa1bcc7.jpeg.jpg"
+alt="Customer review photo"
 >
-</div>
 
-<div class="review-body">
-
-<div class="review-top">
-<span class="review-name">Rohit Kumar</span>
-<span class="review-stars">★★★</span>
+<div class="stars">
+★★★☆☆
 </div>
 
 <div class="review-rating">
 3.0 / 5
 </div>
 
-<p class="review-text">
-Product theek laga. Design attractive hai.
-</p>
+<div class="review-name">
+Customer 5
+</div>
+
+<div class="review-text">
+“Product theek hai. Overall experience satisfactory raha.”
+</div>
 
 </div>
-</div>
+
 
 
 <!-- REVIEW 6 -->
 
-<div class="review-card">
+<div class="review">
 
-<div class="review-photo-wrap">
 <img
 class="review-photo"
-src="./review_8597593370_8640228839_3e3ce1586f4e0.jpeg.jpg"
-alt="Customer review"
-loading="lazy"
+src="./review_5785916701_5816154506_67b36b4e2258d.jpeg.jpg"
+alt="Customer review photo"
 >
-</div>
 
-<div class="review-body">
-
-<div class="review-top">
-<span class="review-name">Anjali Gupta</span>
-<span class="review-stars">★★★★★</span>
-</div>
-
-<div class="review-rating">
-5.0 / 5
-</div>
-
-<p class="review-text">
-Quality aur look dono bahut pasand aaye.
-</p>
-
-</div>
-</div>
-
-
-<!-- REVIEW 7 -->
-
-<div class="review-card">
-
-<div class="review-photo-wrap">
-<img
-class="review-photo"
-src="./review_6368792774_6402177868_37ef47ec4dbad.jpeg.jpg"
-alt="Customer review"
-loading="lazy"
->
-</div>
-
-<div class="review-body">
-
-<div class="review-top">
-<span class="review-name">Vikas Yadav</span>
-<span class="review-stars">★★★★½</span>
+<div class="stars">
+★★★★½
 </div>
 
 <div class="review-rating">
 4.5 / 5
 </div>
 
-<p class="review-text">
-Premium look hai aur daily wear ke liye achha hai.
-</p>
-
-</div>
+<div class="review-name">
+Customer 6
 </div>
 
+<div class="review-text">
+“Look premium hai aur finishing achhi lagi.”
+</div>
 
-<!-- REVIEW 8 -->
+</div>
 
-<div class="review-card">
 
-<div class="review-photo-wrap">
+
+<!-- REVIEW 7 -->
+
+<div class="review">
+
 <img
 class="review-photo"
-src="./review_5785916701_5816514506_67b36b4e2258d.jpeg.jpg"
-alt="Customer review"
-loading="lazy"
+src="./review_5735736659_5766090586_6d74db69dd1aa.jpeg.jpg"
+alt="Customer review photo"
 >
-</div>
 
-<div class="review-body">
-
-<div class="review-top">
-<span class="review-name">Sneha Joshi</span>
-<span class="review-stars">★★★★</span>
+<div class="stars">
+★★★★☆
 </div>
 
 <div class="review-rating">
 4.0 / 5
 </div>
 
-<p class="review-text">
-Fitting achhi hai aur product ka design smart hai.
-</p>
-
-</div>
+<div class="review-name">
+Customer 7
 </div>
 
-
-<!-- REVIEW 9 -->
-
-<div class="review-card">
-
-<div class="review-photo-wrap">
-<img
-class="review-photo"
-src="./review_5735736659_5766090586_c2a3844052a9b.jpeg.jpg"
-alt="Customer review"
-loading="lazy"
->
+<div class="review-text">
+“Design pasand aaya aur product overall achha hai.”
 </div>
 
-<div class="review-body">
-
-<div class="review-top">
-<span class="review-name">Sandeep Mehta</span>
-<span class="review-stars">★★★½</span>
-</div>
-
-<div class="review-rating">
-3.5 / 5
-</div>
-
-<p class="review-text">
-Overall product achha hai aur design attractive hai.
-</p>
-
-</div>
 </div>
 
 
 </div>
+
+
+<div class="review-note">
+Customer feedback
+</div>
+
 </section>
 
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 © 2026 REDLEX. All Rights Reserved.
@@ -1121,25 +1057,40 @@ Overall product achha hai aur design attractive hai.
 
 
 
-<!-- ================= ORDER MODAL ================= -->
+<!-- =========================
+     ORDER MODAL
+========================= -->
 
-<div class="modal" id="orderModal">
+<div
+class="modal"
+id="orderModal">
 
 <div class="modal-box">
 
-<span class="close" onclick="closeOrder()">×</span>
+<span
+class="close"
+onclick="closeOrder()">
+×
+</span>
+
 
 <div id="orderFormArea">
 
-<h2>Complete Your Order</h2>
+<h2>
+Complete Your Order
+</h2>
 
 <p class="modal-sub">
 Enter your details and continue to WhatsApp.
 </p>
 
+
 <form id="orderForm">
 
-<label>Full Name *</label>
+
+<label>
+Full Name *
+</label>
 
 <input
 id="name"
@@ -1148,7 +1099,9 @@ placeholder="Enter your name"
 >
 
 
-<label>Mobile Number *</label>
+<label>
+Mobile Number *
+</label>
 
 <input
 id="phone"
@@ -1160,7 +1113,9 @@ placeholder="10-digit mobile number"
 >
 
 
-<label>Full Address *</label>
+<label>
+Full Address *
+</label>
 
 <textarea
 id="address"
@@ -1173,7 +1128,9 @@ placeholder="House no., street, area"
 
 <div>
 
-<label>City *</label>
+<label>
+City *
+</label>
 
 <input
 id="city"
@@ -1183,9 +1140,12 @@ placeholder="City"
 
 </div>
 
+
 <div>
 
-<label>State *</label>
+<label>
+State *
+</label>
 
 <input
 id="state"
@@ -1198,7 +1158,9 @@ placeholder="State"
 </div>
 
 
-<label>Pincode *</label>
+<label>
+Pincode *
+</label>
 
 <input
 id="pincode"
@@ -1210,9 +1172,13 @@ placeholder="6-digit pincode"
 >
 
 
-<label>Size *</label>
+<label>
+Size *
+</label>
 
-<select id="orderSize" required>
+<select
+id="orderSize"
+required>
 
 <option value="">
 Select size
@@ -1259,8 +1225,7 @@ Cash on Delivery
 
 <button
 class="submit-btn"
-type="submit"
->
+type="submit">
 Confirm Order
 </button>
 
@@ -1269,7 +1234,10 @@ Confirm Order
 </div>
 
 
-<div class="success" id="successArea">
+
+<div
+class="success"
+id="successArea">
 
 <div class="success-icon">
 ✓
@@ -1283,42 +1251,62 @@ Congratulations! 🎉
 Your order details are ready.
 </p>
 
+
 <div class="order-id">
+
 Order ID:
 <span id="orderId"></span>
+
 </div>
 
+
 <p>
+
 Delivery:
 <b>3–10 days</b>
+
 <br>
+
 Payment:
 <b>Cash on Delivery</b>
+
 </p>
 
 <br>
 
+
 <button
 class="submit-btn"
-onclick="sendWhatsApp()"
->
+onclick="sendWhatsApp()">
+
 📱 Continue to WhatsApp
+
 </button>
 
 </div>
 
 </div>
+
 </div>
 
 
 
-<!-- ================= RETURN MODAL ================= -->
+<!-- =========================
+     RETURN MODAL
+========================= -->
 
-<div class="modal" id="returnModal">
+<div
+class="modal"
+id="returnModal">
 
 <div class="modal-box">
 
-<span class="close" onclick="closeReturn()">×</span>
+<span
+class="close"
+onclick="closeReturn()">
+×
+</span>
+
 
 <div id="returnFormArea">
 
@@ -1330,13 +1318,17 @@ Return / Exchange
 Submit your return or exchange request.
 </p>
 
+
 <div class="return-info">
+
 Return/exchange requests are subject to REDLEX's applicable return policy.
 Please provide your order details correctly.
+
 </div>
 
 
 <form id="returnForm">
+
 
 <label>
 Order ID *
@@ -1345,7 +1337,7 @@ Order ID *
 <input
 id="returnOrderId"
 required
-placeholder="Your REDLEX order ID"
+placeholder="Example: RED2609011234"
 >
 
 
@@ -1378,7 +1370,9 @@ placeholder="10-digit mobile number"
 Request Type *
 </label>
 
-<select id="returnType" required>
+<select
+id="returnType"
+required>
 
 <option value="">
 Select
@@ -1408,9 +1402,10 @@ placeholder="Tell us the reason"
 
 <button
 class="submit-btn"
-type="submit"
->
+type="submit">
+
 Submit Request
+
 </button>
 
 </form>
@@ -1418,7 +1413,10 @@ Submit Request
 </div>
 
 
-<div class="success" id="returnSuccess">
+
+<div
+class="success"
+id="returnSuccess">
 
 <div class="success-icon">
 ✓
@@ -1434,16 +1432,19 @@ Your request details are ready to send.
 
 <br>
 
+
 <button
 class="submit-btn"
-onclick="sendReturnWhatsApp()"
->
+onclick="sendReturnWhatsApp()">
+
 📱 Send Request on WhatsApp
+
 </button>
 
 </div>
 
 </div>
+
 </div>
 
 
@@ -1456,7 +1457,9 @@ let currentOrder = null;
 let currentReturn = null;
 
 
-/* ================= IMAGE ================= */
+/* =========================
+   IMAGE
+========================= */
 
 function changeImage(img){
 
@@ -1464,7 +1467,9 @@ document.getElementById("mainImage").src = img.src;
 
 document.querySelectorAll(".thumbnails img")
 .forEach(function(x){
+
 x.classList.remove("active");
+
 });
 
 img.classList.add("active");
@@ -1472,7 +1477,10 @@ img.classList.add("active");
 }
 
 
-/* ================= SIZE ================= */
+
+/* =========================
+   SIZE
+========================= */
 
 function selectSize(size,button){
 
@@ -1480,7 +1488,9 @@ selectedSize = size;
 
 document.querySelectorAll(".size")
 .forEach(function(x){
+
 x.classList.remove("selected");
+
 });
 
 button.classList.add("selected");
@@ -1490,7 +1500,10 @@ document.getElementById("orderSize").value = size;
 }
 
 
-/* ================= QUANTITY ================= */
+
+/* =========================
+   QUANTITY
+========================= */
 
 function changeQty(amount){
 
@@ -1514,13 +1527,18 @@ document.getElementById("summaryTotal").textContent =
 }
 
 
-/* ================= ORDER OPEN ================= */
+
+/* =========================
+   ORDER OPEN
+========================= */
 
 function openOrder(){
 
 if(!selectedSize){
 
-alert("Please select your size: M, L or XL.");
+alert(
+"Please select your size: M, L or XL."
+);
 
 return;
 
@@ -1538,7 +1556,10 @@ document.body.style.overflow =
 }
 
 
-/* ================= ORDER CLOSE ================= */
+
+/* =========================
+   ORDER CLOSE
+========================= */
 
 function closeOrder(){
 
@@ -1551,7 +1572,10 @@ document.body.style.overflow =
 }
 
 
-/* ================= ORDER ID ================= */
+
+/* =========================
+   ORDER ID
+========================= */
 
 function createOrderId(){
 
@@ -1570,7 +1594,10 @@ return "RED" + date + random;
 }
 
 
-/* ================= ORDER FORM ================= */
+
+/* =========================
+   ORDER FORM
+========================= */
 
 document.getElementById("orderForm")
 .addEventListener(
@@ -1584,29 +1611,36 @@ const name =
 document.getElementById("name")
 .value.trim();
 
+
 const phone =
 document.getElementById("phone")
 .value.trim();
+
 
 const address =
 document.getElementById("address")
 .value.trim();
 
+
 const city =
 document.getElementById("city")
 .value.trim();
+
 
 const state =
 document.getElementById("state")
 .value.trim();
 
+
 const pincode =
 document.getElementById("pincode")
 .value.trim();
 
+
 const size =
 document.getElementById("orderSize")
 .value;
+
 
 
 if(
@@ -1623,6 +1657,7 @@ return;
 }
 
 
+
 if(
 pincode.length !== 6 ||
 !/^[0-9]+$/.test(pincode)
@@ -1637,6 +1672,7 @@ return;
 }
 
 
+
 if(!size){
 
 alert(
@@ -1648,6 +1684,7 @@ return;
 }
 
 
+
 const orderId =
 createOrderId();
 
@@ -1655,24 +1692,30 @@ createOrderId();
 currentOrder = {
 
 orderId:orderId,
+
 name:name,
+
 phone:phone,
+
 address:address,
+
 city:city,
+
 state:state,
+
 pincode:pincode,
+
 size:size,
+
 quantity:quantity,
+
 amount:499 * quantity
 
 };
 
 
-/*
-IMPORTANT:
-Save order locally.
-This unlocks Return / Exchange.
-*/
+
+/* Save local order information */
 
 localStorage.setItem(
 "redlex_order_placed",
@@ -1684,14 +1727,6 @@ localStorage.setItem(
 orderId
 );
 
-localStorage.setItem(
-"redlex_order_date",
-Date.now().toString()
-);
-
-
-document.getElementById("returnButton")
-.disabled = false;
 
 
 document.getElementById("orderId")
@@ -1709,18 +1744,16 @@ document.getElementById("successArea")
 );
 
 
-/* ================= WHATSAPP ORDER ================= */
+
+/* =========================
+   WHATSAPP ORDER
+========================= */
 
 function sendWhatsApp(){
 
-if(!currentOrder){
+if(!currentOrder) return;
 
-return;
-
-}
-
-const o =
-currentOrder;
+const o = currentOrder;
 
 
 const message =
@@ -1750,6 +1783,7 @@ Quantity: ${o.quantity}
 Please confirm my REDLEX order.`;
 
 
+
 const whatsappNumber =
 "917869290591";
 
@@ -1767,20 +1801,29 @@ whatsappURL;
 }
 
 
-/* ================= RETURN OPEN ================= */
+
+/* =========================
+   RETURN OPEN
+========================= */
 
 function openReturn(){
+
+/*
+  Same-device basic check:
+  Return option becomes available
+  after an order has been placed
+*/
 
 const orderPlaced =
 localStorage.getItem(
 "redlex_order_placed"
-) === "true";
+);
 
 
-if(!orderPlaced){
+if(orderPlaced !== "true"){
 
 alert(
-"Please place an order first. Return / Exchange is available after placing an order."
+"Return / Exchange is available after placing an order."
 );
 
 return;
@@ -1788,27 +1831,9 @@ return;
 }
 
 
-const savedOrderId =
-localStorage.getItem(
-"redlex_order_id"
-);
-
-
-if(savedOrderId){
-
-document.getElementById(
-"returnOrderId"
-).value =
-savedOrderId;
-
-}
-
-
-document.getElementById(
-"returnModal"
-).style.display =
+document.getElementById("returnModal")
+.style.display =
 "block";
-
 
 document.body.style.overflow =
 "hidden";
@@ -1816,13 +1841,15 @@ document.body.style.overflow =
 }
 
 
-/* ================= RETURN CLOSE ================= */
+
+/* =========================
+   RETURN CLOSE
+========================= */
 
 function closeReturn(){
 
-document.getElementById(
-"returnModal"
-).style.display =
+document.getElementById("returnModal")
+.style.display =
 "none";
 
 document.body.style.overflow =
@@ -1831,7 +1858,10 @@ document.body.style.overflow =
 }
 
 
-/* ================= RETURN FORM ================= */
+
+/* =========================
+   RETURN FORM
+========================= */
 
 document.getElementById("returnForm")
 .addEventListener(
@@ -1842,29 +1872,29 @@ e.preventDefault();
 
 
 const orderId =
-document.getElementById(
-"returnOrderId"
-).value.trim();
+document.getElementById("returnOrderId")
+.value.trim();
+
 
 const name =
-document.getElementById(
-"returnName"
-).value.trim();
+document.getElementById("returnName")
+.value.trim();
+
 
 const phone =
-document.getElementById(
-"returnPhone"
-).value.trim();
+document.getElementById("returnPhone")
+.value.trim();
+
 
 const type =
-document.getElementById(
-"returnType"
-).value;
+document.getElementById("returnType")
+.value;
+
 
 const reason =
-document.getElementById(
-"returnReason"
-).value.trim();
+document.getElementById("returnReason")
+.value.trim();
+
 
 
 if(
@@ -1881,41 +1911,44 @@ return;
 }
 
 
+
 currentReturn = {
 
 orderId:orderId,
+
 name:name,
+
 phone:phone,
+
 type:type,
+
 reason:reason
 
 };
 
 
-document.getElementById(
-"returnFormArea"
-).style.display =
+
+document.getElementById("returnFormArea")
+.style.display =
 "none";
 
 
-document.getElementById(
-"returnSuccess"
-).style.display =
+document.getElementById("returnSuccess")
+.style.display =
 "block";
 
 }
 );
 
 
-/* ================= RETURN WHATSAPP ================= */
+
+/* =========================
+   RETURN WHATSAPP
+========================= */
 
 function sendReturnWhatsApp(){
 
-if(!currentReturn){
-
-return;
-
-}
+if(!currentReturn) return;
 
 const r =
 currentReturn;
@@ -1937,6 +1970,7 @@ ${r.reason}
 Please review my request.`;
 
 
+
 const whatsappNumber =
 "917869290591";
 
@@ -1954,70 +1988,37 @@ whatsappURL;
 }
 
 
-/* ================= REVIEWS SCROLL ================= */
+
+/* =========================
+   REVIEW SCROLL
+========================= */
 
 function scrollToReviews(){
 
 document.getElementById("reviews")
 .scrollIntoView({
+
 behavior:"smooth"
+
 });
 
 }
 
 
-/* ================= STARTUP ================= */
 
-/*
-If an order was already placed on this
-same browser/device, keep Return active.
-*/
-
-function checkExistingOrder(){
-
-const orderPlaced =
-localStorage.getItem(
-"redlex_order_placed"
-) === "true";
-
-
-const returnButton =
-document.getElementById(
-"returnButton"
-);
-
-
-if(orderPlaced){
-
-returnButton.disabled = false;
-
-}else{
-
-returnButton.disabled = true;
-
-}
-
-}
-
-
-checkExistingOrder();
-
-
-/* ================= OUTSIDE CLICK ================= */
+/* =========================
+   OUTSIDE CLICK
+========================= */
 
 window.addEventListener(
 "click",
 function(e){
 
 const orderModal =
-document.getElementById(
-"orderModal"
-);
+document.getElementById("orderModal");
 
 const returnModal =
-document.getElementById(
-"returnModal"
-);
+document.getElementById("returnModal");
 
 
 if(e.target === orderModal){
@@ -2033,8 +2034,7 @@ closeReturn();
 
 }
 
-}
-);
+});
 
 </script>
 
