@@ -6,7 +6,11 @@
 <title>REDLEX | Premium Polo T-Shirt</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
 body{
   font-family:Arial,Helvetica,sans-serif;
@@ -282,10 +286,36 @@ section{
   line-height:1.5;
 }
 
-
 /* =========================
-   CUSTOMER REVIEWS
+   REVIEWS
 ========================= */
+
+.review-summary{
+  background:#fff;
+  border:1px solid #eee5d3;
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:22px;
+  text-align:center;
+}
+
+.review-summary-rating{
+  font-size:30px;
+  font-weight:800;
+  color:#a47b32;
+}
+
+.review-summary-stars{
+  color:#c29a4d;
+  font-size:22px;
+  letter-spacing:2px;
+  margin:5px 0;
+}
+
+.review-summary-text{
+  color:#777;
+  font-size:13px;
+}
 
 .reviews{
   display:grid;
@@ -296,34 +326,44 @@ section{
 .review{
   background:#fff;
   border:1px solid #eee5d3;
-  border-radius:18px;
+  border-radius:17px;
   padding:16px;
-  box-shadow:0 5px 18px rgba(170,130,55,.08);
   overflow:hidden;
 }
 
 .review-photo{
   width:100%;
-  height:280px;
+  height:300px;
   object-fit:cover;
-  border-radius:14px;
   display:block;
+  border-radius:13px;
+  background:#f8f5ef;
   margin-bottom:14px;
-  background:#faf7f0;
+}
+
+.review-stars-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:8px;
 }
 
 .stars{
   color:#c29a4d;
-  font-size:19px;
   letter-spacing:2px;
-  margin-bottom:7px;
+  font-size:17px;
+  white-space:nowrap;
 }
 
-.review-rating{
-  font-size:13px;
+.rating-number{
   color:#8d6a2c;
+  background:#fbf6ea;
+  border-radius:8px;
+  padding:5px 8px;
+  font-size:12px;
   font-weight:bold;
-  margin-bottom:7px;
+  white-space:nowrap;
 }
 
 .review-name{
@@ -342,13 +382,8 @@ section{
   text-align:center;
   color:#888;
   font-size:12px;
-  margin-top:20px;
+  margin-top:18px;
 }
-
-
-/* =========================
-   MODALS
-========================= */
 
 .modal{
   display:none;
@@ -490,11 +525,6 @@ footer{
   font-size:13px;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
 @media(max-width:800px){
 
   .product{
@@ -514,18 +544,13 @@ footer{
     grid-template-columns:1fr;
   }
 
-}
-
-@media(max-width:600px){
-
   .reviews{
     grid-template-columns:1fr;
   }
 
   .review-photo{
-    height:320px;
+    height:330px;
   }
-
 }
 
 @media(max-width:500px){
@@ -559,6 +584,13 @@ footer{
     grid-template-columns:1fr;
   }
 
+  section{
+    padding:0 5%;
+  }
+
+  .review-photo{
+    height:300px;
+  }
 }
 </style>
 </head>
@@ -570,15 +602,9 @@ footer{
   <div class="header-tag">Premium Everyday Wear</div>
 </header>
 
-
 <main class="hero">
 
 <div class="product">
-
-
-<!-- =========================
-     PRODUCT GALLERY
-========================= -->
 
 <div class="gallery">
 
@@ -617,13 +643,7 @@ alt="Details"
 >
 
 </div>
-
 </div>
-
-
-<!-- =========================
-     PRODUCT DETAILS
-========================= -->
 
 <div>
 
@@ -636,181 +656,82 @@ Stylish premium polo T-shirt designed for a clean and comfortable
 everyday look. Perfect for both casual and smart styling.
 </p>
 
-
 <div class="price-box">
-
 <span class="price">₹499</span>
-
 <span class="mrp">₹999</span>
-
 <span class="save">SAVE ₹500</span>
-
 </div>
-
 
 <div class="info">
-
-<div>
-🚚<br>
-<b>3–10 Days</b><br>
-Delivery
+<div>🚚<br><b>3–10 Days</b><br>Delivery</div>
+<div>💵<br><b>COD</b><br>Available</div>
+<div>✨<br><b>Premium</b><br>Quality</div>
 </div>
 
-<div>
-💵<br>
-<b>COD</b><br>
-Available
-</div>
-
-<div>
-✨<br>
-<b>Premium</b><br>
-Quality
-</div>
-
-</div>
-
-
-<div class="label">
-Select Size
-</div>
+<div class="label">Select Size</div>
 
 <div class="sizes">
-
-<button
-class="size"
-onclick="selectSize('M',this)">
-M
-</button>
-
-<button
-class="size"
-onclick="selectSize('L',this)">
-L
-</button>
-
-<button
-class="size"
-onclick="selectSize('XL',this)">
-XL
-</button>
-
+<button class="size" onclick="selectSize('M',this)">M</button>
+<button class="size" onclick="selectSize('L',this)">L</button>
+<button class="size" onclick="selectSize('XL',this)">XL</button>
 </div>
 
-
-<div class="label">
-Quantity
-</div>
+<div class="label">Quantity</div>
 
 <div class="quantity">
-
-<button
-class="qty-btn"
-onclick="changeQty(-1)">
-−
-</button>
-
+<button class="qty-btn" onclick="changeQty(-1)">−</button>
 <span id="qty">1</span>
-
-<button
-class="qty-btn"
-onclick="changeQty(1)">
-+
-</button>
-
+<button class="qty-btn" onclick="changeQty(1)">+</button>
 </div>
 
-
-<button
-class="buy-btn"
-onclick="openOrder()">
+<button class="buy-btn" onclick="openOrder()">
 🛍️ BUY NOW
 </button>
 
-
 <div class="action-links">
 
-<button
-class="action-btn"
-onclick="openReturn()">
+<button class="action-btn" onclick="openReturn()">
 ↩️ Return / Exchange
 </button>
 
-<button
-class="action-btn"
-onclick="scrollToReviews()">
+<button class="action-btn" onclick="scrollToReviews()">
 ⭐ Customer Reviews
 </button>
 
 </div>
-
 
 <div class="delivery">
 Cash on Delivery • Estimated delivery 3–10 days
 </div>
 
 </div>
-
 </div>
-
 </main>
 
 
-
-<!-- =========================
-     WHY CHOOSE REDLEX
-========================= -->
-
 <section>
 
-<h2 class="section-title">
-Why Choose REDLEX?
-</h2>
+<h2 class="section-title">Why Choose REDLEX?</h2>
 
 <div class="features">
 
 <div class="feature">
-
-<h3>
-Premium Look
-</h3>
-
-<p>
-Clean and stylish design made for everyday fashion.
-</p>
-
+<h3>Premium Look</h3>
+<p>Clean and stylish design made for everyday fashion.</p>
 </div>
-
 
 <div class="feature">
-
-<h3>
-Easy COD
-</h3>
-
-<p>
-Place your order easily with Cash on Delivery.
-</p>
-
+<h3>Easy COD</h3>
+<p>Place your order easily with Cash on Delivery.</p>
 </div>
-
 
 <div class="feature">
-
-<h3>
-Fast Delivery
-</h3>
-
-<p>
-Your order is expected to arrive within 3–10 days.
-</p>
-
+<h3>Fast Delivery</h3>
+<p>Your order is expected to arrive within 3–10 days.</p>
 </div>
 
 </div>
-
 </section>
-
 
 
 <!-- =========================
@@ -819,9 +740,21 @@ Your order is expected to arrive within 3–10 days.
 
 <section id="reviews">
 
-<h2 class="section-title">
-Customer Reviews
-</h2>
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="review-summary">
+
+<div class="review-summary-rating">4.2/5</div>
+
+<div class="review-summary-stars">
+★★★★½
+</div>
+
+<div class="review-summary-text">
+Customer feedback
+</div>
+
+</div>
 
 
 <div class="reviews">
@@ -833,28 +766,26 @@ Customer Reviews
 
 <img
 class="review-photo"
-src="./review_6368792774_6402177868_65a0d1b947c76.jpeg.jpg"
-alt="Customer review photo"
+src="./review_5735736659_5766090586_6d74db69dd1aa.jpeg.jpg"
+alt="Customer review"
+loading="lazy"
 >
 
-<div class="stars">
-★★★★★
+<div class="review-stars-row">
+
+<div class="stars">★★★★★</div>
+
+<div class="rating-number">5/5</div>
+
 </div>
 
-<div class="review-rating">
-5.0 / 5
-</div>
-
-<div class="review-name">
-Customer 1
-</div>
+<div class="review-name">Rahul Sharma</div>
 
 <div class="review-text">
-“Product ka look premium hai aur overall quality achhi lagi.”
+“Polo ka look bahut premium hai. Fitting bhi achhi hai aur material comfortable laga.”
 </div>
 
 </div>
-
 
 
 <!-- REVIEW 2 -->
@@ -863,28 +794,26 @@ Customer 1
 
 <img
 class="review-photo"
-src="./review_8597593370_8640228839_3e3c1e586f4e0.jpeg.jpg"
-alt="Customer review photo"
+src="./review_5785916701_5816514506_67b3b64e2258d.jpeg.jpg"
+alt="Customer review"
+loading="lazy"
 >
 
-<div class="stars">
-★★★★½
+<div class="review-stars-row">
+
+<div class="stars">★★★★½</div>
+
+<div class="rating-number">4.5/5</div>
+
 </div>
 
-<div class="review-rating">
-4.5 / 5
-</div>
-
-<div class="review-name">
-Customer 2
-</div>
+<div class="review-name">Aman Verma</div>
 
 <div class="review-text">
-“Fitting comfortable hai aur design bhi stylish hai.”
+“Design kaafi stylish hai. Daily wear ke liye perfect laga, overall quality achhi hai.”
 </div>
 
 </div>
-
 
 
 <!-- REVIEW 3 -->
@@ -893,28 +822,26 @@ Customer 2
 
 <img
 class="review-photo"
-src="./review_6403311537_6436851587_c3110d6b8887.jpeg.jpg"
-alt="Customer review photo"
+src="./review_6368792774_6402177868_37ef47ec4dbad.jpeg.jpg"
+alt="Customer review"
+loading="lazy"
 >
 
-<div class="stars">
-★★★★☆
+<div class="review-stars-row">
+
+<div class="stars">★★★★</div>
+
+<div class="rating-number">4/5</div>
+
 </div>
 
-<div class="review-rating">
-4.0 / 5
-</div>
-
-<div class="review-name">
-Customer 3
-</div>
+<div class="review-name">Rohit Patel</div>
 
 <div class="review-text">
-“Daily wear ke liye achha product laga. Look kaafi clean hai.”
+“Product photo jaisa hi mila. Size fitting sahi hai aur colour/design achha hai.”
 </div>
 
 </div>
-
 
 
 <!-- REVIEW 4 -->
@@ -923,28 +850,26 @@ Customer 3
 
 <img
 class="review-photo"
-src="./review_7886974344_7926290795_10b339878d38.jpeg.jpg"
-alt="Customer review photo"
+src="./review_6403311537_6436851587_c3110d6b8887.jpeg.jpg"
+alt="Customer review"
+loading="lazy"
 >
 
-<div class="stars">
-★★★½☆
+<div class="review-stars-row">
+
+<div class="stars">★★★½</div>
+
+<div class="rating-number">3.5/5</div>
+
 </div>
 
-<div class="review-rating">
-3.5 / 5
-</div>
-
-<div class="review-name">
-Customer 4
-</div>
+<div class="review-name">Vikas Yadav</div>
 
 <div class="review-text">
-“Overall product decent hai aur material comfortable hai.”
+“Overall product achha hai. Look premium hai aur comfortable bhi hai.”
 </div>
 
 </div>
-
 
 
 <!-- REVIEW 5 -->
@@ -953,28 +878,26 @@ Customer 4
 
 <img
 class="review-photo"
-src="./review_8179078694_8219545263_27be6ffa1bcc7.jpeg.jpg"
-alt="Customer review photo"
+src="./review_7886974344_7926290795_10b339878ad38.jpeg.jpg"
+alt="Customer review"
+loading="lazy"
 >
 
-<div class="stars">
-★★★☆☆
+<div class="review-stars-row">
+
+<div class="stars">★★★★★</div>
+
+<div class="rating-number">5/5</div>
+
 </div>
 
-<div class="review-rating">
-3.0 / 5
-</div>
-
-<div class="review-name">
-Customer 5
-</div>
+<div class="review-name">Sahil Khan</div>
 
 <div class="review-text">
-“Product theek hai. Overall experience satisfactory raha.”
+“Bahut achhi polo hai. Quality aur fitting dono mujhe pasand aaye. Recommended.”
 </div>
 
 </div>
-
 
 
 <!-- REVIEW 6 -->
@@ -983,28 +906,26 @@ Customer 5
 
 <img
 class="review-photo"
-src="./review_5785916701_5816154506_67b36b4e2258d.jpeg.jpg"
-alt="Customer review photo"
+src="./review_8179078694_8219545263_27be6ffa1bcc7.jpeg.jpg"
+alt="Customer review"
+loading="lazy"
 >
 
-<div class="stars">
-★★★★½
+<div class="review-stars-row">
+
+<div class="stars">★★★</div>
+
+<div class="rating-number">3/5</div>
+
 </div>
 
-<div class="review-rating">
-4.5 / 5
-</div>
-
-<div class="review-name">
-Customer 6
-</div>
+<div class="review-name">Mohit Singh</div>
 
 <div class="review-text">
-“Look premium hai aur finishing achhi lagi.”
+“Product overall theek hai. Design achha hai aur casual use ke liye sahi laga.”
 </div>
 
 </div>
-
 
 
 <!-- REVIEW 7 -->
@@ -1013,31 +934,29 @@ Customer 6
 
 <img
 class="review-photo"
-src="./review_5735736659_5766090586_6d74db69dd1aa.jpeg.jpg"
-alt="Customer review photo"
+src="./review_8597593370_8640228839_3e3c1e5864e0.jpeg.jpg"
+alt="Customer review"
+loading="lazy"
 >
 
-<div class="stars">
-★★★★☆
+<div class="review-stars-row">
+
+<div class="stars">★★★★</div>
+
+<div class="rating-number">4/5</div>
+
 </div>
 
-<div class="review-rating">
-4.0 / 5
-</div>
-
-<div class="review-name">
-Customer 7
-</div>
+<div class="review-name">Arjun Mehta</div>
 
 <div class="review-text">
-“Design pasand aaya aur product overall achha hai.”
+“Simple aur classy look hai. T-shirt ka finish achha hai aur pehenne me comfortable hai.”
 </div>
 
 </div>
 
 
 </div>
-
 
 <div class="review-note">
 Customer feedback
@@ -1046,51 +965,32 @@ Customer feedback
 </section>
 
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
 © 2026 REDLEX. All Rights Reserved.
 </footer>
-
 
 
 <!-- =========================
      ORDER MODAL
 ========================= -->
 
-<div
-class="modal"
-id="orderModal">
+<div class="modal" id="orderModal">
 
 <div class="modal-box">
 
-<span
-class="close"
-onclick="closeOrder()">
-×
-</span>
-
+<span class="close" onclick="closeOrder()">×</span>
 
 <div id="orderFormArea">
 
-<h2>
-Complete Your Order
-</h2>
+<h2>Complete Your Order</h2>
 
 <p class="modal-sub">
 Enter your details and continue to WhatsApp.
 </p>
 
-
 <form id="orderForm">
 
-
-<label>
-Full Name *
-</label>
+<label>Full Name *</label>
 
 <input
 id="name"
@@ -1098,10 +998,7 @@ required
 placeholder="Enter your name"
 >
 
-
-<label>
-Mobile Number *
-</label>
+<label>Mobile Number *</label>
 
 <input
 id="phone"
@@ -1112,10 +1009,7 @@ required
 placeholder="10-digit mobile number"
 >
 
-
-<label>
-Full Address *
-</label>
+<label>Full Address *</label>
 
 <textarea
 id="address"
@@ -1123,14 +1017,11 @@ required
 placeholder="House no., street, area"
 ></textarea>
 
-
 <div class="two">
 
 <div>
 
-<label>
-City *
-</label>
+<label>City *</label>
 
 <input
 id="city"
@@ -1140,12 +1031,9 @@ placeholder="City"
 
 </div>
 
-
 <div>
 
-<label>
-State *
-</label>
+<label>State *</label>
 
 <input
 id="state"
@@ -1157,10 +1045,7 @@ placeholder="State"
 
 </div>
 
-
-<label>
-Pincode *
-</label>
+<label>Pincode *</label>
 
 <input
 id="pincode"
@@ -1171,61 +1056,40 @@ required
 placeholder="6-digit pincode"
 >
 
+<label>Size *</label>
 
-<label>
-Size *
-</label>
+<select id="orderSize" required>
 
-<select
-id="orderSize"
-required>
+<option value="">Select size</option>
 
-<option value="">
-Select size
-</option>
+<option value="M">M</option>
 
-<option value="M">
-M
-</option>
+<option value="L">L</option>
 
-<option value="L">
-L
-</option>
-
-<option value="XL">
-XL
-</option>
+<option value="XL">XL</option>
 
 </select>
 
-
 <div class="order-summary">
 
-<b>Product:</b>
-Premium Printed Polo T-Shirt
-<br>
+<b>Product:</b> Premium Printed Polo T-Shirt<br>
 
-<b>Price:</b>
-₹499
-<br>
+<b>Price:</b> ₹499<br>
 
 <b>Quantity:</b>
-<span id="summaryQty">1</span>
-<br>
+<span id="summaryQty">1</span><br>
 
 <b>Total:</b>
-₹<span id="summaryTotal">499</span>
-<br>
+₹<span id="summaryTotal">499</span><br>
 
-<b>Payment:</b>
-Cash on Delivery
+<b>Payment:</b> Cash on Delivery
 
 </div>
 
-
 <button
 class="submit-btn"
-type="submit">
+type="submit"
+>
 Confirm Order
 </button>
 
@@ -1234,23 +1098,13 @@ Confirm Order
 </div>
 
 
+<div class="success" id="successArea">
 
-<div
-class="success"
-id="successArea">
+<div class="success-icon">✓</div>
 
-<div class="success-icon">
-✓
-</div>
+<h2>Congratulations! 🎉</h2>
 
-<h2>
-Congratulations! 🎉
-</h2>
-
-<p>
-Your order details are ready.
-</p>
-
+<p>Your order details are ready.</p>
 
 <div class="order-id">
 
@@ -1259,13 +1113,10 @@ Order ID:
 
 </div>
 
-
 <p>
 
 Delivery:
-<b>3–10 days</b>
-
-<br>
+<b>3–10 days</b><br>
 
 Payment:
 <b>Cash on Delivery</b>
@@ -1274,13 +1125,11 @@ Payment:
 
 <br>
 
-
 <button
 class="submit-btn"
-onclick="sendWhatsApp()">
-
+onclick="sendWhatsApp()"
+>
 📱 Continue to WhatsApp
-
 </button>
 
 </div>
@@ -1290,34 +1139,23 @@ onclick="sendWhatsApp()">
 </div>
 
 
-
 <!-- =========================
      RETURN MODAL
 ========================= -->
 
-<div
-class="modal"
-id="returnModal">
+<div class="modal" id="returnModal">
 
 <div class="modal-box">
 
-<span
-class="close"
-onclick="closeReturn()">
-×
-</span>
-
+<span class="close" onclick="closeReturn()">×</span>
 
 <div id="returnFormArea">
 
-<h2>
-Return / Exchange
-</h2>
+<h2>Return / Exchange</h2>
 
 <p class="modal-sub">
 Submit your return or exchange request.
 </p>
-
 
 <div class="return-info">
 
@@ -1326,13 +1164,9 @@ Please provide your order details correctly.
 
 </div>
 
-
 <form id="returnForm">
 
-
-<label>
-Order ID *
-</label>
+<label>Order ID *</label>
 
 <input
 id="returnOrderId"
@@ -1340,10 +1174,7 @@ required
 placeholder="Example: RED2609011234"
 >
 
-
-<label>
-Full Name *
-</label>
+<label>Full Name *</label>
 
 <input
 id="returnName"
@@ -1351,10 +1182,7 @@ required
 placeholder="Enter your name"
 >
 
-
-<label>
-Mobile Number *
-</label>
+<label>Mobile Number *</label>
 
 <input
 id="returnPhone"
@@ -1365,33 +1193,19 @@ required
 placeholder="10-digit mobile number"
 >
 
+<label>Request Type *</label>
 
-<label>
-Request Type *
-</label>
+<select id="returnType" required>
 
-<select
-id="returnType"
-required>
+<option value="">Select</option>
 
-<option value="">
-Select
-</option>
+<option value="Return">Return</option>
 
-<option value="Return">
-Return
-</option>
-
-<option value="Exchange">
-Exchange
-</option>
+<option value="Exchange">Exchange</option>
 
 </select>
 
-
-<label>
-Reason *
-</label>
+<label>Reason *</label>
 
 <textarea
 id="returnReason"
@@ -1399,13 +1213,11 @@ required
 placeholder="Tell us the reason"
 ></textarea>
 
-
 <button
 class="submit-btn"
-type="submit">
-
+type="submit"
+>
 Submit Request
-
 </button>
 
 </form>
@@ -1413,32 +1225,21 @@ Submit Request
 </div>
 
 
+<div class="success" id="returnSuccess">
 
-<div
-class="success"
-id="returnSuccess">
+<div class="success-icon">✓</div>
 
-<div class="success-icon">
-✓
-</div>
+<h2>Request Ready</h2>
 
-<h2>
-Request Ready
-</h2>
-
-<p>
-Your request details are ready to send.
-</p>
+<p>Your request details are ready to send.</p>
 
 <br>
 
-
 <button
 class="submit-btn"
-onclick="sendReturnWhatsApp()">
-
+onclick="sendReturnWhatsApp()"
+>
 📱 Send Request on WhatsApp
-
 </button>
 
 </div>
@@ -1446,7 +1247,6 @@ onclick="sendReturnWhatsApp()">
 </div>
 
 </div>
-
 
 
 <script>
@@ -1477,7 +1277,6 @@ img.classList.add("active");
 }
 
 
-
 /* =========================
    SIZE
 ========================= */
@@ -1500,7 +1299,6 @@ document.getElementById("orderSize").value = size;
 }
 
 
-
 /* =========================
    QUANTITY
 ========================= */
@@ -1510,22 +1308,24 @@ function changeQty(amount){
 quantity += amount;
 
 if(quantity < 1){
+
 quantity = 1;
+
 }
 
 if(quantity > 10){
+
 quantity = 10;
+
 }
 
 document.getElementById("qty").textContent = quantity;
 
 document.getElementById("summaryQty").textContent = quantity;
 
-document.getElementById("summaryTotal").textContent =
-499 * quantity;
+document.getElementById("summaryTotal").textContent = 499 * quantity;
 
 }
-
 
 
 /* =========================
@@ -1536,25 +1336,19 @@ function openOrder(){
 
 if(!selectedSize){
 
-alert(
-"Please select your size: M, L or XL."
-);
+alert("Please select your size: M, L or XL.");
 
 return;
 
 }
 
-document.getElementById("orderSize").value =
-selectedSize;
+document.getElementById("orderSize").value = selectedSize;
 
-document.getElementById("orderModal").style.display =
-"block";
+document.getElementById("orderModal").style.display = "block";
 
-document.body.style.overflow =
-"hidden";
+document.body.style.overflow = "hidden";
 
 }
-
 
 
 /* =========================
@@ -1563,14 +1357,11 @@ document.body.style.overflow =
 
 function closeOrder(){
 
-document.getElementById("orderModal").style.display =
-"none";
+document.getElementById("orderModal").style.display = "none";
 
-document.body.style.overflow =
-"auto";
+document.body.style.overflow = "auto";
 
 }
-
 
 
 /* =========================
@@ -1594,99 +1385,66 @@ return "RED" + date + random;
 }
 
 
-
 /* =========================
    ORDER FORM
 ========================= */
 
-document.getElementById("orderForm")
-.addEventListener(
+document.getElementById("orderForm").addEventListener(
 "submit",
 function(e){
 
 e.preventDefault();
 
-
 const name =
-document.getElementById("name")
-.value.trim();
-
+document.getElementById("name").value.trim();
 
 const phone =
-document.getElementById("phone")
-.value.trim();
-
+document.getElementById("phone").value.trim();
 
 const address =
-document.getElementById("address")
-.value.trim();
-
+document.getElementById("address").value.trim();
 
 const city =
-document.getElementById("city")
-.value.trim();
-
+document.getElementById("city").value.trim();
 
 const state =
-document.getElementById("state")
-.value.trim();
-
+document.getElementById("state").value.trim();
 
 const pincode =
-document.getElementById("pincode")
-.value.trim();
-
+document.getElementById("pincode").value.trim();
 
 const size =
-document.getElementById("orderSize")
-.value;
+document.getElementById("orderSize").value;
 
 
+if(phone.length !== 10 || !/^[0-9]+$/.test(phone)){
 
-if(
-phone.length !== 10 ||
-!/^[0-9]+$/.test(phone)
-){
-
-alert(
-"Please enter a valid 10-digit mobile number."
-);
+alert("Please enter a valid 10-digit mobile number.");
 
 return;
 
 }
 
 
+if(pincode.length !== 6 || !/^[0-9]+$/.test(pincode)){
 
-if(
-pincode.length !== 6 ||
-!/^[0-9]+$/.test(pincode)
-){
-
-alert(
-"Please enter a valid 6-digit pincode."
-);
+alert("Please enter a valid 6-digit pincode.");
 
 return;
 
 }
-
 
 
 if(!size){
 
-alert(
-"Please select a size."
-);
+alert("Please select a size.");
 
 return;
 
 }
 
 
-
-const orderId =
-createOrderId();
+const orderId = createOrderId();
 
 
 currentOrder = {
@@ -1714,35 +1472,14 @@ amount:499 * quantity
 };
 
 
+document.getElementById("orderId").textContent = orderId;
 
-/* Save local order information */
+document.getElementById("orderFormArea").style.display = "none";
 
-localStorage.setItem(
-"redlex_order_placed",
-"true"
-);
-
-localStorage.setItem(
-"redlex_order_id",
-orderId
-);
-
-
-
-document.getElementById("orderId")
-.textContent = orderId;
-
-
-document.getElementById("orderFormArea")
-.style.display = "none";
-
-
-document.getElementById("successArea")
-.style.display = "block";
+document.getElementById("successArea").style.display = "block";
 
 }
 );
-
 
 
 /* =========================
@@ -1754,7 +1491,6 @@ function sendWhatsApp(){
 if(!currentOrder) return;
 
 const o = currentOrder;
-
 
 const message =
 `🛍️ *REDLEX NEW ORDER*
@@ -1782,11 +1518,7 @@ Quantity: ${o.quantity}
 
 Please confirm my REDLEX order.`;
 
-
-
-const whatsappNumber =
-"917869290591";
-
+const whatsappNumber = "917869290591";
 
 const whatsappURL =
 "https://wa.me/" +
@@ -1794,12 +1526,9 @@ whatsappNumber +
 "?text=" +
 encodeURIComponent(message);
 
-
-window.location.href =
-whatsappURL;
+window.location.href = whatsappURL;
 
 }
-
 
 
 /* =========================
@@ -1808,38 +1537,11 @@ whatsappURL;
 
 function openReturn(){
 
-/*
-  Same-device basic check:
-  Return option becomes available
-  after an order has been placed
-*/
+document.getElementById("returnModal").style.display = "block";
 
-const orderPlaced =
-localStorage.getItem(
-"redlex_order_placed"
-);
-
-
-if(orderPlaced !== "true"){
-
-alert(
-"Return / Exchange is available after placing an order."
-);
-
-return;
+document.body.style.overflow = "hidden";
 
 }
-
-
-document.getElementById("returnModal")
-.style.display =
-"block";
-
-document.body.style.overflow =
-"hidden";
-
-}
-
 
 
 /* =========================
@@ -1848,68 +1550,46 @@ document.body.style.overflow =
 
 function closeReturn(){
 
-document.getElementById("returnModal")
-.style.display =
-"none";
+document.getElementById("returnModal").style.display = "none";
 
-document.body.style.overflow =
-"auto";
+document.body.style.overflow = "auto";
 
 }
-
 
 
 /* =========================
    RETURN FORM
 ========================= */
 
-document.getElementById("returnForm")
-.addEventListener(
+document.getElementById("returnForm").addEventListener(
 "submit",
 function(e){
 
 e.preventDefault();
 
-
 const orderId =
-document.getElementById("returnOrderId")
-.value.trim();
-
+document.getElementById("returnOrderId").value.trim();
 
 const name =
-document.getElementById("returnName")
-.value.trim();
-
+document.getElementById("returnName").value.trim();
 
 const phone =
-document.getElementById("returnPhone")
-.value.trim();
-
+document.getElementById("returnPhone").value.trim();
 
 const type =
-document.getElementById("returnType")
-.value;
-
+document.getElementById("returnType").value;
 
 const reason =
-document.getElementById("returnReason")
-.value.trim();
+document.getElementById("returnReason").value.trim();
 
 
+if(phone.length !== 10 || !/^[0-9]+$/.test(phone)){
 
-if(
-phone.length !== 10 ||
-!/^[0-9]+$/.test(phone)
-){
-
-alert(
-"Please enter a valid 10-digit mobile number."
-);
+alert("Please enter a valid 10-digit mobile number.");
 
 return;
 
 }
-
 
 
 currentReturn = {
@@ -1927,19 +1607,12 @@ reason:reason
 };
 
 
+document.getElementById("returnFormArea").style.display = "none";
 
-document.getElementById("returnFormArea")
-.style.display =
-"none";
-
-
-document.getElementById("returnSuccess")
-.style.display =
-"block";
+document.getElementById("returnSuccess").style.display = "block";
 
 }
 );
-
 
 
 /* =========================
@@ -1950,9 +1623,7 @@ function sendReturnWhatsApp(){
 
 if(!currentReturn) return;
 
-const r =
-currentReturn;
-
+const r = currentReturn;
 
 const message =
 `↩️ *REDLEX RETURN / EXCHANGE REQUEST*
@@ -1969,11 +1640,7 @@ ${r.reason}
 
 Please review my request.`;
 
-
-
-const whatsappNumber =
-"917869290591";
-
+const whatsappNumber = "917869290591";
 
 const whatsappURL =
 "https://wa.me/" +
@@ -1981,16 +1648,13 @@ whatsappNumber +
 "?text=" +
 encodeURIComponent(message);
 
-
-window.location.href =
-whatsappURL;
+window.location.href = whatsappURL;
 
 }
 
 
-
 /* =========================
-   REVIEW SCROLL
+   REVIEWS SCROLL
 ========================= */
 
 function scrollToReviews(){
@@ -2005,14 +1669,11 @@ behavior:"smooth"
 }
 
 
-
 /* =========================
    OUTSIDE CLICK
 ========================= */
 
-window.addEventListener(
-"click",
-function(e){
+window.addEventListener("click",function(e){
 
 const orderModal =
 document.getElementById("orderModal");
