@@ -4,2027 +4,1312 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>REDLEX | Premium Polo T-Shirt</title>
+<title>REDLEX | Premium Electric Spin Scrubber</title>
+<meta name="description" content="REDLEX Premium Electric Spin Scrubber. Powerful cordless cleaning with multiple brush heads. Cash on Delivery available.">
 
 <style>
-
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --blue:#eaf8ff;
+  --blue-soft:#f5fcff;
+  --blue-light:#dff4ff;
+  --blue-border:#d5edf8;
+  --blue-btn:#c9edff;
+  --blue-btn-hover:#b9e7fc;
+  --text:#193746;
+  --heading:#123d52;
+  --muted:#71848d;
+  --white:#fff;
+  --shadow:0 14px 40px rgba(75,157,193,.09);
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#fffdf8;
-  color:#252525;
+  background:#fcfeff;
+  color:var(--text);
+  line-height:1.6;
 }
 
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* TOP BAR */
+
+.topbar{
+  text-align:center;
+  padding:8px 12px;
+  background:var(--blue-soft);
+  border-bottom:1px solid var(--blue-border);
+  color:#4d7486;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.4px;
+}
+
+/* HEADER */
+
 header{
-  background:#fff;
-  padding:18px 6%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid #eee5d3;
   position:sticky;
   top:0;
-  z-index:100;
+  z-index:1000;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--blue-border);
+}
+
+.nav{
+  max-width:1180px;
+  margin:auto;
+  padding:15px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .logo{
-  font-size:28px;
-  font-weight:800;
-  letter-spacing:2px;
-  color:#b28a3e;
+  font-size:27px;
+  font-weight:900;
+  letter-spacing:3px;
+  color:var(--heading);
 }
 
-.header-tag{
-  font-size:13px;
-  color:#777;
+.logo span{
+  color:#82d1f4;
 }
+
+.nav-badge{
+  padding:8px 14px;
+  border-radius:30px;
+  background:var(--blue);
+  border:1px solid var(--blue-border);
+  color:#467489;
+  font-size:11px;
+  font-weight:800;
+}
+
+/* HERO */
 
 .hero{
-  padding:45px 6% 60px;
-  max-width:1200px;
-  margin:auto;
+  max-width:1180px;
+  margin:27px auto;
+  padding:0 18px;
 }
 
-.product{
+.hero-box{
+  padding:35px 28px;
+  border-radius:30px;
+  border:1px solid var(--blue-border);
+  background:linear-gradient(135deg,#ffffff,#f1fbff);
+  box-shadow:var(--shadow);
+}
+
+.hero-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:55px;
-  align-items:start;
-}
-
-.gallery{
-  position:sticky;
-  top:95px;
-}
-
-.main-image{
-  width:100%;
-  aspect-ratio:1/1;
-  object-fit:contain;
-  background:#fff;
-  border:1px solid #eee5d3;
-  border-radius:20px;
-  padding:15px;
-}
-
-.thumbnails{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  margin-top:12px;
-}
-
-.thumbnails img{
-  width:100%;
-  aspect-ratio:1/1;
-  object-fit:cover;
-  background:#fff;
-  border:2px solid transparent;
-  border-radius:12px;
-  cursor:pointer;
-  padding:3px;
-}
-
-.thumbnails img.active{
-  border-color:#c7a45b;
+  grid-template-columns:1.05fr .95fr;
+  gap:38px;
+  align-items:center;
 }
 
 .badge{
-  display:inline-block;
-  background:#f8efd9;
-  color:#9a742e;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
   padding:8px 14px;
   border-radius:30px;
-  font-size:12px;
-  font-weight:bold;
-  letter-spacing:1px;
-  margin-bottom:15px;
+  background:#fff;
+  border:1px solid var(--blue-border);
+  color:#4e7a8e;
+  font-size:11px;
+  font-weight:800;
+  margin-bottom:16px;
+}
+
+.badge:before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#9bdcf8;
 }
 
 h1{
-  font-size:42px;
-  line-height:1.1;
-  margin-bottom:14px;
+  color:var(--heading);
+  font-size:clamp(35px,5vw,58px);
+  line-height:1.04;
+  letter-spacing:-1.8px;
+  margin-bottom:17px;
 }
 
-.description{
-  color:#666;
-  line-height:1.7;
-  margin-bottom:22px;
+.hero-text{
+  max-width:570px;
+  color:var(--muted);
+  font-size:15px;
+  margin-bottom:21px;
+}
+
+.hero-points{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:23px;
+}
+
+.hero-points span{
+  padding:8px 12px;
+  border-radius:20px;
+  background:#fff;
+  border:1px solid var(--blue-border);
+  color:#547584;
+  font-size:11px;
+  font-weight:700;
 }
 
 .price-box{
   display:flex;
-  align-items:center;
-  gap:14px;
-  margin:20px 0;
-  flex-wrap:wrap;
+  align-items:end;
+  gap:12px;
+  margin-bottom:19px;
 }
 
 .price{
-  font-size:34px;
-  font-weight:800;
-  color:#a47b32;
+  color:var(--heading);
+  font-size:43px;
+  font-weight:900;
 }
 
-.mrp{
-  color:#999;
+.old-price{
+  color:#9aaab1;
   text-decoration:line-through;
-  font-size:18px;
+  font-size:16px;
+  padding-bottom:8px;
 }
 
 .save{
-  background:#f3ead7;
-  color:#8d6a2c;
-  padding:6px 10px;
-  border-radius:8px;
+  color:#5790a7;
   font-size:12px;
-  font-weight:bold;
+  font-weight:800;
+  padding-bottom:9px;
 }
 
-.info{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-  margin:22px 0;
-}
-
-.info div{
-  background:#fff;
-  border:1px solid #eee5d3;
-  padding:13px 8px;
-  text-align:center;
-  border-radius:12px;
-  font-size:12px;
-}
-
-.label{
-  font-weight:bold;
-  margin:20px 0 10px;
-}
-
-.sizes{
-  display:flex;
-  gap:10px;
-}
-
-.size{
-  width:58px;
-  height:45px;
-  border:1px solid #d8c7a6;
-  background:#fff;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:bold;
-}
-
-.size.selected{
-  background:#c7a45b;
-  color:#fff;
-  border-color:#c7a45b;
-}
-
-.quantity{
-  display:flex;
+.cta{
+  display:inline-flex;
   align-items:center;
-  gap:15px;
-  margin:15px 0 25px;
+  justify-content:center;
+  padding:14px 25px;
+  border-radius:14px;
+  background:var(--blue-btn);
+  border:1px solid #b7e4f8;
+  color:#17445a;
+  font-weight:900;
+  box-shadow:0 8px 22px rgba(86,175,214,.12);
+  transition:.2s;
 }
 
-.qty-btn{
-  width:40px;
-  height:40px;
-  border:1px solid #d8c7a6;
+.cta:hover{
+  transform:translateY(-2px);
+  background:var(--blue-btn-hover);
+}
+
+.hero-image{
+  padding:11px;
   background:#fff;
-  border-radius:9px;
-  font-size:20px;
-  cursor:pointer;
+  border:1px solid var(--blue-border);
+  border-radius:25px;
+  box-shadow:var(--shadow);
 }
 
-#qty{
-  font-weight:bold;
-}
-
-.buy-btn{
+.hero-image img{
   width:100%;
-  padding:17px;
-  border:0;
-  border-radius:13px;
-  background:linear-gradient(135deg,#d1b16a,#b88d3e);
-  color:#fff;
-  font-size:17px;
-  font-weight:bold;
-  cursor:pointer;
-  box-shadow:0 8px 20px rgba(170,130,55,.18);
+  aspect-ratio:1/1;
+  object-fit:contain;
+  border-radius:18px;
 }
 
-.buy-btn:hover{
-  opacity:.92;
-}
+/* SECTIONS */
 
-.delivery{
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#666;
-}
-
-.action-links{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin-top:15px;
-}
-
-.action-btn{
-  padding:13px;
-  border-radius:11px;
-  border:1px solid #dcccae;
-  background:#fff;
-  color:#8d6a2c;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-section{
-  max-width:1100px;
-  margin:20px auto 60px;
-  padding:0 6%;
+.section{
+  max-width:1180px;
+  margin:auto;
+  padding:48px 18px;
 }
 
 .section-title{
   text-align:center;
-  font-size:28px;
-  margin-bottom:25px;
+  color:var(--heading);
+  font-size:31px;
+  letter-spacing:-.5px;
+  margin-bottom:9px;
 }
 
-.features{
+.section-subtitle{
+  max-width:650px;
+  margin:0 auto 28px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* GALLERY */
+
+.gallery{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
+  grid-template-columns:repeat(4,1fr);
+  gap:13px;
+}
+
+.gallery-card{
+  padding:8px;
+  background:#fff;
+  border:1px solid var(--blue-border);
+  border-radius:19px;
+  box-shadow:0 8px 25px rgba(75,157,193,.06);
+  overflow:hidden;
+}
+
+.gallery-card img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:13px;
+  transition:.25s;
+}
+
+.gallery-card:hover img{
+  transform:scale(1.025);
+}
+
+/* FEATURES */
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
 }
 
 .feature{
-  background:#fff;
-  border:1px solid #eee5d3;
-  border-radius:16px;
-  padding:22px;
+  padding:22px 16px;
   text-align:center;
+  background:#fff;
+  border:1px solid var(--blue-border);
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(75,157,193,.05);
+}
+
+.feature-icon{
+  width:48px;
+  height:48px;
+  margin:0 auto 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:15px;
+  background:var(--blue);
+  font-size:22px;
 }
 
 .feature h3{
-  margin-bottom:8px;
-  color:#a47b32;
+  color:#28566a;
+  font-size:15px;
+  margin-bottom:5px;
 }
 
 .feature p{
-  color:#777;
-  font-size:14px;
-  line-height:1.5;
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* PRODUCT INFO */
+
+.info-box{
+  padding:30px;
+  border-radius:25px;
+  border:1px solid var(--blue-border);
+  background:linear-gradient(135deg,#ffffff,#f1fbff);
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:27px;
+}
+
+.info h3{
+  color:#1d4d63;
+  margin-bottom:11px;
+}
+
+.info ul{
+  list-style:none;
+}
+
+.info li{
+  padding:8px 0;
+  border-bottom:1px solid #e5f3f8;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.info li strong{
+  color:#315c6e;
 }
 
 /* REVIEWS */
 
-.review-summary{
-  background:#fff;
-  border:1px solid #eee5d3;
-  border-radius:18px;
-  padding:20px;
-  margin-bottom:22px;
-  text-align:center;
-}
-
-.review-summary-rating{
-  font-size:30px;
-  font-weight:800;
-  color:#a47b32;
-}
-
-.review-summary-stars{
-  color:#c29a4d;
-  font-size:22px;
-  letter-spacing:2px;
-  margin:5px 0;
-}
-
-.review-summary-text{
-  color:#777;
-  font-size:13px;
-}
-
-.reviews{
+.review-grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
 }
 
 .review{
-  background:#fff;
-  border:1px solid #eee5d3;
-  border-radius:17px;
-  padding:16px;
   overflow:hidden;
+  background:#fff;
+  border:1px solid var(--blue-border);
+  border-radius:19px;
+  box-shadow:0 8px 25px rgba(75,157,193,.06);
 }
 
-.review-photo{
+.review img{
   width:100%;
-  height:300px;
+  aspect-ratio:1/1;
   object-fit:cover;
-  display:block;
-  border-radius:13px;
-  background:#f8f5ef;
-  margin-bottom:14px;
 }
 
-.review-stars-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  margin-bottom:8px;
+.review-content{
+  padding:12px;
 }
 
 .stars{
-  color:#c29a4d;
+  color:#f2bd55;
   letter-spacing:2px;
-  font-size:17px;
-  white-space:nowrap;
+  font-size:13px;
+  margin-bottom:4px;
 }
 
-.rating-number{
-  color:#8d6a2c;
-  background:#fbf6ea;
-  border-radius:8px;
-  padding:5px 8px;
-  font-size:12px;
-  font-weight:bold;
-  white-space:nowrap;
+.review-title{
+  color:#275468;
+  font-size:13px;
+  font-weight:900;
+  margin-bottom:3px;
 }
 
 .review-name{
-  font-weight:bold;
-  font-size:16px;
-  margin-bottom:7px;
+  color:#79909a;
+  font-size:11px;
+  font-weight:700;
 }
 
 .review-text{
-  color:#666;
-  font-size:14px;
-  line-height:1.55;
+  color:#71838c;
+  font-size:11px;
+  margin-top:5px;
 }
 
-.review-note{
-  text-align:center;
-  color:#888;
-  font-size:12px;
-  margin-top:18px;
+/* ORDER */
+
+.order-wrap{
+  max-width:760px;
+  margin:auto;
 }
 
-/* MODAL */
-
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.55);
-  z-index:999;
-  padding:20px;
-  overflow:auto;
-}
-
-.modal-box{
-  max-width:520px;
+.order-card{
+  padding:28px;
   background:#fff;
-  margin:30px auto;
-  border-radius:20px;
-  padding:25px;
-  position:relative;
+  border:1px solid var(--blue-border);
+  border-radius:26px;
+  box-shadow:var(--shadow);
 }
 
-.close{
-  position:absolute;
-  right:18px;
-  top:14px;
-  font-size:28px;
-  cursor:pointer;
-  color:#777;
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
 }
 
-.modal-box h2{
+.form-group{
+  margin-bottom:13px;
+}
+
+.form-group.full{
+  grid-column:1/-1;
+}
+
+label{
+  display:block;
+  color:#4e6e7b;
+  font-size:11px;
+  font-weight:800;
   margin-bottom:6px;
 }
 
-.modal-sub{
-  color:#777;
-  font-size:13px;
-  margin-bottom:20px;
-}
-
-form label{
-  display:block;
-  font-size:13px;
-  font-weight:bold;
-  margin:12px 0 6px;
-}
-
-form input,
-form textarea,
-form select{
+input,
+select,
+textarea{
   width:100%;
   padding:13px;
-  border:1px solid #ddd2bd;
-  border-radius:10px;
+  border:1px solid #d8ebf3;
+  border-radius:12px;
   outline:none;
-  font-size:14px;
-  background:#fffdf9;
+  background:#fbfeff;
+  color:#294d5e;
+  font-size:13px;
 }
 
-form textarea{
-  min-height:80px;
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:#9bdaf3;
+  box-shadow:0 0 0 3px rgba(155,218,243,.15);
+}
+
+textarea{
+  min-height:90px;
   resize:vertical;
 }
 
-.two{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
-
-.order-summary{
-  margin:18px 0;
-  padding:15px;
-  background:#fbf6ea;
-  border-radius:12px;
-  font-size:14px;
-  line-height:1.8;
-}
-
-.submit-btn{
+.submit{
   width:100%;
-  border:0;
-  background:#c29a4d;
-  color:#fff;
   padding:15px;
-  border-radius:11px;
-  font-size:16px;
-  font-weight:bold;
+  border:0;
+  border-radius:13px;
+  background:var(--blue-btn);
+  color:#123e53;
+  font-size:14px;
+  font-weight:900;
   cursor:pointer;
+}
+
+.cod-note{
   margin-top:10px;
-}
-
-.return-info{
-  background:#fbf6ea;
-  border-radius:12px;
-  padding:14px;
-  margin:15px 0;
-  color:#666;
-  font-size:13px;
-  line-height:1.6;
-}
-
-.success{
-  display:none;
   text-align:center;
-  padding:20px 5px;
+  color:#788b94;
+  font-size:10px;
 }
 
-.success-icon{
-  width:70px;
-  height:70px;
-  margin:0 auto 15px;
-  border-radius:50%;
-  background:#f5ead0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:35px;
+#success{
+  display:none;
+  margin-top:18px;
+  padding:20px;
+  border-radius:17px;
+  background:#f2fbff;
+  border:1px solid #cdebf7;
+  text-align:center;
 }
 
-.success h2{
-  color:#a47b32;
-  margin-bottom:10px;
+#success h3{
+  color:#174a62;
+  margin-bottom:6px;
 }
 
-.order-id{
-  background:#faf4e6;
-  padding:12px;
-  border-radius:10px;
-  margin:15px 0;
-  font-weight:bold;
+#orderId{
+  color:#174a62;
+  font-weight:900;
 }
+
+/* RETURN */
+
+.return-box{
+  max-width:760px;
+  margin:auto;
+  padding:25px;
+  background:#fff;
+  border:1px solid var(--blue-border);
+  border-radius:23px;
+}
+
+/* FOOTER */
 
 footer{
-  background:#fff;
-  border-top:1px solid #eee5d3;
-  text-align:center;
-  padding:25px;
-  color:#888;
-  font-size:13px;
+  margin-top:25px;
+  background:#f3fbff;
+  border-top:1px solid var(--blue-border);
 }
 
-@media(max-width:800px){
+.footer-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:30px 18px;
+  text-align:center;
+}
 
-  .product{
+.footer-logo{
+  color:#174a62;
+  font-size:23px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.footer-text{
+  color:#7b8d95;
+  font-size:11px;
+  margin-top:5px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:17px;
+  bottom:17px;
+  z-index:999;
+  padding:12px 16px;
+  border-radius:50px;
+  background:#d9f5ff;
+  border:1px solid #b9e6f6;
+  color:#174a62;
+  font-size:12px;
+  font-weight:900;
+  box-shadow:0 8px 25px rgba(75,157,193,.14);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .hero-grid{
     grid-template-columns:1fr;
-    gap:30px;
+  }
+
+  .hero-image{
+    max-width:620px;
+    margin:auto;
   }
 
   .gallery{
-    position:static;
+    grid-template-columns:repeat(2,1fr);
   }
 
-  h1{
-    font-size:32px;
+  .feature-grid{
+    grid-template-columns:repeat(2,1fr);
   }
 
-  .features{
-    grid-template-columns:1fr;
-  }
-
-  .reviews{
-    grid-template-columns:1fr;
-  }
-
-  .review-photo{
-    height:330px;
+  .review-grid{
+    grid-template-columns:repeat(2,1fr);
   }
 }
 
-@media(max-width:500px){
+@media(max-width:600px){
 
-  header{
-    padding:15px 5%;
+  .nav{
+    padding:13px 14px;
   }
 
   .logo{
-    font-size:24px;
-  }
-
-  .header-tag{
-    font-size:11px;
+    font-size:23px;
   }
 
   .hero{
-    padding:25px 5% 40px;
+    margin-top:15px;
   }
 
-  .info{
-    grid-template-columns:1fr 1fr 1fr;
+  .hero-box{
+    padding:22px 16px;
+    border-radius:22px;
   }
 
-  .two{
+  h1{
+    font-size:38px;
+  }
+
+  .price{
+    font-size:35px;
+  }
+
+  .section{
+    padding:35px 14px;
+  }
+
+  .section-title{
+    font-size:27px;
+  }
+
+  .gallery{
+    gap:9px;
+  }
+
+  .feature-grid{
+    gap:9px;
+  }
+
+  .feature{
+    padding:17px 10px;
+  }
+
+  .info-grid{
+    grid-template-columns:1fr;
+  }
+
+  .info-box{
+    padding:20px;
+  }
+
+  .form-grid{
     grid-template-columns:1fr;
     gap:0;
   }
 
-  .action-links{
-    grid-template-columns:1fr;
+  .form-group.full{
+    grid-column:auto;
   }
 
-  section{
-    padding:0 5%;
+  .order-card{
+    padding:20px 15px;
   }
 
-  .review-photo{
-    height:300px;
+  .whatsapp{
+    right:12px;
+    bottom:12px;
   }
 }
-
 </style>
 </head>
 
 <body>
 
+<div class="topbar">
+  ✦ PREMIUM CLEANING SOLUTION &nbsp; • &nbsp; CASH ON DELIVERY AVAILABLE
+</div>
+
 <header>
-  <div class="logo">REDLEX</div>
-  <div class="header-tag">Premium Everyday Wear</div>
+  <div class="nav">
+    <div class="logo">RED<span>LEX</span></div>
+    <div class="nav-badge">PREMIUM STORE</div>
+  </div>
 </header>
 
+<!-- HERO -->
 
-<main class="hero">
+<section class="hero">
 
-<div class="product">
+  <div class="hero-box">
 
+    <div class="hero-grid">
 
-<!-- PRODUCT GALLERY -->
+      <div>
 
-<div class="gallery">
+        <div class="badge">PREMIUM ELECTRIC CLEANING</div>
 
-<img
-id="mainImage"
-class="main-image"
-src="./file_00000000c58482078d28ede43bb0cffb.png"
-alt="REDLEX Premium Polo T-Shirt"
->
+        <h1>
+          Clean Smarter.<br>
+          Live Better.
+        </h1>
 
-<div class="thumbnails">
+        <p class="hero-text">
+          Meet the REDLEX Electric Spin Scrubber — a convenient cordless
+          cleaning solution designed to make everyday cleaning easier,
+          faster and more comfortable.
+        </p>
 
-<img
-class="active"
-src="./file_00000000c58482078d28ede43bb0cffb.png"
-onclick="changeImage(this)"
-alt="Front"
->
+        <div class="hero-points">
+          <span>⚡ Powerful Cleaning</span>
+          <span>🔋 Cordless</span>
+          <span>🧽 Multiple Heads</span>
+          <span>🏠 Multi-Purpose</span>
+        </div>
 
-<img
-src="./file_0000000084388211b06359360a1effe5.png"
-onclick="changeImage(this)"
-alt="Back"
->
+        <div class="price-box">
+          <div class="price">₹1,299</div>
+          <div class="old-price">₹2,499</div>
+          <div class="save">SAVE ₹1,200</div>
+        </div>
 
-<img
-src="./file_00000000d8608207ba913d1d8ef96594.png"
-onclick="changeImage(this)"
-alt="Side"
->
+        <a href="#order" class="cta">
+          ORDER NOW →
+        </a>
 
-<img
-src="./file_00000000a22c8207a780e8c914f8ff6d.png"
-onclick="changeImage(this)"
-alt="Details"
->
+      </div>
 
-</div>
-</div>
+      <div class="hero-image">
+        <img
+          src="Screenshot_20260905-190644~2.jpg"
+          alt="REDLEX Electric Spin Scrubber">
+      </div>
 
+    </div>
 
-<!-- PRODUCT DETAILS -->
-
-<div>
-
-<span class="badge">REDLEX COLLECTION</span>
-
-<h1>Premium Printed Polo T-Shirt</h1>
-
-<p class="description">
-Stylish premium polo T-shirt designed for a clean and comfortable
-everyday look. Perfect for both casual and smart styling.
-</p>
-
-
-<div class="price-box">
-
-<span class="price">₹499</span>
-
-<span class="mrp">₹999</span>
-
-<span class="save">SAVE ₹500</span>
-
-</div>
-
-
-<div class="info">
-
-<div>
-🚚<br>
-<b>3–10 Days</b><br>
-Delivery
-</div>
-
-<div>
-💵<br>
-<b>COD</b><br>
-Available
-</div>
-
-<div>
-✨<br>
-<b>Premium</b><br>
-Quality
-</div>
-
-</div>
-
-
-<div class="label">
-Select Size
-</div>
-
-<div class="sizes">
-
-<button
-class="size"
-onclick="selectSize('M',this)"
->
-M
-</button>
-
-<button
-class="size"
-onclick="selectSize('L',this)"
->
-L
-</button>
-
-<button
-class="size"
-onclick="selectSize('XL',this)"
->
-XL
-</button>
-
-</div>
-
-
-<div class="label">
-Quantity
-</div>
-
-<div class="quantity">
-
-<button
-class="qty-btn"
-onclick="changeQty(-1)"
->
-−
-</button>
-
-<span id="qty">1</span>
-
-<button
-class="qty-btn"
-onclick="changeQty(1)"
->
-+
-</button>
-
-</div>
-
-
-<button
-class="buy-btn"
-onclick="openOrder()"
->
-🛍️ BUY NOW
-</button>
-
-
-<div class="action-links">
-
-<button
-class="action-btn"
-onclick="openReturn()"
->
-↩️ Return / Exchange
-</button>
-
-<button
-class="action-btn"
-onclick="scrollToReviews()"
->
-⭐ Customer Reviews
-</button>
-
-</div>
-
-
-<div class="delivery">
-Cash on Delivery • Estimated delivery 3–10 days
-</div>
-
-</div>
-
-</div>
-
-</main>
-
-
-<!-- WHY REDLEX -->
-
-<section>
-
-<h2 class="section-title">
-Why Choose REDLEX?
-</h2>
-
-<div class="features">
-
-<div class="feature">
-
-<h3>
-Premium Look
-</h3>
-
-<p>
-Clean and stylish design made for everyday fashion.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<h3>
-Easy COD
-</h3>
-
-<p>
-Place your order easily with Cash on Delivery.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<h3>
-Fast Delivery
-</h3>
-
-<p>
-Your order is expected to arrive within 3–10 days.
-</p>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- CUSTOMER REVIEWS -->
+<!-- PRODUCT PHOTOS -->
 
-<section id="reviews">
+<section class="section">
 
-<h2 class="section-title">
-Customer Reviews
-</h2>
+  <h2 class="section-title">Explore The Product</h2>
 
+  <p class="section-subtitle">
+    Premium design with multiple attachments for convenient everyday cleaning.
+  </p>
 
-<div class="review-summary">
+  <div class="gallery">
 
-<div class="review-summary-rating">
-4.2/5
-</div>
+    <div class="gallery-card">
+      <img src="Screenshot_20260905-190644~2.jpg" alt="Electric Spin Scrubber">
+    </div>
 
-<div class="review-summary-stars">
-★★★★½
-</div>
+    <div class="gallery-card">
+      <img src="Screenshot_20260905-190648~2.jpg" alt="Electric Spin Scrubber">
+    </div>
 
-<div class="review-summary-text">
-Customer feedback
-</div>
+    <div class="gallery-card">
+      <img src="Screenshot_20260905-190652~2.jpg" alt="Electric Spin Scrubber">
+    </div>
 
-</div>
+    <div class="gallery-card">
+      <img src="Screenshot_20260905-190655~2.jpg" alt="Electric Spin Scrubber">
+    </div>
 
+    <div class="gallery-card">
+      <img src="Screenshot_20260905-190658~2.jpg" alt="Electric Spin Scrubber">
+    </div>
 
-<div class="reviews">
+    <div class="gallery-card">
+      <img src="Screenshot_20260905-190700~2.jpg" alt="Electric Spin Scrubber">
+    </div>
 
+    <div class="gallery-card">
+      <img src="Screenshot_20260905-190707~2.jpg" alt="Electric Spin Scrubber">
+    </div>
 
-<!-- REVIEW 1 -->
-
-<div class="review">
-
-<img
-class="review-photo"
-src="./review1.jpg"
-alt="Customer review"
-loading="lazy"
->
-
-<div class="review-stars-row">
-
-<div class="stars">
-★★★★★
-</div>
-
-<div class="rating-number">
-5/5
-</div>
-
-</div>
-
-<div class="review-name">
-Rahul Sharma
-</div>
-
-<div class="review-text">
-“Polo ka look bahut premium hai. Fitting bhi achhi hai aur material comfortable laga.”
-</div>
-
-</div>
-
-
-<!-- REVIEW 2 -->
-
-<div class="review">
-
-<img
-class="review-photo"
-src="./review2.jpg"
-alt="Customer review"
-loading="lazy"
->
-
-<div class="review-stars-row">
-
-<div class="stars">
-★★★★½
-</div>
-
-<div class="rating-number">
-4.5/5
-</div>
-
-</div>
-
-<div class="review-name">
-Aman Verma
-</div>
-
-<div class="review-text">
-“Design kaafi stylish hai. Daily wear ke liye perfect laga, overall quality achhi hai.”
-</div>
-
-</div>
-
-
-<!-- REVIEW 3 -->
-
-<div class="review">
-
-<img
-class="review-photo"
-src="./review3.jpg"
-alt="Customer review"
-loading="lazy"
->
-
-<div class="review-stars-row">
-
-<div class="stars">
-★★★★
-</div>
-
-<div class="rating-number">
-4/5
-</div>
-
-</div>
-
-<div class="review-name">
-Rohit Patel
-</div>
-
-<div class="review-text">
-“Product photo jaisa hi mila. Size fitting sahi hai aur colour/design achha hai.”
-</div>
-
-</div>
-
-
-<!-- REVIEW 4 -->
-
-<div class="review">
-
-<img
-class="review-photo"
-src="./review4.jpg"
-alt="Customer review"
-loading="lazy"
->
-
-<div class="review-stars-row">
-
-<div class="stars">
-★★★½
-</div>
-
-<div class="rating-number">
-3.5/5
-</div>
-
-</div>
-
-<div class="review-name">
-Vikas Yadav
-</div>
-
-<div class="review-text">
-“Overall product achha hai. Look premium hai aur comfortable bhi hai.”
-</div>
-
-</div>
-
-
-<!-- REVIEW 5 -->
-
-<div class="review">
-
-<img
-class="review-photo"
-src="./review5.jpg"
-alt="Customer review"
-loading="lazy"
->
-
-<div class="review-stars-row">
-
-<div class="stars">
-★★★★★
-</div>
-
-<div class="rating-number">
-5/5
-</div>
-
-</div>
-
-<div class="review-name">
-Sahil Khan
-</div>
-
-<div class="review-text">
-“Bahut achhi polo hai. Quality aur fitting dono mujhe pasand aaye. Recommended.”
-</div>
-
-</div>
-
-
-<!-- REVIEW 6 -->
-
-<div class="review">
-
-<img
-class="review-photo"
-src="./review6.jpg"
-alt="Customer review"
-loading="lazy"
->
-
-<div class="review-stars-row">
-
-<div class="stars">
-★★★
-</div>
-
-<div class="rating-number">
-3/5
-</div>
-
-</div>
-
-<div class="review-name">
-Mohit Singh
-</div>
-
-<div class="review-text">
-“Product overall theek hai. Design achha hai aur casual use ke liye sahi laga.”
-</div>
-
-</div>
-
-
-<!-- REVIEW 7 -->
-
-<div class="review">
-
-<img
-class="review-photo"
-src="./review7.jpg"
-alt="Customer review"
-loading="lazy"
->
-
-<div class="review-stars-row">
-
-<div class="stars">
-★★★★
-</div>
-
-<div class="rating-number">
-4/5
-</div>
-
-</div>
-
-<div class="review-name">
-Arjun Mehta
-</div>
-
-<div class="review-text">
-“Simple aur classy look hai. T-shirt ka finish achha hai aur pehenne me comfortable hai.”
-</div>
-
-</div>
-
-
-</div>
-
-
-<div class="review-note">
-Customer feedback
-</div>
+  </div>
 
 </section>
 
+
+<!-- FEATURES -->
+
+<section class="section">
+
+  <h2 class="section-title">Why Choose REDLEX?</h2>
+
+  <p class="section-subtitle">
+    Designed to reduce the effort required for everyday cleaning.
+  </p>
+
+  <div class="feature-grid">
+
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <h3>Powerful Cleaning</h3>
+      <p>Rotating cleaning action helps tackle everyday dirt and grime.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">🔋</div>
+      <h3>Cordless Design</h3>
+      <p>Move freely without having to manage a power cable.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">🧽</div>
+      <h3>Multiple Heads</h3>
+      <p>Different attachments for different cleaning surfaces.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">🏠</div>
+      <h3>Multi-Purpose</h3>
+      <p>Suitable for many everyday household cleaning tasks.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DETAILS -->
+
+<section class="section">
+
+  <div class="info-box">
+
+    <div class="info-grid">
+
+      <div class="info">
+
+        <h3>Product Highlights</h3>
+
+        <ul>
+          <li><strong>Product:</strong> Electric Spin Scrubber</li>
+          <li><strong>Design:</strong> Cordless & Portable</li>
+          <li><strong>Cleaning:</strong> Rotating Brush Action</li>
+          <li><strong>Attachments:</strong> Multiple Brush Heads</li>
+          <li><strong>Use:</strong> Multi-Surface Cleaning</li>
+        </ul>
+
+      </div>
+
+      <div class="info">
+
+        <h3>Order Information</h3>
+
+        <ul>
+          <li><strong>Price:</strong> ₹1,299</li>
+          <li><strong>MRP:</strong> ₹2,499</li>
+          <li><strong>Payment:</strong> Cash On Delivery</li>
+          <li><strong>Delivery:</strong> 3–10 Days</li>
+          <li><strong>Confirmation:</strong> WhatsApp</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="section">
+
+  <h2 class="section-title">Customer Reviews</h2>
+
+  <p class="section-subtitle">
+    Customer feedback shared with REDLEX.
+  </p>
+
+  <div class="review-grid">
+
+    <div class="review">
+      <img src="review_6142407618_6174757074_6906278ce0787.jpeg.jpg" alt="Customer review">
+      <div class="review-content">
+        <div class="stars">★★★★★</div>
+        <div class="review-title">Very useful product</div>
+        <div class="review-name">Customer Review</div>
+        <div class="review-text">The product is useful for regular cleaning.</div>
+      </div>
+    </div>
+
+    <div class="review">
+      <img src="review_1_1265049234_201bec2d03d72.jpeg.jpg" alt="Customer review">
+      <div class="review-content">
+        <div class="stars">★★★★★</div>
+        <div class="review-title">Easy to use</div>
+        <div class="review-name">Customer Review</div>
+        <div class="review-text">Simple and convenient for everyday cleaning.</div>
+      </div>
+    </div>
+
+    <div class="review">
+      <img src="review_6137610344_6169936651_255c5aed93d95.jpeg.jpg" alt="Customer review">
+      <div class="review-content">
+        <div class="stars">★★★★★</div>
+        <div class="review-title">Cleaning made easier</div>
+        <div class="review-name">Customer Review</div>
+        <div class="review-text">Helpful for cleaning different areas at home.</div>
+      </div>
+    </div>
+
+    <div class="review">
+      <img src="review_8613400696_8656094083_dd06e131ec6ff.jpeg.jpg" alt="Customer review">
+      <div class="review-content">
+        <div class="stars">★★★★☆</div>
+        <div class="review-title">Good experience</div>
+        <div class="review-name">Customer Review</div>
+        <div class="review-text">A useful addition to regular cleaning.</div>
+      </div>
+    </div>
+
+    <div class="review">
+      <img src="review_8055934896_8095884078_3f8e45bd9a085.jpeg.jpg" alt="Customer review">
+      <div class="review-content">
+        <div class="stars">★★★★☆</div>
+        <div class="review-title">Quite convenient</div>
+        <div class="review-name">Customer Review</div>
+        <div class="review-text">Makes some cleaning tasks more convenient.</div>
+      </div>
+    </div>
+
+    <div class="review">
+      <img src="review_7587709200_7625859319_7ee19155db7d4.jpeg.jpg" alt="Customer review">
+      <div class="review-content">
+        <div class="stars">★★★★☆</div>
+        <div class="review-title">Worth trying</div>
+        <div class="review-name">Customer Review</div>
+        <div class="review-text">Useful for regular household cleaning.</div>
+      </div>
+    </div>
+
+    <div class="review">
+      <img src="review_5870001199_5901022629_4a8f6e2c80b95.jpeg.jpg" alt="Customer review">
+      <div class="review-content">
+        <div class="stars">★★★★☆</div>
+        <div class="review-title">Nice cleaning helper</div>
+        <div class="review-name">Customer Review</div>
+        <div class="review-text">Convenient product for everyday use.</div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ORDER -->
+
+<section class="section" id="order">
+
+  <h2 class="section-title">Place Your Order</h2>
+
+  <p class="section-subtitle">
+    Enter your details and confirm your order through WhatsApp.
+  </p>
+
+  <div class="order-wrap">
+
+    <div class="order-card">
+
+      <form id="orderForm">
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="name" required>
+          </div>
+
+          <div class="form-group">
+            <label>Mobile Number</label>
+            <input
+              type="tel"
+              id="mobile"
+              maxlength="10"
+              pattern="[0-9]{10}"
+              required>
+          </div>
+
+          <div class="form-group full">
+            <label>Full Address</label>
+            <textarea id="address" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" id="city" required>
+          </div>
+
+          <div class="form-group">
+            <label>State</label>
+            <input type="text" id="state" required>
+          </div>
+
+          <div class="form-group">
+            <label>Pincode</label>
+            <input
+              type="text"
+              id="pincode"
+              maxlength="6"
+              pattern="[0-9]{6}"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label>Quantity</label>
+            <select id="quantity">
+              <option value="1">1 Unit — ₹1,299</option>
+              <option value="2">2 Units — ₹2,598</option>
+              <option value="3">3 Units — ₹3,897</option>
+            </select>
+          </div>
+
+        </div>
+
+        <button class="submit" type="submit">
+          🛒 ORDER NOW — ₹1,299
+        </button>
+
+        <div class="cod-note">
+          🔒 Cash On Delivery • Delivery in 3–10 Days
+        </div>
+
+      </form>
+
+      <div id="success">
+
+        <h3>🎉 Congratulations!</h3>
+
+        <p>Your order request has been prepared.</p>
+
+        <p>
+          Order ID:
+          <span id="orderId"></span>
+        </p>
+
+        <p style="margin-top:8px;font-size:11px;color:#71838d;">
+          Please complete WhatsApp confirmation to confirm your order.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- RETURN / EXCHANGE -->
+
+<section class="section">
+
+  <h2 class="section-title">Return / Exchange</h2>
+
+  <p class="section-subtitle">
+    Already placed an order? Send your request through WhatsApp.
+  </p>
+
+  <div class="return-box">
+
+    <form id="returnForm">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Order ID</label>
+          <input type="text" id="returnOrder" required>
+        </div>
+
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="returnName" required>
+        </div>
+
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <input
+            type="tel"
+            id="returnMobile"
+            maxlength="10"
+            pattern="[0-9]{10}"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label>Request Type</label>
+          <select id="returnType">
+            <option>Return</option>
+            <option>Exchange</option>
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label>Reason</label>
+          <textarea id="returnReason" required></textarea>
+        </div>
+
+      </div>
+
+      <button class="submit" type="submit">
+        SEND REQUEST ON WHATSAPP
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
-© 2026 REDLEX. All Rights Reserved.
+
+  <div class="footer-inner">
+
+    <div class="footer-logo">REDLEX</div>
+
+    <div class="footer-text">
+      Premium products. Simple shopping. Reliable service.
+    </div>
+
+    <div class="footer-text">
+      © 2026 REDLEX. All Rights Reserved.
+    </div>
+
+  </div>
+
 </footer>
 
 
-<!-- ORDER MODAL -->
-
-<div
-class="modal"
-id="orderModal"
->
-
-<div class="modal-box">
-
-<span
-class="close"
-onclick="closeOrder()"
->
-×
-</span>
-
-
-<div id="orderFormArea">
-
-<h2>
-Complete Your Order
-</h2>
-
-<p class="modal-sub">
-Enter your details and continue to WhatsApp.
-</p>
-
-
-<form id="orderForm">
-
-
-<label>
-Full Name *
-</label>
-
-<input
-id="name"
-required
-placeholder="Enter your name"
->
-
-
-<label>
-Mobile Number *
-</label>
-
-<input
-id="phone"
-type="tel"
-inputmode="numeric"
-maxlength="10"
-required
-placeholder="10-digit mobile number"
->
-
-
-<label>
-Full Address *
-</label>
-
-<textarea
-id="address"
-required
-placeholder="House no., street, area"
-></textarea>
-
-
-<div class="two">
-
-
-<div>
-
-<label>
-City *
-</label>
-
-<input
-id="city"
-required
-placeholder="City"
->
-
-</div>
-
-
-<div>
-
-<label>
-State *
-</label>
-
-<input
-id="state"
-required
-placeholder="State"
->
-
-</div>
-
-</div>
-
-
-<label>
-Pincode *
-</label>
-
-<input
-id="pincode"
-type="text"
-inputmode="numeric"
-maxlength="6"
-required
-placeholder="6-digit pincode"
->
-
-
-<label>
-Size *
-</label>
-
-<select
-id="orderSize"
-required
->
-
-<option value="">
-Select size
-</option>
-
-<option value="M">
-M
-</option>
-
-<option value="L">
-L
-</option>
-
-<option value="XL">
-XL
-</option>
-
-</select>
-
-
-<div class="order-summary">
-
-<b>Product:</b>
-Premium Printed Polo T-Shirt
-<br>
-
-<b>Price:</b>
-₹499
-<br>
-
-<b>Quantity:</b>
-<span id="summaryQty">
-1
-</span>
-<br>
-
-<b>Total:</b>
-₹<span id="summaryTotal">
-499
-</span>
-<br>
-
-<b>Payment:</b>
-Cash on Delivery
-
-</div>
-
-
-<button
-class="submit-btn"
-type="submit"
->
-Confirm Order
-</button>
-
-</form>
-
-</div>
-
-
-<div
-class="success"
-id="successArea"
->
-
-<div class="success-icon">
-✓
-</div>
-
-<h2>
-Congratulations! 🎉
-</h2>
-
-<p>
-Your order details are ready.
-</p>
-
-<div class="order-id">
-
-Order ID:
-<span id="orderId"></span>
-
-</div>
-
-<p>
-
-Delivery:
-<b>3–10 days</b>
-
-<br>
-
-Payment:
-<b>Cash on Delivery</b>
-
-</p>
-
-<br>
-
-<button
-class="submit-btn"
-onclick="sendWhatsApp()"
->
-📱 Continue to WhatsApp
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- RETURN MODAL -->
-
-<div
-class="modal"
-id="returnModal"
->
-
-<div class="modal-box">
-
-<span
-class="close"
-onclick="closeReturn()"
->
-×
-</span>
-
-
-<div id="returnFormArea">
-
-<h2>
-Return / Exchange
-</h2>
-
-<p class="modal-sub">
-Submit your return or exchange request.
-</p>
-
-
-<div class="return-info">
-
-Return/exchange requests are subject to REDLEX's applicable return policy.
-Please provide your order details correctly.
-
-</div>
-
-
-<form id="returnForm">
-
-
-<label>
-Order ID *
-</label>
-
-<input
-id="returnOrderId"
-required
-placeholder="Example: RED2609011234"
->
-
-
-<label>
-Full Name *
-</label>
-
-<input
-id="returnName"
-required
-placeholder="Enter your name"
->
-
-
-<label>
-Mobile Number *
-</label>
-
-<input
-id="returnPhone"
-type="tel"
-inputmode="numeric"
-maxlength="10"
-required
-placeholder="10-digit mobile number"
->
-
-
-<label>
-Request Type *
-</label>
-
-<select
-id="returnType"
-required
->
-
-<option value="">
-Select
-</option>
-
-<option value="Return">
-Return
-</option>
-
-<option value="Exchange">
-Exchange
-</option>
-
-</select>
-
-
-<label>
-Reason *
-</label>
-
-<textarea
-id="returnReason"
-required
-placeholder="Tell us the reason"
-></textarea>
-
-
-<button
-class="submit-btn"
-type="submit"
->
-Submit Request
-</button>
-
-</form>
-
-</div>
-
-
-<div
-class="success"
-id="returnSuccess"
->
-
-<div class="success-icon">
-✓
-</div>
-
-<h2>
-Request Ready
-</h2>
-
-<p>
-Your request details are ready to send.
-</p>
-
-<br>
-
-<button
-class="submit-btn"
-onclick="sendReturnWhatsApp()"
->
-📱 Send Request on WhatsApp
-</button>
-
-</div>
-
-</div>
-
-</div>
+<!-- WHATSAPP -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/917869290591"
+  target="_blank">
+  💬 WhatsApp
+</a>
 
 
 <script>
 
-let selectedSize = "";
-
-let quantity = 1;
-
-let currentOrder = null;
-
-let currentReturn = null;
-
-
-/* IMAGE */
-
-function changeImage(img){
-
-document.getElementById("mainImage").src = img.src;
-
-document
-.querySelectorAll(".thumbnails img")
-.forEach(function(x){
-
-x.classList.remove("active");
-
-});
-
-img.classList.add("active");
-
-}
-
-
-/* SIZE */
-
-function selectSize(size,button){
-
-selectedSize = size;
-
-document
-.querySelectorAll(".size")
-.forEach(function(x){
-
-x.classList.remove("selected");
-
-});
-
-button.classList.add("selected");
-
-document.getElementById("orderSize").value = size;
-
-}
-
-
-/* QUANTITY */
-
-function changeQty(amount){
-
-quantity += amount;
-
-if(quantity < 1){
-quantity = 1;
-}
-
-if(quantity > 10){
-quantity = 10;
-}
-
-document.getElementById("qty").textContent = quantity;
-
-document.getElementById("summaryQty").textContent = quantity;
-
-document.getElementById("summaryTotal").textContent =
-499 * quantity;
-
-}
-
-
-/* OPEN ORDER */
-
-function openOrder(){
-
-if(!selectedSize){
-
-alert("Please select your size: M, L or XL.");
-
-return;
-
-}
-
-document.getElementById("orderSize").value =
-selectedSize;
-
-document.getElementById("orderModal").style.display =
-"block";
-
-document.body.style.overflow =
-"hidden";
-
-}
-
-
-/* CLOSE ORDER */
-
-function closeOrder(){
-
-document.getElementById("orderModal").style.display =
-"none";
-
-document.body.style.overflow =
-"auto";
-
-}
-
-
-/* ORDER ID */
+const WHATSAPP_NUMBER = "917869290591";
+const PRODUCT_PRICE = 1299;
 
 function createOrderId(){
 
-const now = new Date();
+  const now = new Date();
 
-const date =
-now.getFullYear().toString().slice(-2) +
-String(now.getMonth()+1).padStart(2,"0") +
-String(now.getDate()).padStart(2,"0");
+  const random =
+    Math.floor(1000 + Math.random() * 9000);
 
-const random =
-Math.floor(1000 + Math.random() * 9000);
-
-return "RED" + date + random;
-
+  return "RL" +
+    now.getFullYear() +
+    String(now.getMonth()+1).padStart(2,"0") +
+    String(now.getDate()).padStart(2,"0") +
+    random;
 }
 
 
-/* ORDER FORM */
+/* ORDER */
 
 document
 .getElementById("orderForm")
-.addEventListener(
-"submit",
-function(e){
+.addEventListener("submit",function(e){
 
-e.preventDefault();
+  e.preventDefault();
 
+  const name =
+    document.getElementById("name").value.trim();
 
-const name =
-document.getElementById("name").value.trim();
+  const mobile =
+    document.getElementById("mobile").value.trim();
 
-const phone =
-document.getElementById("phone").value.trim();
+  const address =
+    document.getElementById("address").value.trim();
 
-const address =
-document.getElementById("address").value.trim();
+  const city =
+    document.getElementById("city").value.trim();
 
-const city =
-document.getElementById("city").value.trim();
+  const state =
+    document.getElementById("state").value.trim();
 
-const state =
-document.getElementById("state").value.trim();
+  const pincode =
+    document.getElementById("pincode").value.trim();
 
-const pincode =
-document.getElementById("pincode").value.trim();
+  const quantity =
+    Number(document.getElementById("quantity").value);
 
-const size =
-document.getElementById("orderSize").value;
+  const orderId = createOrderId();
 
+  const total = PRODUCT_PRICE * quantity;
 
-if(
-phone.length !== 10 ||
-!/^[0-9]+$/.test(phone)
-){
+  document.getElementById("orderId").textContent =
+    orderId;
 
-alert(
-"Please enter a valid 10-digit mobile number."
-);
+  document.getElementById("success").style.display =
+    "block";
 
-return;
+  const message =
+`🔥 NEW REDLEX ORDER
 
-}
+Order ID: ${orderId}
 
+Product: Electric Spin Scrubber
+Price: ₹1,299
+Quantity: ${quantity}
+Total: ₹${total}
 
-if(
-pincode.length !== 6 ||
-!/^[0-9]+$/.test(pincode)
-){
+Customer Name: ${name}
+Mobile: ${mobile}
 
-alert(
-"Please enter a valid 6-digit pincode."
-);
+Address:
+${address}
 
-return;
+City: ${city}
+State: ${state}
+Pincode: ${pincode}
 
-}
+Payment: Cash On Delivery
+Delivery: 3–10 Days
 
+Please confirm my order.`;
 
-if(!size){
+  const whatsappURL =
+    "https://wa.me/" +
+    WHATSAPP_NUMBER +
+    "?text=" +
+    encodeURIComponent(message);
 
-alert(
-"Please select a size."
-);
+  setTimeout(function(){
 
-return;
+    window.open(whatsappURL,"_blank");
 
-}
+  },500);
 
+  document.getElementById("success")
+    .scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
 
-const orderId =
-createOrderId();
+});
 
 
-currentOrder = {
-
-orderId:orderId,
-
-name:name,
-
-phone:phone,
-
-address:address,
-
-city:city,
-
-state:state,
-
-pincode:pincode,
-
-size:size,
-
-quantity:quantity,
-
-amount:499 * quantity
-
-};
-
-
-document.getElementById("orderId").textContent =
-orderId;
-
-document.getElementById("orderFormArea").style.display =
-"none";
-
-document.getElementById("successArea").style.display =
-"block";
-
-}
-);
-
-
-/* WHATSAPP ORDER */
-
-function sendWhatsApp(){
-
-if(!currentOrder)
-return;
-
-const o = currentOrder;
-
-
-const message =
-`🛍️ *REDLEX NEW ORDER*
-
-Order ID: ${o.orderId}
-
-👤 *Customer Details*
-Name: ${o.name}
-Mobile: ${o.phone}
-
-📍 *Delivery Address*
-${o.address}
-${o.city}, ${o.state}
-Pincode: ${o.pincode}
-
-👕 *Product*
-Premium Printed Polo T-Shirt
-Size: ${o.size}
-Quantity: ${o.quantity}
-
-💰 *Amount:* ₹${o.amount}
-💵 *Payment:* Cash on Delivery
-
-🚚 Delivery: 3–10 days
-
-Please confirm my REDLEX order.`;
-
-
-const whatsappNumber =
-"917869290591";
-
-
-const whatsappURL =
-"https://wa.me/" +
-whatsappNumber +
-"?text=" +
-encodeURIComponent(message);
-
-
-window.location.href =
-whatsappURL;
-
-}
-
-
-/* RETURN OPEN */
-
-function openReturn(){
-
-document.getElementById("returnModal").style.display =
-"block";
-
-document.body.style.overflow =
-"hidden";
-
-}
-
-
-/* RETURN CLOSE */
-
-function closeReturn(){
-
-document.getElementById("returnModal").style.display =
-"none";
-
-document.body.style.overflow =
-"auto";
-
-}
-
-
-/* RETURN FORM */
+/* RETURN / EXCHANGE */
 
 document
 .getElementById("returnForm")
-.addEventListener(
-"submit",
-function(e){
+.addEventListener("submit",function(e){
 
-e.preventDefault();
+  e.preventDefault();
 
+  const order =
+    document.getElementById("returnOrder").value.trim();
 
-const orderId =
-document
-.getElementById("returnOrderId")
-.value
-.trim();
+  const name =
+    document.getElementById("returnName").value.trim();
 
+  const mobile =
+    document.getElementById("returnMobile").value.trim();
 
-const name =
-document
-.getElementById("returnName")
-.value
-.trim();
+  const type =
+    document.getElementById("returnType").value;
 
+  const reason =
+    document.getElementById("returnReason").value.trim();
 
-const phone =
-document
-.getElementById("returnPhone")
-.value
-.trim();
+  const message =
+`🔄 REDLEX RETURN / EXCHANGE REQUEST
 
+Order ID: ${order}
 
-const type =
-document
-.getElementById("returnType")
-.value;
+Name: ${name}
+Mobile: ${mobile}
 
+Request: ${type}
 
-const reason =
-document
-.getElementById("returnReason")
-.value
-.trim();
+Reason:
+${reason}`;
 
+  const whatsappURL =
+    "https://wa.me/" +
+    WHATSAPP_NUMBER +
+    "?text=" +
+    encodeURIComponent(message);
 
-if(
-phone.length !== 10 ||
-!/^[0-9]+$/.test(phone)
-){
+  window.open(whatsappURL,"_blank");
 
-alert(
-"Please enter a valid 10-digit mobile number."
-);
-
-return;
-
-}
-
-
-if(!type){
-
-alert(
-"Please select Return or Exchange."
-);
-
-return;
-
-}
-
-
-currentReturn = {
-
-orderId:orderId,
-
-name:name,
-
-phone:phone,
-
-type:type,
-
-reason:reason
-
-};
-
-
-document.getElementById("returnFormArea").style.display =
-"none";
-
-document.getElementById("returnSuccess").style.display =
-"block";
-
-}
-);
-
-
-/* RETURN WHATSAPP */
-
-function sendReturnWhatsApp(){
-
-if(!currentReturn)
-return;
-
-const r =
-currentReturn;
-
-
-const message =
-`↩️ *REDLEX RETURN / EXCHANGE REQUEST*
-
-Order ID: ${r.orderId}
-
-👤 Customer Name: ${r.name}
-📱 Mobile: ${r.phone}
-
-📦 Request: ${r.type}
-
-📝 Reason:
-${r.reason}
-
-Please review my request.`;
-
-
-const whatsappNumber =
-"917869290591";
-
-
-const whatsappURL =
-"https://wa.me/" +
-whatsappNumber +
-"?text=" +
-encodeURIComponent(message);
-
-
-window.location.href =
-whatsappURL;
-
-}
-
-
-/* REVIEWS SCROLL */
-
-function scrollToReviews(){
-
-document
-.getElementById("reviews")
-.scrollIntoView({
-behavior:"smooth"
 });
-
-}
-
-
-/* OUTSIDE CLICK */
-
-window.addEventListener(
-"click",
-function(e){
-
-const orderModal =
-document.getElementById("orderModal");
-
-const returnModal =
-document.getElementById("returnModal");
-
-
-if(e.target === orderModal){
-
-closeOrder();
-
-}
-
-
-if(e.target === returnModal){
-
-closeReturn();
-
-}
-
-}
-);
 
 </script>
 
