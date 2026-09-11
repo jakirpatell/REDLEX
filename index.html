@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>REDLEX | Electric Spin Scrubber</title>
 
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{
@@ -368,7 +371,6 @@ footer b{color:#227bb5}
 </div>
 </section>
 
-
 <!-- PRODUCT -->
 <section id="product">
 <div class="container">
@@ -427,7 +429,6 @@ and everyday household cleaning. Clean with less effort.
 </div>
 </section>
 
-
 <!-- FEATURES -->
 <section>
 <div class="container">
@@ -464,7 +465,6 @@ and everyday household cleaning. Clean with less effort.
 </div>
 </section>
 
-
 <!-- DETAILS -->
 <section>
 <div class="container">
@@ -473,17 +473,39 @@ and everyday household cleaning. Clean with less effort.
 
 <div class="details">
 
-<div class="detail"><b>Product</b><br><span>Electric Spin Scrubber</span></div>
-<div class="detail"><b>Price</b><br><span>₹1,299</span></div>
-<div class="detail"><b>MRP</b><br><span>₹2,499</span></div>
-<div class="detail"><b>Delivery</b><br><span>3–10 Days</span></div>
-<div class="detail"><b>Payment</b><br><span>UPI / COD</span></div>
-<div class="detail"><b>Design</b><br><span>Cordless</span></div>
+<div class="detail">
+<b>Product</b><br>
+<span>Electric Spin Scrubber</span>
+</div>
+
+<div class="detail">
+<b>Price</b><br>
+<span>₹1,299</span>
+</div>
+
+<div class="detail">
+<b>MRP</b><br>
+<span>₹2,499</span>
+</div>
+
+<div class="detail">
+<b>Delivery</b><br>
+<span>3–10 Days</span>
+</div>
+
+<div class="detail">
+<b>Payment</b><br>
+<span>UPI / COD</span>
+</div>
+
+<div class="detail">
+<b>Design</b><br>
+<span>Cordless</span>
+</div>
 
 </div>
 </div>
 </section>
-
 
 <!-- REVIEWS -->
 <section>
@@ -493,18 +515,44 @@ and everyday household cleaning. Clean with less effort.
 
 <div class="reviews">
 
-<div class="review"><img src="review_6142407618_6174757074_6906278ce0787.jpeg.jpg" onclick="openImage(this.src)"></div>
-<div class="review"><img src="review_1_1265049234_201bec2d03d72.jpeg.jpg" onclick="openImage(this.src)"></div>
-<div class="review"><img src="review_6137610344_6169936651_255c5aed93d95.jpeg.jpg" onclick="openImage(this.src)"></div>
-<div class="review"><img src="review_8613400696_8656094083_dd06e131ec6ff.jpeg.jpg" onclick="openImage(this.src)"></div>
-<div class="review"><img src="review_8055934896_8095884078_3f8e45bd9a085.jpeg.jpg" onclick="openImage(this.src)"></div>
-<div class="review"><img src="review_7587709200_7625859319_7ee19155db7d4.jpeg.jpg" onclick="openImage(this.src)"></div>
-<div class="review"><img src="review_5870001199_5901022629_4a8f6e2c80b95.jpeg.jpg" onclick="openImage(this.src)"></div>
+<div class="review">
+<img src="review_6142407618_6174757074_6906278ce0787.jpeg.jpg"
+onclick="openImage(this.src)">
+</div>
+
+<div class="review">
+<img src="review_1_1265049234_201bec2d03d72.jpeg.jpg"
+onclick="openImage(this.src)">
+</div>
+
+<div class="review">
+<img src="review_6137610344_6169936651_255c5aed93d95.jpeg.jpg"
+onclick="openImage(this.src)">
+</div>
+
+<div class="review">
+<img src="review_8613400696_8656094083_dd06e131ec6ff.jpeg.jpg"
+onclick="openImage(this.src)">
+</div>
+
+<div class="review">
+<img src="review_8055934896_8095884078_3f8e45bd9a085.jpeg.jpg"
+onclick="openImage(this.src)">
+</div>
+
+<div class="review">
+<img src="review_7587709200_7625859319_7ee19155db7d4.jpeg.jpg"
+onclick="openImage(this.src)">
+</div>
+
+<div class="review">
+<img src="review_5870001199_5901022629_4a8f6e2c80b95.jpeg.jpg"
+onclick="openImage(this.src)">
+</div>
 
 </div>
 </div>
 </section>
-
 
 <!-- ORDER -->
 <section id="order">
@@ -513,36 +561,46 @@ and everyday household cleaning. Clean with less effort.
 <div class="order">
 
 <h2>Place Your Order</h2>
-<p class="order-sub">Enter your details and choose payment method.</p>
+
+<p class="order-sub">
+Enter your details and choose payment method.
+</p>
 
 <label>Full Name</label>
 <input id="name" type="text" placeholder="Your full name">
 
 <label>Mobile Number</label>
-<input id="mobile" type="tel" maxlength="10" placeholder="10 digit mobile number">
+<input id="mobile" type="tel" maxlength="10"
+placeholder="10 digit mobile number">
 
 <label>Full Address</label>
-<textarea id="address" placeholder="House no., street, area, city..."></textarea>
+<textarea id="address"
+placeholder="House no., street, area, city..."></textarea>
 
 <label>Pincode</label>
-<input id="pincode" type="tel" maxlength="6" placeholder="6 digit pincode">
-
+<input id="pincode" type="tel" maxlength="6"
+placeholder="6 digit pincode">
 
 <!-- QR -->
+
 <div class="qr">
 
 <h3>💳 Pay Online — ₹1,299</h3>
-<p>Scan the QR using your UPI app and pay exactly ₹1,299.</p>
+
+<p>
+Scan the QR using your UPI app and pay exactly ₹1,299.
+</p>
 
 <img
 src="IMG_20260906_113836_343.jpg"
 onclick="openImage(this.src)"
 alt="REDLEX UPI QR Code">
 
-<div class="upi">UPI ID: patelll09@ptyes</div>
-
+<div class="upi">
+UPI ID: patelll09@ptyes
 </div>
 
+</div>
 
 <div class="payments">
 
@@ -556,35 +614,42 @@ alt="REDLEX UPI QR Code">
 
 </div>
 
-
 <div id="onlineConfirm" class="confirm">
 
 <h3>🎉 Congratulations!</h3>
 
-<p>Your online payment submission has been received. Payment will be manually verified before final confirmation.</p>
+<p>
+Your online payment submission has been received.
+Payment will be manually verified before final confirmation.
+</p>
 
 <div class="orderid">
 Order ID: <span id="onlineId"></span>
 </div>
 
-<a id="onlineWA" class="btn green" target="_blank">
+<a id="onlineWA"
+class="btn green"
+target="_blank">
 📲 Send Details on WhatsApp
 </a>
 
 </div>
 
-
 <div id="codConfirm" class="confirm">
 
 <h3>🎉 Congratulations!</h3>
 
-<p>Your COD order has been submitted successfully.</p>
+<p>
+Your COD order has been submitted successfully.
+</p>
 
 <div class="orderid">
 Order ID: <span id="codId"></span>
 </div>
 
-<a id="codWA" class="btn green" target="_blank">
+<a id="codWA"
+class="btn green"
+target="_blank">
 📲 Confirm on WhatsApp
 </a>
 
@@ -594,24 +659,32 @@ Order ID: <span id="codId"></span>
 </div>
 </section>
 
-
 <!-- RETURN -->
+
 <section>
 <div class="container">
 
 <div class="return">
 
 <h3>🔄 Return / Exchange</h3>
-<p>Need help with your order? Send your request on WhatsApp.</p>
+
+<p>
+Need help with your order? Send your request on WhatsApp.
+</p>
 
 <label>Name</label>
-<input id="returnName" type="text" placeholder="Your name">
+<input id="returnName"
+type="text"
+placeholder="Your name">
 
 <label>Order ID</label>
-<input id="returnOrder" type="text" placeholder="Order ID">
+<input id="returnOrder"
+type="text"
+placeholder="Order ID">
 
 <label>Reason</label>
-<textarea id="returnReason" placeholder="Tell us your issue..."></textarea>
+<textarea id="returnReason"
+placeholder="Tell us your issue..."></textarea>
 
 <button class="btn green" onclick="returnRequest()">
 📲 Send Request
@@ -621,86 +694,194 @@ Order ID: <span id="codId"></span>
 </div>
 </section>
 
-
 <footer>
 © 2026 <b>REDLEX</b> — Premium Everyday Cleaning Solutions
 </footer>
 
-
 <!-- WHATSAPP -->
+
 <a class="float"
 href="https://wa.me/918602720758"
 target="_blank">💬</a>
 
-
 <!-- IMAGE MODAL -->
-<div id="modal" class="modal" onclick="closeModal(event)">
-<button class="close" onclick="closeModal(event)">×</button>
-<img id="modalImg">
-</div>
 
+<div id="modal"
+class="modal"
+onclick="closeModal(event)">
+
+<button class="close"
+onclick="closeModal(event)">×</button>
+
+<img id="modalImg">
+
+</div>
 
 <script>
 
+/* =========================================================
+   SUPABASE DATABASE CONNECTION
+   ========================================================= */
+
+const SUPABASE_URL =
+"https://smfmhoujnmdssrkzbeyv.supabase.co";
+
+const SUPABASE_PUBLISHABLE_KEY =
+"sb_publishable_hoEH3p-71Jqh2mVNgf42fw_uFlM6Obp";
+
+const { createClient } = supabase;
+
+const db = createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
+
+
+/* =========================================================
+   EXISTING WEBSITE SETTINGS
+   ========================================================= */
+
 const WA="918602720758";
 const PRICE=1299;
+
 let quantity=1;
 
+
+/* =========================================================
+   QUANTITY
+   ========================================================= */
+
 function changeQty(n){
+
   quantity+=n;
+
   if(quantity<1) quantity=1;
   if(quantity>10) quantity=10;
+
   document.getElementById("qty").textContent=quantity;
 }
 
+
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
+
 function changeMain(src){
+
   document.getElementById("mainProduct").src=src;
 }
 
+
+/* =========================================================
+   IMAGE MODAL
+   ========================================================= */
+
 function openImage(src){
+
   document.getElementById("modalImg").src=src;
-  document.getElementById("modal").classList.add("show");
+
+  document.getElementById("modal")
+  .classList.add("show");
 }
 
+
 function closeModal(e){
-  if(e.target.id==="modal" || e.target.classList.contains("close")){
-    document.getElementById("modal").classList.remove("show");
+
+  if(
+    e.target.id==="modal" ||
+    e.target.classList.contains("close")
+  ){
+
+    document.getElementById("modal")
+    .classList.remove("show");
   }
 }
+
+
+/* =========================================================
+   CUSTOMER DETAILS
+   ========================================================= */
 
 function details(){
 
-  const name=document.getElementById("name").value.trim();
-  const mobile=document.getElementById("mobile").value.trim();
-  const address=document.getElementById("address").value.trim();
-  const pincode=document.getElementById("pincode").value.trim();
+  const name=
+    document.getElementById("name")
+    .value.trim();
+
+  const mobile=
+    document.getElementById("mobile")
+    .value.trim();
+
+  const address=
+    document.getElementById("address")
+    .value.trim();
+
+  const pincode=
+    document.getElementById("pincode")
+    .value.trim();
+
 
   if(name.length<2){
+
     alert("Please enter your full name.");
+
     return null;
   }
+
 
   if(!/^[0-9]{10}$/.test(mobile)){
-    alert("Please enter a valid 10 digit mobile number.");
+
+    alert(
+      "Please enter a valid 10 digit mobile number."
+    );
+
     return null;
   }
+
 
   if(address.length<8){
-    alert("Please enter your complete address.");
+
+    alert(
+      "Please enter your complete address."
+    );
+
     return null;
   }
+
 
   if(!/^[0-9]{6}$/.test(pincode)){
-    alert("Please enter a valid 6 digit pincode.");
+
+    alert(
+      "Please enter a valid 6 digit pincode."
+    );
+
     return null;
   }
 
-  return {name,mobile,address,pincode};
+
+  return {
+    name,
+    mobile,
+    address,
+    pincode
+  };
 }
 
+
+/* =========================================================
+   ORDER ID
+   ========================================================= */
+
 function orderId(prefix){
-  return prefix+"-"+Math.floor(100000+Math.random()*900000);
+
+  return prefix+"-"+
+  Math.floor(100000+Math.random()*900000);
 }
+
+
+/* =========================================================
+   WHATSAPP MESSAGE
+   ========================================================= */
 
 function message(d,id,payment){
 
@@ -717,85 +898,262 @@ function message(d,id,payment){
   "Pincode: "+encodeURIComponent(d.pincode);
 }
 
-function paidOnline(){
+
+/* =========================================================
+   SUPABASE SAVE FUNCTION
+   ========================================================= */
+
+async function saveOrder(
+  d,
+  id,
+  paymentMethod,
+  status
+){
+
+  const totalAmount =
+    PRICE * quantity;
+
+
+  const { data, error } =
+    await db
+    .from("orders")
+    .insert([
+
+      {
+        order_id:id,
+        customer_name:d.name,
+        phone:d.mobile,
+        address:d.address,
+        pincode:d.pincode,
+        quantity:quantity,
+        amount:totalAmount,
+        order_status:status
+      }
+
+    ])
+    .select();
+
+
+  if(error){
+
+    console.error(
+      "SUPABASE ERROR:",
+      error
+    );
+
+    alert(
+      "Order database me save nahi ho paya.\n\n"+
+      "Please try again."
+    );
+
+    return false;
+  }
+
+
+  console.log(
+    "ORDER SAVED TO SUPABASE:",
+    data
+  );
+
+  return true;
+}
+
+
+/* =========================================================
+   ONLINE PAYMENT
+   ========================================================= */
+
+async function paidOnline(){
 
   const d=details();
+
   if(!d)return;
 
-  const id=orderId("REDLEX-ON");
 
-  document.getElementById("onlineId").textContent=id;
+  const id=
+    orderId("REDLEX-ON");
+
+
+  /* DATABASE SAVE */
+
+  const saved=
+    await saveOrder(
+      d,
+      id,
+      "UPI",
+      "Payment Verification Pending"
+    );
+
+
+  if(!saved)return;
+
+
+  document.getElementById("onlineId")
+  .textContent=id;
+
 
   document.getElementById("onlineWA").href=
-  "https://wa.me/"+WA+"?text="+
-  message(d,id,"UPI - ₹1,299");
+    "https://wa.me/"+WA+
+    "?text="+
+    message(
+      d,
+      id,
+      "UPI - ₹1,299"
+    );
 
-  document.getElementById("onlineConfirm").classList.add("show");
-  document.getElementById("codConfirm").classList.remove("show");
 
   document.getElementById("onlineConfirm")
-  .scrollIntoView({behavior:"smooth",block:"center"});
-}
+  .classList.add("show");
 
-function codOrder(){
-
-  const d=details();
-  if(!d)return;
-
-  const id=orderId("REDLEX-COD");
-
-  document.getElementById("codId").textContent=id;
-
-  document.getElementById("codWA").href=
-  "https://wa.me/"+WA+"?text="+
-  message(d,id,"Cash On Delivery");
-
-  document.getElementById("codConfirm").classList.add("show");
-  document.getElementById("onlineConfirm").classList.remove("show");
 
   document.getElementById("codConfirm")
-  .scrollIntoView({behavior:"smooth",block:"center"});
+  .classList.remove("show");
+
+
+  document.getElementById("onlineConfirm")
+  .scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+  });
+
 }
+
+
+/* =========================================================
+   COD ORDER
+   ========================================================= */
+
+async function codOrder(){
+
+  const d=details();
+
+  if(!d)return;
+
+
+  const id=
+    orderId("REDLEX-COD");
+
+
+  /* DATABASE SAVE */
+
+  const saved=
+    await saveOrder(
+      d,
+      id,
+      "Cash On Delivery",
+      "Confirmed"
+    );
+
+
+  if(!saved)return;
+
+
+  document.getElementById("codId")
+  .textContent=id;
+
+
+  document.getElementById("codWA").href=
+    "https://wa.me/"+WA+
+    "?text="+
+    message(
+      d,
+      id,
+      "Cash On Delivery"
+    );
+
+
+  document.getElementById("codConfirm")
+  .classList.add("show");
+
+
+  document.getElementById("onlineConfirm")
+  .classList.remove("show");
+
+
+  document.getElementById("codConfirm")
+  .scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+  });
+
+}
+
+
+/* =========================================================
+   RETURN / EXCHANGE
+   ========================================================= */
 
 function returnRequest(){
 
-  const name=document.getElementById("returnName").value.trim();
-  const id=document.getElementById("returnOrder").value.trim();
-  const reason=document.getElementById("returnReason").value.trim();
+  const name=
+    document.getElementById("returnName")
+    .value.trim();
+
+  const id=
+    document.getElementById("returnOrder")
+    .value.trim();
+
+  const reason=
+    document.getElementById("returnReason")
+    .value.trim();
+
 
   if(name.length<2){
+
     alert("Please enter your name.");
+
     return;
   }
+
 
   if(id.length<3){
+
     alert("Please enter your Order ID.");
+
     return;
   }
+
 
   if(reason.length<3){
+
     alert("Please enter the reason.");
+
     return;
   }
 
+
   const msg=
-  "Hi REDLEX,%0A%0A"+
-  "I need Return / Exchange support.%0A%0A"+
-  "Name: "+encodeURIComponent(name)+"%0A"+
-  "Order ID: "+encodeURIComponent(id)+"%0A"+
-  "Reason: "+encodeURIComponent(reason);
+    "Hi REDLEX,%0A%0A"+
+    "I need Return / Exchange support.%0A%0A"+
+    "Name: "+encodeURIComponent(name)+"%0A"+
+    "Order ID: "+encodeURIComponent(id)+"%0A"+
+    "Reason: "+encodeURIComponent(reason);
+
 
   window.open(
-    "https://wa.me/"+WA+"?text="+msg,
+    "https://wa.me/"+WA+
+    "?text="+msg,
     "_blank"
   );
 }
 
-document.addEventListener("keydown",function(e){
-  if(e.key==="Escape"){
-    document.getElementById("modal").classList.remove("show");
+
+/* =========================================================
+   ESCAPE KEY
+   ========================================================= */
+
+document.addEventListener(
+  "keydown",
+  function(e){
+
+    if(e.key==="Escape"){
+
+      document.getElementById("modal")
+      .classList.remove("show");
+    }
+
   }
-});
+);
 
 </script>
 
