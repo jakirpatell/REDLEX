@@ -2,676 +2,1735 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#eef8ff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>REDLEX | 9-in-1 Electric Spin Scrubber</title>
+<meta name="description" content="REDLEX 9-in-1 Electric Spin Scrubber. Cordless cleaning for bathrooms, tiles and floors. Cash on Delivery across India.">
+<meta name="theme-color" content="#318dcc">
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
-*{box-sizing:border-box}
-body{
+*{
+  box-sizing:border-box;
   margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f7fbff;
-  color:#17212b;
+  padding:0;
 }
-a{text-decoration:none;color:inherit}
-.container{max-width:720px;margin:auto;padding:12px}
-.top{
-  background:#fff;
-  border-bottom:1px solid #e5eef5;
-  position:sticky;top:0;z-index:20;
-}
-.nav{
-  max-width:720px;margin:auto;
-  padding:12px;
-  display:flex;justify-content:space-between;align-items:center;
-}
-.logo{
-  font-size:22px;font-weight:800;letter-spacing:2px;color:#2384c6;
-}
-.support{
-  font-size:13px;font-weight:700;color:#2384c6;
-}
-.hero{
-  background:linear-gradient(180deg,#fff,#eef8ff);
-  border-radius:20px;
-  padding:18px 14px;
-  text-align:center;
-  margin-top:12px;
-}
-.hero h1{font-size:28px;margin:5px 0 7px}
-.hero p{margin:0;color:#607080;font-size:15px}
-.gallery{
-  background:#fff;border-radius:20px;padding:10px;margin-top:12px;
-}
-.main-img{
-  width:100%;height:390px;object-fit:contain;border-radius:15px;
-  background:#f4faff;cursor:pointer;
-}
-.thumbs{
-  display:flex;gap:7px;overflow-x:auto;margin-top:8px;
-}
-.thumbs img{
-  width:66px;height:66px;object-fit:cover;border-radius:10px;
-  border:2px solid transparent;cursor:pointer;
-}
-.price-card{
-  background:#fff;border-radius:20px;padding:16px;margin-top:12px;
-  box-shadow:0 5px 20px rgba(30,100,150,.07);
-}
-.price{
-  font-size:30px;font-weight:800;color:#1687c9;
-}
-.mrp{text-decoration:line-through;color:#8996a2;font-size:14px}
-.save{
-  display:inline-block;background:#e9f7ff;color:#1687c9;
-  border-radius:20px;padding:5px 9px;font-size:12px;font-weight:700;
-}
-.badges{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
-.badge{
-  background:#f0f8fd;color:#39728f;border-radius:20px;
-  padding:7px 10px;font-size:12px;font-weight:700;
-}
-.order-btn{
-  width:100%;border:0;border-radius:14px;
-  padding:15px;background:#168bd0;color:#fff;
-  font-size:17px;font-weight:800;cursor:pointer;margin-top:14px;
-}
-.order-btn:hover{background:#0879bc}
-.section{
-  background:#fff;border-radius:20px;margin-top:12px;padding:16px;
-}
-.section h2{font-size:19px;margin:0 0 10px}
-.features{
-  display:grid;grid-template-columns:1fr 1fr;gap:9px;
-}
-.feature{
-  background:#f4faff;border-radius:13px;padding:12px;
-  font-size:13px;font-weight:700;
-}
-.details{
-  margin-top:10px;border-top:1px solid #edf1f4;padding-top:10px;
-}
-details summary{cursor:pointer;font-weight:800}
-details p{font-size:14px;line-height:1.6;color:#566574}
-.review-summary{
-  text-align:center;background:#f2f9ff;border-radius:16px;padding:15px;
-}
-.rating{font-size:32px;font-weight:800;color:#168bd0}
-.stars{font-size:20px;letter-spacing:2px}
-.review{
-  border:1px solid #e8eef2;border-radius:15px;padding:11px;
-  margin-top:10px;background:#fff;
-}
-.review img{
-  width:100%;height:250px;object-fit:contain;background:#f7fbfd;
-  border-radius:11px;cursor:pointer;
-}
-.review-head{
-  display:flex;justify-content:space-between;align-items:center;
-  margin-top:8px;font-weight:800;
-}
-.review p{font-size:14px;line-height:1.5;color:#4f5e69;margin:8px 0 0}
-.proscons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}
-.pro,.con{padding:10px;border-radius:11px;font-size:12px;line-height:1.4}
-.pro{background:#effbf4;color:#247243}
-.con{background:#fff6ee;color:#8a5b27}
 
-#orderBox{display:none}
-.form-row{margin-top:10px}
-label{font-size:13px;font-weight:700}
-input,textarea{
-  width:100%;margin-top:5px;border:1px solid #d8e4ec;
-  border-radius:11px;padding:12px;font-size:15px;outline:none;
+html{
+  scroll-behavior:smooth;
 }
-textarea{min-height:90px;resize:vertical}
-.qty{
-  display:flex;align-items:center;gap:12px;margin-top:7px
+
+body{
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#f7fbff;
+  color:#142333;
+  line-height:1.55;
+  padding-bottom:76px;
 }
-.qty button{
-  width:38px;height:38px;border:0;border-radius:10px;
-  background:#eaf6ff;color:#168bd0;font-size:22px;cursor:pointer;
+
+button,
+input,
+textarea,
+select{
+  font:inherit;
 }
-.qty span{font-size:18px;font-weight:800;min-width:25px;text-align:center}
-.total{
-  margin-top:13px;padding:13px;background:#eef8ff;
-  border-radius:12px;font-weight:800;font-size:18px;
+
+button{
+  cursor:pointer;
 }
-.error{color:#d33;font-size:13px;margin-top:8px}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* TOP BAR */
+.topbar{
+  background:#eaf6ff;
+  color:#216b9c;
+  text-align:center;
+  padding:9px 14px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.2px;
+}
+
+/* HEADER */
+header{
+  background:rgba(255,255,255,.94);
+  border-bottom:1px solid #e8f1f7;
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter:blur(12px);
+}
+
+.header-inner{
+  max-width:1120px;
+  margin:auto;
+  min-height:62px;
+  padding:0 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:2px;
+  color:#2585c5;
+}
+
+.header-tag{
+  font-size:12px;
+  color:#6d7d8b;
+  font-weight:600;
+}
+
+/* MAIN */
+.container{
+  width:min(1120px,calc(100% - 28px));
+  margin:auto;
+}
+
+/* HERO */
+.hero{
+  padding:24px 0 18px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.02fr .98fr;
+  gap:28px;
+  align-items:center;
+}
+
+.gallery{
+  background:#fff;
+  border:1px solid #e7f1f7;
+  border-radius:24px;
+  padding:14px;
+  box-shadow:0 12px 35px rgba(31,105,145,.08);
+}
+
+.main-image{
+  aspect-ratio:1/1;
+  width:100%;
+  object-fit:contain;
+  border-radius:18px;
+  background:#f5faff;
+  cursor:pointer;
+}
+
+.thumb-row{
+  display:flex;
+  gap:8px;
+  margin-top:10px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+
+.thumb-row::-webkit-scrollbar{
+  display:none;
+}
+
+.thumb{
+  width:64px;
+  height:64px;
+  min-width:64px;
+  object-fit:cover;
+  border-radius:11px;
+  border:2px solid transparent;
+  background:#f3f8fb;
+  cursor:pointer;
+}
+
+.thumb.active{
+  border-color:#318dcc;
+}
+
+.hero-copy{
+  padding:4px 2px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  background:#eaf6ff;
+  color:#2879ad;
+  border-radius:999px;
+  padding:7px 11px;
+  font-size:11px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+h1{
+  font-size:clamp(29px,4vw,46px);
+  line-height:1.08;
+  letter-spacing:-1.3px;
+  margin-bottom:11px;
+}
+
+.hero-description{
+  color:#667785;
+  font-size:15px;
+  max-width:540px;
+  margin-bottom:17px;
+}
+
+.rating{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  margin-bottom:16px;
+  font-size:13px;
+  color:#596c7a;
+}
+
+.stars{
+  color:#f2a900;
+  letter-spacing:1px;
+  font-size:16px;
+}
+
+/* PRICE */
+.price-box{
+  background:#fff;
+  border:1px solid #e4eff6;
+  border-radius:18px;
+  padding:15px 17px;
+  margin-bottom:14px;
+}
+
+.mrp{
+  color:#8997a1;
+  text-decoration:line-through;
+  font-size:14px;
+}
+
+.price-line{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  flex-wrap:wrap;
+}
+
+.price{
+  font-size:36px;
+  line-height:1;
+  font-weight:900;
+  color:#1c78b2;
+}
+
+.cod-label{
+  background:#eaf8f0;
+  color:#1b8b51;
+  padding:5px 9px;
+  border-radius:8px;
+  font-size:11px;
+  font-weight:800;
+}
+
+.free-delivery{
+  margin-top:8px;
+  color:#347b9f;
+  font-size:12px;
+  font-weight:700;
+}
+
+/* CTA */
+.primary-btn{
+  width:100%;
+  border:0;
+  border-radius:15px;
+  background:#22b85b;
+  color:#fff;
+  font-weight:900;
+  font-size:16px;
+  padding:15px 18px;
+  box-shadow:0 8px 22px rgba(34,184,91,.20);
+  transition:.2s;
+}
+
+.primary-btn:hover{
+  transform:translateY(-1px);
+  filter:brightness(.97);
+}
+
+.no-advance{
+  text-align:center;
+  color:#71808c;
+  font-size:11px;
+  margin-top:7px;
+}
+
+/* TRUST */
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:9px;
+  margin:18px 0 10px;
+}
+
+.trust{
+  background:#fff;
+  border:1px solid #e5eff5;
+  border-radius:14px;
+  padding:12px 8px;
+  text-align:center;
+}
+
+.trust-icon{
+  font-size:20px;
+  margin-bottom:3px;
+}
+
+.trust strong{
+  display:block;
+  font-size:11px;
+}
+
+.trust span{
+  display:block;
+  color:#778692;
+  font-size:9px;
+}
+
+/* SECTION */
+section{
+  padding:22px 0;
+}
+
+.section-card{
+  background:#fff;
+  border:1px solid #e4eff6;
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 8px 28px rgba(32,99,132,.045);
+}
+
+.section-title{
+  font-size:23px;
+  line-height:1.15;
+  margin-bottom:7px;
+  letter-spacing:-.5px;
+}
+
+.section-subtitle{
+  color:#74838e;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+/* BENEFITS */
+.benefit-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:11px;
+}
+
+.benefit{
+  background:#f6fbff;
+  border:1px solid #e5f2f9;
+  border-radius:15px;
+  padding:15px;
+}
+
+.benefit-icon{
+  font-size:23px;
+  margin-bottom:6px;
+}
+
+.benefit strong{
+  display:block;
+  font-size:13px;
+  margin-bottom:3px;
+}
+
+.benefit p{
+  font-size:11px;
+  color:#71818d;
+}
+
+/* HOW IT WORKS */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.step{
+  position:relative;
+  padding:17px;
+  border-radius:16px;
+  background:#f7fbff;
+  border:1px solid #e4eff5;
+}
+
+.step-no{
+  color:#318dcc;
+  font-weight:900;
+  font-size:12px;
+  margin-bottom:7px;
+}
+
+.step strong{
+  font-size:14px;
+}
+
+.step p{
+  color:#758590;
+  font-size:11px;
+  margin-top:4px;
+}
+
+/* REVIEW */
+.review-summary{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  background:#f5faff;
+  border:1px solid #e1eef6;
+  border-radius:17px;
+  padding:15px;
+  margin-bottom:15px;
+}
+
+.big-rating{
+  font-size:32px;
+  font-weight:900;
+  color:#1e78b1;
+}
+
+.review-summary p{
+  font-size:12px;
+  color:#6c7c88;
+}
+
+.review-images{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.review-images img{
+  width:100%;
+  border-radius:15px;
+  border:1px solid #e1eaf0;
+  background:#f4f7f9;
+  cursor:pointer;
+}
+
+/* INDIAN PRODUCT LINE */
+.indian-note{
+  margin-top:15px;
+  padding:15px 16px;
+  border-radius:16px;
+  background:#eef8ff;
+  border:1px solid #dceef8;
+  text-align:center;
+  color:#326b8e;
+  font-size:13px;
+  font-weight:700;
+}
+
+/* PROS CONS */
+.proscons{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.pc{
+  padding:17px;
+  border-radius:17px;
+  border:1px solid #e3edf3;
+}
+
+.pc.good{
+  background:#f3fbf7;
+}
+
+.pc.note{
+  background:#f8fbfd;
+}
+
+.pc h3{
+  font-size:14px;
+  margin-bottom:9px;
+}
+
+.pc ul{
+  list-style:none;
+}
+
+.pc li{
+  font-size:12px;
+  color:#62737f;
+  margin:7px 0;
+}
+
+.good li::before{
+  content:"✓";
+  color:#20a85b;
+  font-weight:900;
+  margin-right:7px;
+}
+
+.note li::before{
+  content:"•";
+  color:#318dcc;
+  font-weight:900;
+  margin-right:7px;
+}
+
+/* ORDER */
+.order-section{
+  scroll-margin-top:80px;
+}
+
+.order-card{
+  background:#fff;
+  border:1px solid #dfeef6;
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 12px 35px rgba(30,105,145,.08);
+}
+
+.order-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  margin-bottom:17px;
+}
+
+.order-price{
+  font-weight:900;
+  color:#1f7db8;
+  font-size:18px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:11px;
+}
+
+.field{
+  margin-bottom:11px;
+}
+
+.field.full{
+  grid-column:1/-1;
+}
+
+.field label{
+  display:block;
+  font-size:11px;
+  font-weight:800;
+  margin-bottom:5px;
+  color:#445865;
+}
+
+.field input,
+.field textarea,
+.field select{
+  width:100%;
+  border:1px solid #d9e7ee;
+  background:#fbfdff;
+  border-radius:11px;
+  padding:12px;
+  outline:none;
+  color:#1d2e3b;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus{
+  border-color:#58a8d6;
+  box-shadow:0 0 0 3px rgba(49,141,204,.08);
+}
+
+.field textarea{
+  min-height:82px;
+  resize:vertical;
+}
+
+.total-box{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#eef8ff;
+  border-radius:13px;
+  padding:13px;
+  margin:4px 0 12px;
+}
+
+.total-box span{
+  font-size:12px;
+  color:#647783;
+}
+
+.total-box strong{
+  font-size:21px;
+  color:#1f7eb9;
+}
+
+/* SUCCESS */
 .success{
-  display:none;background:#edfff4;color:#176b3b;
-  padding:14px;border-radius:14px;margin-top:12px;line-height:1.5;
+  display:none;
+  margin-top:14px;
+  padding:17px;
+  border-radius:15px;
+  background:#effaf4;
+  border:1px solid #cceedd;
+  color:#176c43;
 }
-.wa{
-  display:block;text-align:center;margin-top:10px;
-  color:#128c50;font-weight:800;
+
+.success.show{
+  display:block;
 }
-.sticky{
-  position:fixed;bottom:0;left:0;right:0;
+
+.success h3{
+  margin-bottom:5px;
+}
+
+.success p{
+  font-size:12px;
+}
+
+/* DETAILS */
+.details-wrap{
+  display:grid;
+  gap:9px;
+}
+
+details{
+  background:#fff;
+  border:1px solid #e3edf3;
+  border-radius:14px;
+  overflow:hidden;
+}
+
+summary{
+  cursor:pointer;
+  padding:15px;
+  font-weight:800;
+  font-size:13px;
+  list-style:none;
+}
+
+summary::-webkit-details-marker{
+  display:none;
+}
+
+summary::after{
+  content:"+";
+  float:right;
+  color:#318dcc;
+  font-size:18px;
+}
+
+details[open] summary::after{
+  content:"−";
+}
+
+.detail-content{
+  padding:0 15px 15px;
+  color:#697a86;
+  font-size:12px;
+}
+
+/* SUPPORT */
+.support{
+  text-align:center;
+  padding:24px 12px;
+}
+
+.support p{
+  color:#71818c;
+  font-size:12px;
+  margin:5px 0 13px;
+}
+
+.whatsapp{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:#22b85b;
+  color:#fff;
+  padding:12px 18px;
+  border-radius:12px;
+  font-size:12px;
+  font-weight:800;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  color:#8997a0;
+  font-size:10px;
+  padding:18px;
+}
+
+/* STICKY CTA */
+.sticky-order{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:100;
+  padding:9px 12px;
   background:rgba(255,255,255,.96);
-  padding:9px;border-top:1px solid #dfeaf1;
-  z-index:30;
+  border-top:1px solid #dce9f0;
+  backdrop-filter:blur(12px);
 }
-.sticky button{
-  display:block;max-width:720px;margin:auto;width:100%;
-  border:0;border-radius:13px;padding:14px;
-  background:#168bd0;color:#fff;font-size:17px;font-weight:800;
+
+.sticky-order button{
+  display:block;
+  max-width:720px;
+  margin:auto;
+  width:100%;
+  background:#22b85b;
+  border:0;
+  color:#fff;
+  padding:13px;
+  border-radius:12px;
+  font-weight:900;
+  font-size:14px;
 }
-footer{text-align:center;padding:30px 10px 90px;color:#84909a;font-size:12px}
+
+/* MODAL */
 .modal{
-  display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);
-  z-index:100;align-items:center;justify-content:center;padding:15px;
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:200;
+  background:rgba(10,27,40,.78);
+  align-items:center;
+  justify-content:center;
+  padding:18px;
 }
-.modal img{max-width:100%;max-height:90vh;border-radius:12px}
-.close{
-  position:absolute;right:18px;top:12px;color:white;
-  font-size:30px;cursor:pointer
+
+.modal.show{
+  display:flex;
 }
-@media(max-width:500px){
- .hero h1{font-size:24px}
- .main-img{height:320px}
- .review img{height:210px}
+
+.modal img{
+  max-width:95vw;
+  max-height:90vh;
+  object-fit:contain;
+  border-radius:13px;
+}
+
+.close-modal{
+  position:fixed;
+  top:15px;
+  right:18px;
+  width:40px;
+  height:40px;
+  border:0;
+  border-radius:50%;
+  background:#fff;
+  color:#1c3443;
+  font-size:24px;
+}
+
+/* MOBILE */
+@media(max-width:760px){
+  .header-tag{
+    display:none;
+  }
+
+  .hero{
+    padding-top:14px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:17px;
+  }
+
+  .gallery{
+    padding:9px;
+    border-radius:19px;
+  }
+
+  .main-image{
+    border-radius:14px;
+  }
+
+  h1{
+    font-size:31px;
+  }
+
+  .hero-description{
+    font-size:13px;
+  }
+
+  .price{
+    font-size:32px;
+  }
+
+  .trust-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .benefit-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .proscons{
+    grid-template-columns:1fr;
+  }
+
+  .review-images{
+    grid-template-columns:1fr;
+  }
+
+  .section-card{
+    padding:17px;
+    border-radius:18px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .field.full{
+    grid-column:auto;
+  }
+
+  .order-head{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:3px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header class="top">
-  <div class="nav">
+<div class="topbar">
+  🇮🇳 FREE DELIVERY • CASH ON DELIVERY • ALL INDIA
+</div>
+
+<header>
+  <div class="header-inner">
     <div class="logo">REDLEX</div>
-    <a class="support" href="https://wa.me/918602720758">WhatsApp Support</a>
+    <div class="header-tag">Smart Cleaning • Simple Living</div>
   </div>
 </header>
 
-<main class="container">
+<main>
+
+<div class="container">
 
 <section class="hero">
-  <h1>9-in-1 Electric Spin Scrubber</h1>
-  <p>Clean Smarter. Live Better.</p>
-</section>
+  <div class="hero-grid">
 
-<section class="gallery">
-  <img id="mainImg"
-       class="main-img"
-       src="Screenshot_20260905-190644~2.jpg"
-       onclick="openImg(this.src)">
-  <div class="thumbs">
-    <img src="Screenshot_20260905-190644~2.jpg" onclick="changeImg(this.src)">
-    <img src="Screenshot_20260905-190648~2.jpg" onclick="changeImg(this.src)">
-    <img src="Screenshot_20260905-190652~2.jpg" onclick="changeImg(this.src)">
-    <img src="Screenshot_20260905-190655~2.jpg" onclick="changeImg(this.src)">
-    <img src="Screenshot_20260905-190658~2.jpg" onclick="changeImg(this.src)">
-    <img src="Screenshot_20260905-190700~2.jpg" onclick="changeImg(this.src)">
-    <img src="Screenshot_20260905-190707~2.jpg" onclick="changeImg(this.src)">
-  </div>
-</section>
+    <div class="gallery">
+      <img
+        id="mainImage"
+        class="main-image"
+        src="Screenshot_20260905-190644~2.jpg"
+        alt="REDLEX 9-in-1 Electric Spin Scrubber"
+        onclick="openModal(this.src)"
+      >
 
-<section class="price-card">
-  <div>
-    <span class="price">₹1,299</span>
-    <span class="mrp">₹2,499</span>
-  </div>
-  <span class="save">SAVE ₹1,200</span>
+      <div class="thumb-row">
+        <img class="thumb active"
+             src="Screenshot_20260905-190644~2.jpg"
+             onclick="changeImage(this)"
+             alt="REDLEX Spin Scrubber">
 
-  <div class="badges">
-    <span class="badge">🚚 COD Available</span>
-    <span class="badge">📦 3–10 Days</span>
-    <span class="badge">🔋 Cordless</span>
-    <span class="badge">🧹 9-in-1</span>
-  </div>
+        <img class="thumb"
+             src="Screenshot_20260905-190648~2.jpg"
+             onclick="changeImage(this)"
+             alt="REDLEX Spin Scrubber">
 
-  <button class="order-btn" onclick="showOrder()">
-    Order Now — ₹1,299
-  </button>
-</section>
+        <img class="thumb"
+             src="Screenshot_20260905-190652~2.jpg"
+             onclick="changeImage(this)"
+             alt="REDLEX Spin Scrubber">
 
-<section id="orderBox" class="section">
-  <h2>Place Your COD Order</h2>
-  <p style="color:#667582;font-size:13px">
-    Pay only when your order is delivered.
-  </p>
+        <img class="thumb"
+             src="Screenshot_20260905-190655~2.jpg"
+             onclick="changeImage(this)"
+             alt="REDLEX Spin Scrubber">
 
-  <div class="form-row">
-    <label>Name</label>
-    <input id="name" placeholder="Your full name">
-  </div>
+        <img class="thumb"
+             src="Screenshot_20260905-190658~2.jpg"
+             onclick="changeImage(this)"
+             alt="REDLEX Spin Scrubber">
 
-  <div class="form-row">
-    <label>Mobile Number</label>
-    <input id="mobile" type="tel" maxlength="10" inputmode="numeric"
-           placeholder="10-digit mobile number">
-  </div>
+        <img class="thumb"
+             src="Screenshot_20260905-190700~2.jpg"
+             onclick="changeImage(this)"
+             alt="REDLEX Spin Scrubber">
 
-  <div class="form-row">
-    <label>Full Address</label>
-    <textarea id="address" placeholder="House no., street, area..."></textarea>
-  </div>
+        <img class="thumb"
+             src="Screenshot_20260905-190707~2.jpg"
+             onclick="changeImage(this)"
+             alt="REDLEX Spin Scrubber">
+      </div>
+    </div>
 
-  <div class="form-row">
-    <label>City</label>
-    <input id="city" placeholder="City">
-  </div>
+    <div class="hero-copy">
 
-  <div class="form-row">
-    <label>State</label>
-    <input id="state" placeholder="State">
-  </div>
+      <div class="eyebrow">9-IN-1 ELECTRIC SPIN SCRUBBER</div>
 
-  <div class="form-row">
-    <label>Pincode</label>
-    <input id="pincode" type="tel" maxlength="6" inputmode="numeric"
-           placeholder="6-digit pincode">
-  </div>
+      <h1>Clean Smarter.<br>Live Better.</h1>
 
-  <div class="form-row">
-    <label>Quantity</label>
-    <div class="qty">
-      <button onclick="changeQty(-1)">−</button>
-      <span id="qty">1</span>
-      <button onclick="changeQty(1)">+</button>
+      <p class="hero-description">
+        Cordless spin scrubber designed for easier cleaning of
+        bathrooms, tiles, floors and everyday home surfaces.
+      </p>
+
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <strong>4.6/5</strong>
+        <span>Customer feedback</span>
+      </div>
+
+      <div class="price-box">
+        <div class="mrp">MRP ₹2,499</div>
+
+        <div class="price-line">
+          <div class="price">₹1,299</div>
+          <div class="cod-label">COD AVAILABLE</div>
+        </div>
+
+        <div class="free-delivery">
+          🚚 Free Delivery • Delivery in 3–10 Days
+        </div>
+      </div>
+
+      <button class="primary-btn" onclick="scrollToOrder()">
+        ORDER NOW — CASH ON DELIVERY
+      </button>
+
+      <div class="no-advance">
+        No Advance Payment Required
+      </div>
+
     </div>
   </div>
 
-  <div class="total">
-    Total COD Amount: ₹<span id="total">1299</span>
-  </div>
+  <div class="trust-grid">
 
-  <button class="order-btn" id="placeBtn" onclick="placeOrder()">
-    Place COD Order
-  </button>
+    <div class="trust">
+      <div class="trust-icon">🚚</div>
+      <strong>Free Delivery</strong>
+      <span>Across India</span>
+    </div>
 
-  <div id="error" class="error"></div>
+    <div class="trust">
+      <div class="trust-icon">💵</div>
+      <strong>Cash on Delivery</strong>
+      <span>Pay on delivery</span>
+    </div>
 
-  <div id="success" class="success">
-    <b>🎉 Order Received!</b><br>
-    Your COD order has been submitted successfully.<br><br>
-    <b>Order Reference:</b> <span id="orderRef"></span><br>
-    Amount: ₹<span id="successAmount"></span><br>
-    Delivery: 3–10 days
-    <a id="waConfirm" class="wa" target="_blank">
-      Confirm Order on WhatsApp →
-    </a>
+    <div class="trust">
+      <div class="trust-icon">🛡️</div>
+      <strong>Secure Checkout</strong>
+      <span>Protected order</span>
+    </div>
+
+    <div class="trust">
+      <div class="trust-icon">🇮🇳</div>
+      <strong>All India</strong>
+      <span>3–10 days</span>
+    </div>
+
   </div>
 </section>
 
-<section class="section">
-  <h2>Why Choose REDLEX?</h2>
 
-  <div class="features">
-    <div class="feature">🔋 Cordless Cleaning</div>
-    <div class="feature">🧹 9-in-1 Attachments</div>
-    <div class="feature">🚿 Bathroom & Tiles</div>
-    <div class="feature">🏠 Floors & Corners</div>
-    <div class="feature">💪 Less Scrubbing</div>
-    <div class="feature">🚚 COD Available</div>
+<!-- BENEFITS -->
+<section>
+  <div class="section-card">
+
+    <h2 class="section-title">Made for Everyday Cleaning</h2>
+
+    <p class="section-subtitle">
+      A practical cordless cleaning tool for the places that need regular attention.
+    </p>
+
+    <div class="benefit-grid">
+
+      <div class="benefit">
+        <div class="benefit-icon">🛁</div>
+        <strong>Bathroom Cleaning</strong>
+        <p>Useful for bathroom surfaces, corners and regular cleaning.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">◻️</div>
+        <strong>Tiles & Grout</strong>
+        <p>Helps make tile cleaning more convenient.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">🏠</div>
+        <strong>Floor Cleaning</strong>
+        <p>Suitable for everyday floor cleaning tasks.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">🔋</div>
+        <strong>Cordless Design</strong>
+        <p>Clean without managing a power cable while using it.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">🔄</div>
+        <strong>Multiple Heads</strong>
+        <p>Different heads for different cleaning surfaces and areas.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">🧹</div>
+        <strong>Easy Handling</strong>
+        <p>Designed to make everyday scrubbing more convenient.</p>
+      </div>
+
+    </div>
   </div>
+</section>
 
-  <div class="details">
-    <details open>
-      <summary>Product Details</summary>
-      <p>
-        REDLEX Electric Spin Scrubber is designed for everyday household
-        cleaning. Use different brush heads for bathrooms, tiles, floors,
-        corners and other hard-to-clean areas.
-      </p>
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="section-card">
+
+    <h2 class="section-title">Order in 3 Simple Steps</h2>
+
+    <p class="section-subtitle">
+      No complicated checkout. Just enter your delivery details.
+    </p>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-no">01</div>
+        <strong>Choose Quantity</strong>
+        <p>Select how many units you want.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-no">02</div>
+        <strong>Enter Address</strong>
+        <p>Add your name, phone and delivery address.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-no">03</div>
+        <strong>Place COD Order</strong>
+        <p>Pay when the product is delivered.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- REVIEWS -->
+<section>
+  <div class="section-card">
+
+    <h2 class="section-title">Real Customer Feedback</h2>
+
+    <p class="section-subtitle">
+      Customer review screenshots shared with REDLEX.
+    </p>
+
+    <div class="review-summary">
+      <div class="big-rating">4.6</div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <p>Overall customer feedback</p>
+      </div>
+    </div>
+
+    <div class="review-images">
+
+      <img src="review_6142407618_6174757074_6906278ce0787.jpeg.jpg"
+           alt="REDLEX customer review"
+           onclick="openModal(this.src)">
+
+      <img src="review_1_1265049234_201bec2d03d72.jpeg.jpg"
+           alt="REDLEX customer review"
+           onclick="openModal(this.src)">
+
+      <img src="review_6137610344_6169936651_255c5aed93d95.jpeg.jpg"
+           alt="REDLEX customer review"
+           onclick="openModal(this.src)">
+
+      <img src="review_8613400696_8656094083_dd06e131ec6ff.jpeg.jpg"
+           alt="REDLEX customer review"
+           onclick="openModal(this.src)">
+
+      <img src="review_8055934896_8095884078_3f8e45bd9a085.jpeg.jpg"
+           alt="REDLEX customer review"
+           onclick="openModal(this.src)">
+
+      <img src="review_7587709200_7625859319_7ee19155db7d4.jpeg.jpg"
+           alt="REDLEX customer review"
+           onclick="openModal(this.src)">
+
+      <img src="review_5870001199_5901022629_4a8f6e2c80b95.jpeg.jpg"
+           alt="REDLEX customer review"
+           onclick="openModal(this.src)">
+
+    </div>
+
+    <div class="indian-note">
+      Bathroom, Tiles aur Floor ki safai ke liye ek practical cordless cleaning solution.
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PROS -->
+<section>
+  <div class="section-card">
+
+    <h2 class="section-title">Why REDLEX?</h2>
+
+    <p class="section-subtitle">
+      Simple features that make the product useful for regular cleaning.
+    </p>
+
+    <div class="proscons">
+
+      <div class="pc good">
+        <h3>What You'll Like</h3>
+
+        <ul>
+          <li>Cordless design</li>
+          <li>Multiple cleaning heads</li>
+          <li>Useful for bathroom & tiles</li>
+          <li>Suitable for floor cleaning</li>
+          <li>Convenient everyday use</li>
+        </ul>
+      </div>
+
+      <div class="pc note">
+        <h3>Things to Know</h3>
+
+        <ul>
+          <li>Battery-powered product</li>
+          <li>Charging is required</li>
+          <li>Best for everyday/light-to-moderate cleaning</li>
+          <li>Use the appropriate head for the surface</li>
+          <li>Keep the charging area dry</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ORDER -->
+<section class="order-section" id="order">
+
+  <div class="order-card">
+
+    <div class="order-head">
+      <div>
+        <h2 class="section-title">Place Your COD Order</h2>
+        <p class="section-subtitle" style="margin-bottom:0">
+          Enter your delivery details below.
+        </p>
+      </div>
+
+      <div class="order-price">
+        ₹1,299 / unit
+      </div>
+    </div>
+
+    <form id="orderForm">
+
+      <div class="form-grid">
+
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Enter your name"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="mobile">Phone Number</label>
+          <input
+            id="mobile"
+            name="mobile"
+            type="tel"
+            inputmode="numeric"
+            maxlength="10"
+            placeholder="10-digit mobile number"
+            required
+          >
+        </div>
+
+        <div class="field full">
+          <label for="address">Full Address</label>
+          <textarea
+            id="address"
+            name="address"
+            placeholder="House/Flat, Street, Area"
+            required
+          ></textarea>
+        </div>
+
+        <div class="field">
+          <label for="city">City</label>
+          <input
+            id="city"
+            name="city"
+            type="text"
+            placeholder="Your city"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="state">State</label>
+          <input
+            id="state"
+            name="state"
+            type="text"
+            placeholder="Your state"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="pincode">Pincode</label>
+          <input
+            id="pincode"
+            name="pincode"
+            type="tel"
+            inputmode="numeric"
+            maxlength="6"
+            placeholder="6-digit pincode"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="quantity">Quantity</label>
+          <select id="quantity" name="quantity">
+            <option value="1">1 Unit</option>
+            <option value="2">2 Units</option>
+            <option value="3">3 Units</option>
+            <option value="4">4 Units</option>
+            <option value="5">5 Units</option>
+            <option value="6">6 Units</option>
+            <option value="7">7 Units</option>
+            <option value="8">8 Units</option>
+            <option value="9">9 Units</option>
+            <option value="10">10 Units</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="total-box">
+        <span>Cash on Delivery Total</span>
+        <strong id="totalAmount">₹1,299</strong>
+      </div>
+
+      <button
+        type="submit"
+        class="primary-btn"
+        id="submitBtn"
+      >
+        PLACE COD ORDER — ₹1,299
+      </button>
+
+      <div class="no-advance">
+        No online payment • No advance payment required
+      </div>
+
+    </form>
+
+    <div class="success" id="successBox">
+      <h3>Order Placed Successfully 🎉</h3>
+      <p id="successText"></p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- INFORMATION -->
+<section>
+  <div class="details-wrap">
+
+    <details>
+      <summary>🚚 Delivery Information</summary>
+      <div class="detail-content">
+        We deliver across India. Estimated delivery time is 3–10 days,
+        depending on your location and courier service.
+      </div>
     </details>
 
     <details>
-      <summary>What's Good 👍</summary>
-      <p>
-        Cordless design makes movement easier. Multiple heads help with
-        different surfaces, and the rotating brush can reduce the effort
-        required for regular scrubbing.
-      </p>
+      <summary>💵 Cash on Delivery</summary>
+      <div class="detail-content">
+        REDLEX currently accepts Cash on Delivery. You do not need to make
+        an advance online payment to place your order.
+      </div>
     </details>
 
     <details>
-      <summary>Things to Know 👎</summary>
-      <p>
-        It is a household cleaning helper, not a replacement for every
-        type of deep-cleaning tool. Very stubborn stains may still require
-        some manual cleaning and suitable cleaning liquid.
-      </p>
+      <summary>🔒 Secure Checkout</summary>
+      <div class="detail-content">
+        Your order details are submitted securely for order processing.
+        We do not require your card or UPI details for a COD order.
+      </div>
     </details>
 
     <details>
-      <summary>Delivery & Payment</summary>
-      <p>
-        Delivery usually takes 3–10 days. Payment method currently available:
-        <b>Cash on Delivery (COD)</b>.
-      </p>
+      <summary>↩️ Return / Exchange</summary>
+      <div class="detail-content">
+        If you receive a damaged or incorrect product, contact REDLEX support
+        with your order reference and issue details so the request can be reviewed.
+      </div>
     </details>
 
     <details>
-      <summary>Return / Help</summary>
-      <p>
-        For return or product-related assistance, contact REDLEX support
-        through WhatsApp.
-      </p>
+      <summary>❓ Need Help?</summary>
+      <div class="detail-content">
+        For order-related help, you can contact REDLEX through WhatsApp support.
+      </div>
     </details>
+
   </div>
 </section>
 
-<!-- REVIEWS DIRECTLY VISIBLE -->
-<section class="section">
-  <h2>Customer Reviews</h2>
 
-  <div class="review-summary">
-    <div class="rating">4.6/5</div>
-    <div class="stars">★★★★★</div>
-    <div style="font-size:13px;color:#65727c;margin-top:4px">
-      Customer feedback from Indian buyers
-    </div>
-  </div>
+<!-- SUPPORT -->
+<section class="support">
+  <h2 class="section-title">Need Help With Your Order?</h2>
+  <p>Our support team can help you with order-related questions.</p>
 
-  <div class="review">
-    <img src="review_6142407618_6174757074_6906278ce0787.jpeg.jpg"
-         onclick="openImg(this.src)">
-    <div class="review-head">
-      <span>Indian Customer</span><span>★★★★★</span>
-    </div>
-    <p>
-      Cleaning mein kaafi help karta hai. Bathroom aur tiles ke liye
-      especially convenient laga.
-    </p>
-    <div class="proscons">
-      <div class="pro">👍 Easy to use & saves effort</div>
-      <div class="con">👎 Very stubborn stains may still need manual scrubbing</div>
-    </div>
-  </div>
-
-  <div class="review">
-    <img src="review_1_1265049234_201bec2d03d72.jpeg.jpg"
-         onclick="openImg(this.src)">
-    <div class="review-head">
-      <span>Indian Customer</span><span>★★★★★</span>
-    </div>
-    <p>
-      Product useful laga aur different brush heads ki wajah se alag
-      cleaning jobs mein kaam aa gaya.
-    </p>
-    <div class="proscons">
-      <div class="pro">👍 Multiple heads are useful</div>
-      <div class="con">👎 Charging is required after use</div>
-    </div>
-  </div>
-
-  <div class="review">
-    <img src="review_6137610344_6169936651_255c5aed93d95.jpeg.jpg"
-         onclick="openImg(this.src)">
-    <div class="review-head">
-      <span>Indian Customer</span><span>★★★★★</span>
-    </div>
-    <p>
-      Daily cleaning ke liye convenient hai. Cordless hone se bathroom
-      mein use karna easy laga.
-    </p>
-    <div class="proscons">
-      <div class="pro">👍 Convenient cordless use</div>
-      <div class="con">👎 Not meant for every heavy-duty cleaning job</div>
-    </div>
-  </div>
-
-  <div class="review">
-    <img src="review_8613400696_8656094083_dd06e131ec6ff.jpeg.jpg"
-         onclick="openImg(this.src)">
-    <div class="review-head">
-      <span>Indian Customer</span><span>★★★★☆</span>
-    </div>
-    <p>
-      Tiles aur corners clean karne mein achha experience raha.
-    </p>
-    <div class="proscons">
-      <div class="pro">👍 Helpful for corners and tiles</div>
-      <div class="con">👎 Results depend on stain and surface</div>
-    </div>
-  </div>
-
-  <div class="review">
-    <img src="review_8055934896_8095884078_3f8e45bd9a085.jpeg.jpg"
-         onclick="openImg(this.src)">
-    <div class="review-head">
-      <span>Indian Customer</span><span>★★★★★</span>
-    </div>
-    <p>
-      Regular bathroom cleaning ke liye useful laga. Manual scrubbing
-      ka effort kam ho jata hai.
-    </p>
-    <div class="proscons">
-      <div class="pro">👍 Less physical effort</div>
-      <div class="con">👎 Needs proper brush head selection</div>
-    </div>
-  </div>
-
-  <div class="review">
-    <img src="review_7587709200_7625859319_7ee19155db7d4.jpeg.jpg"
-         onclick="openImg(this.src)">
-    <div class="review-head">
-      <span>Indian Customer</span><span>★★★★☆</span>
-    </div>
-    <p>
-      Home cleaning ke liye convenient product hai aur use karna
-      complicated nahi laga.
-    </p>
-    <div class="proscons">
-      <div class="pro">👍 Simple operation</div>
-      <div class="con">👎 Battery needs charging</div>
-    </div>
-  </div>
-
-  <div class="review">
-    <img src="review_5870001199_5901022629_4a8f6e2c80b95.jpeg.jpg"
-         onclick="openImg(this.src)">
-    <div class="review-head">
-      <span>Indian Customer</span><span>★★★★★</span>
-    </div>
-    <p>
-      Bathroom aur floor cleaning ke routine kaam mein kaafi helpful
-      laga. Overall value achhi lagi.
-    </p>
-    <div class="proscons">
-      <div class="pro">👍 Useful for routine cleaning</div>
-      <div class="con">👎 Deep stains can still require extra work</div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="text-align:center">
-  <h2>Need Help?</h2>
-  <p style="font-size:14px;color:#63717c">
-    REDLEX support ke liye WhatsApp par message karein.
-  </p>
-  <a class="order-btn" style="display:block"
-     href="https://wa.me/918602720758">
-    WhatsApp Support
+  <a
+    class="whatsapp"
+    href="https://wa.me/918602720758"
+    target="_blank"
+    rel="noopener"
+  >
+    💬 Chat on WhatsApp
   </a>
 </section>
 
+</div>
+
 </main>
 
+
 <footer>
-  © 2026 REDLEX · COD Available · 3–10 Days Delivery
+  © 2026 REDLEX • Smart Cleaning Products
 </footer>
 
-<div class="sticky">
-  <button onclick="showOrder()">Order Now — ₹1,299</button>
+
+<!-- STICKY ORDER -->
+<div class="sticky-order">
+  <button onclick="scrollToOrder()">
+    ORDER NOW • ₹1,299 • CASH ON DELIVERY
+  </button>
 </div>
 
-<div id="modal" class="modal" onclick="closeImg()">
-  <span class="close">×</span>
-  <img id="modalImg">
+
+<!-- IMAGE MODAL -->
+<div class="modal" id="imageModal" onclick="closeModal(event)">
+  <button class="close-modal" onclick="closeModal()">×</button>
+  <img id="modalImage" src="" alt="REDLEX product image">
 </div>
+
 
 <script>
-const SUPABASE_URL = "https://smfmhoujnmdssrkzbeyv.supabase.co";
+/* =========================
+   SUPABASE
+========================= */
+
+const SUPABASE_URL =
+  "https://smfmhoujnmdssrkzbeyv.supabase.co";
+
 const SUPABASE_PUBLISHABLE_KEY =
-"sb_publishable_hoEH3p-71Jqh2mVNgf42fw_uFlM6Obp";
+  "sb_publishable_hoEH3p-71Jqh2mVNgf42fw_uFlM6Obp";
 
 const { createClient } = supabase;
-const db = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
 
-const COD_PRICE = 1299;
-const WA = "918602720758";
+const db = createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
 
-let quantity = 1;
 
-function changeImg(src){
-  document.getElementById("mainImg").src = src;
+/* =========================
+   PRODUCT
+========================= */
+
+const PRODUCT_PRICE = 1299;
+
+
+/* =========================
+   GALLERY
+========================= */
+
+function changeImage(element){
+
+  const main = document.getElementById("mainImage");
+
+  main.src = element.src;
+
+  document.querySelectorAll(".thumb").forEach(function(img){
+    img.classList.remove("active");
+  });
+
+  element.classList.add("active");
 }
 
-function openImg(src){
-  document.getElementById("modalImg").src = src;
-  document.getElementById("modal").style.display = "flex";
+
+/* =========================
+   ORDER SCROLL
+========================= */
+
+function scrollToOrder(){
+
+  const order = document.getElementById("order");
+
+  order.scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+
 }
 
-function closeImg(){
-  document.getElementById("modal").style.display = "none";
+
+/* =========================
+   TOTAL
+========================= */
+
+const quantitySelect =
+  document.getElementById("quantity");
+
+const totalAmount =
+  document.getElementById("totalAmount");
+
+const submitBtn =
+  document.getElementById("submitBtn");
+
+
+function updateTotal(){
+
+  const quantity =
+    Number(quantitySelect.value);
+
+  const total =
+    PRODUCT_PRICE * quantity;
+
+  totalAmount.textContent =
+    "₹" + total.toLocaleString("en-IN");
+
+  submitBtn.textContent =
+    "PLACE COD ORDER — ₹" +
+    total.toLocaleString("en-IN");
 }
 
-function showOrder(){
-  const box = document.getElementById("orderBox");
-  box.style.display = "block";
-  setTimeout(()=>{
-    box.scrollIntoView({behavior:"smooth",block:"start"});
-  },50);
+
+quantitySelect.addEventListener(
+  "change",
+  updateTotal
+);
+
+
+/* =========================
+   ORDER SUBMISSION
+========================= */
+
+document
+  .getElementById("orderForm")
+  .addEventListener("submit", async function(event){
+
+    event.preventDefault();
+
+    const name =
+      document.getElementById("name").value.trim();
+
+    const mobile =
+      document.getElementById("mobile").value.trim();
+
+    const address =
+      document.getElementById("address").value.trim();
+
+    const city =
+      document.getElementById("city").value.trim();
+
+    const state =
+      document.getElementById("state").value.trim();
+
+    const pincode =
+      document.getElementById("pincode").value.trim();
+
+    const quantity =
+      Number(quantitySelect.value);
+
+    const amount =
+      PRODUCT_PRICE * quantity;
+
+
+    /* VALIDATION */
+
+    if(name.length < 2){
+      alert("Please enter your full name.");
+      return;
+    }
+
+    if(!/^[6-9]\d{9}$/.test(mobile)){
+      alert("Please enter a valid 10-digit Indian mobile number.");
+      return;
+    }
+
+    if(address.length < 8){
+      alert("Please enter your complete address.");
+      return;
+    }
+
+    if(city.length < 2){
+      alert("Please enter your city.");
+      return;
+    }
+
+    if(state.length < 2){
+      alert("Please enter your state.");
+      return;
+    }
+
+    if(!/^\d{6}$/.test(pincode)){
+      alert("Please enter a valid 6-digit pincode.");
+      return;
+    }
+
+
+    /* CLIENT ORDER REFERENCE */
+
+    const orderReference =
+      "REDLEX-COD-" +
+      Math.floor(100000 + Math.random() * 900000);
+
+
+    /* DATABASE OBJECT
+       Matches current Supabase orders table:
+       customer_name
+       phone
+       address
+       city
+       state
+       pincode
+       quantity
+       amount
+       payment_method
+       payment_status
+       order_status
+    */
+
+    const orderData = {
+
+      customer_name: name,
+
+      phone: mobile,
+
+      address: address,
+
+      city: city,
+
+      state: state,
+
+      pincode: pincode,
+
+      quantity: quantity,
+
+      amount: amount,
+
+      payment_method: "COD",
+
+      payment_status: "pending",
+
+      order_status: "new"
+
+    };
+
+
+    submitBtn.disabled = true;
+
+    submitBtn.textContent =
+      "PLACING ORDER...";
+
+
+    try{
+
+      const { error } =
+        await db
+          .from("orders")
+          .insert(orderData);
+
+
+      if(error){
+
+        console.error(
+          "Supabase order error:",
+          error
+        );
+
+        throw error;
+      }
+
+
+      /* SUCCESS */
+
+      const successBox =
+        document.getElementById("successBox");
+
+      const successText =
+        document.getElementById("successText");
+
+
+      successText.innerHTML =
+        "Your COD order has been received.<br><br>" +
+        "<strong>Order Reference:</strong> " +
+        orderReference +
+        "<br>" +
+        "<strong>Amount:</strong> ₹" +
+        amount.toLocaleString("en-IN") +
+        "<br>" +
+        "<strong>Delivery:</strong> 3–10 Days";
+
+
+      successBox.classList.add("show");
+
+      document
+        .getElementById("orderForm")
+        .reset();
+
+      quantitySelect.value = "1";
+
+      updateTotal();
+
+
+      successBox.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+      });
+
+
+    }catch(error){
+
+      alert(
+        "Order submit nahi ho paya. Please check your internet connection and try again."
+      );
+
+      console.error(error);
+
+    }finally{
+
+      submitBtn.disabled = false;
+
+      updateTotal();
+
+    }
+
+  });
+
+
+/* =========================
+   IMAGE MODAL
+========================= */
+
+function openModal(src){
+
+  const modal =
+    document.getElementById("imageModal");
+
+  const image =
+    document.getElementById("modalImage");
+
+  image.src = src;
+
+  modal.classList.add("show");
+
+  document.body.style.overflow = "hidden";
 }
 
-function changeQty(n){
-  quantity += n;
-  if(quantity < 1) quantity = 1;
-  if(quantity > 10) quantity = 10;
 
-  document.getElementById("qty").textContent = quantity;
-  document.getElementById("total").textContent = COD_PRICE * quantity;
-}
+function closeModal(event){
 
-function validMobile(v){
-  return /^[6-9][0-9]{9}$/.test(v);
-}
-
-function validPin(v){
-  return /^[0-9]{6}$/.test(v);
-}
-
-function makeOrderRef(){
-  return "REDLEX-COD-" +
-    Math.floor(100000 + Math.random()*900000);
-}
-
-async function placeOrder(){
-
-  const error = document.getElementById("error");
-  const btn = document.getElementById("placeBtn");
-
-  error.textContent = "";
-
-  const d = {
-    name: document.getElementById("name").value.trim(),
-    mobile: document.getElementById("mobile").value.trim(),
-    address: document.getElementById("address").value.trim(),
-    city: document.getElementById("city").value.trim(),
-    state: document.getElementById("state").value.trim(),
-    pincode: document.getElementById("pincode").value.trim()
-  };
-
-  if(d.name.length < 2){
-    error.textContent = "Please enter your name.";
+  if(
+    event &&
+    event.target &&
+    event.target.id !== "imageModal" &&
+    !event.target.classList.contains("close-modal")
+  ){
     return;
   }
 
-  if(!validMobile(d.mobile)){
-    error.textContent = "Please enter a valid 10-digit mobile number.";
-    return;
-  }
+  const modal =
+    document.getElementById("imageModal");
 
-  if(d.address.length < 8){
-    error.textContent = "Please enter your complete address.";
-    return;
-  }
+  modal.classList.remove("show");
 
-  if(d.city.length < 2){
-    error.textContent = "Please enter your city.";
-    return;
-  }
-
-  if(d.state.length < 2){
-    error.textContent = "Please enter your state.";
-    return;
-  }
-
-  if(!validPin(d.pincode)){
-    error.textContent = "Please enter a valid 6-digit pincode.";
-    return;
-  }
-
-  const amount = COD_PRICE * quantity;
-
-  const orderData = {
-    customer_name: d.name,
-    phone: d.mobile,
-    address: d.address,
-    city: d.city,
-    state: d.state,
-    pincode: d.pincode,
-    quantity: quantity,
-    amount: amount,
-    payment_method: "COD",
-    payment_status: "pending",
-    order_status: "new"
-  };
-
-  btn.disabled = true;
-  btn.textContent = "Placing Order...";
-
-  try{
-
-    const { error: dbError } =
-      await db.from("orders").insert(orderData);
-
-    if(dbError) throw dbError;
-
-    const ref = makeOrderRef();
-
-    document.getElementById("orderRef").textContent = ref;
-    document.getElementById("successAmount").textContent = amount;
-
-    const message =
-      `REDLEX COD Order Confirmation%0A%0A` +
-      `Order Reference: ${ref}%0A` +
-      `Name: ${d.name}%0A` +
-      `Mobile: ${d.mobile}%0A` +
-      `Address: ${d.address}%0A` +
-      `City: ${d.city}%0A` +
-      `State: ${d.state}%0A` +
-      `Pincode: ${d.pincode}%0A` +
-      `Quantity: ${quantity}%0A` +
-      `Amount: ₹${amount}%0A` +
-      `Payment: COD`;
-
-    document.getElementById("waConfirm").href =
-      `https://wa.me/${WA}?text=${message}`;
-
-    document.getElementById("success").style.display = "block";
-    btn.style.display = "none";
-
-    document.getElementById("success")
-      .scrollIntoView({behavior:"smooth",block:"center"});
-
-  }catch(err){
-
-    console.error(err);
-
-    error.textContent =
-      "Order save nahi ho paya. Please internet check karke dobara try karein.";
-
-    btn.disabled = false;
-    btn.textContent = "Place COD Order";
-
-  }
+  document.body.style.overflow = "";
 }
+
+
+/* ESC CLOSE */
+
+document.addEventListener(
+  "keydown",
+  function(event){
+
+    if(event.key === "Escape"){
+
+      const modal =
+        document.getElementById("imageModal");
+
+      modal.classList.remove("show");
+
+      document.body.style.overflow = "";
+
+    }
+
+  }
+);
+
+
+/* INITIAL */
+
+updateTotal();
+
 </script>
 
 </body>
