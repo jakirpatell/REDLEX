@@ -2,107 +2,146 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>REDLEX | Electric Spin Scrubber</title>
+<title>REDLEX | 9-in-1 Electric Spin Scrubber</title>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
-
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   font-family:Arial,sans-serif;
-  background:#fff8fb;
-  color:#30232b;
-  line-height:1.5;
+  background:#f7fbff;
+  color:#17212b;
+  padding-bottom:72px;
 }
 
 .container{
-  width:min(760px,94%);
+  width:min(720px,94%);
   margin:auto;
 }
 
-button,
-input,
-textarea{
-  font-family:Arial,sans-serif;
+button,a{
+  -webkit-tap-highlight-color:transparent;
 }
 
-.hero{
+img{
+  max-width:100%;
+  display:block;
+}
+
+/* HEADER */
+
+header{
   background:#fff;
-  padding:18px 0 14px;
-  text-align:center;
-  border-bottom:1px solid #f8dce8;
+  border-bottom:1px solid #e5f1fa;
+  padding:13px 0;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .logo{
-  font-size:28px;
+  font-size:24px;
   font-weight:900;
   letter-spacing:2px;
-  color:#ff6fae;
+  color:#17212b;
+}
+
+.head-link{
+  color:#287eb5;
+  font-size:13px;
+  font-weight:800;
+}
+
+/* HERO */
+
+.hero{
+  background:#fff;
+  text-align:center;
+  padding:20px 0 14px;
 }
 
 .hero h1{
   font-size:28px;
-  line-height:1.15;
-  margin-top:8px;
+  line-height:1.1;
+  margin-bottom:7px;
 }
 
 .hero h1 span{
-  color:#ff6fae;
+  color:#318dcc;
 }
 
 .hero p{
-  color:#806f78;
+  color:#697781;
   font-size:13px;
-  margin:7px 0 12px;
+  margin-bottom:12px;
 }
 
 .btn{
-  display:inline-block;
   border:0;
-  border-radius:10px;
-  padding:11px 17px;
-  font-weight:700;
-  text-decoration:none;
+  border-radius:12px;
+  padding:13px 18px;
+  font-size:14px;
+  font-weight:900;
   cursor:pointer;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-.pink{
-  background:#ff6fae;
-  color:#fff;
+.blue{
+  background:#318dcc;
+  color:white;
 }
 
 .green{
-  background:#20b95b;
-  color:#fff;
+  background:#20b86b;
+  color:white;
 }
 
 .soft{
-  background:#fff0f6;
-  color:#e75491;
+  background:#eaf6ff;
+  color:#2679ae;
+}
+
+/* PRODUCT */
+
+.product{
+  padding:13px 0;
 }
 
 .card{
   background:#fff;
-  border-radius:18px;
-  padding:14px;
-  margin:15px 0;
-  box-shadow:0 5px 25px rgba(190,80,125,.09);
+  border:1px solid #e3f0f8;
+  border-radius:20px;
+  padding:12px;
+  box-shadow:0 7px 28px rgba(40,110,150,.09);
 }
 
 .main-img{
   width:100%;
-  max-height:390px;
+  max-height:410px;
   object-fit:contain;
-  background:#fff7fa;
-  border-radius:14px;
+  border-radius:15px;
+  background:#f5faff;
   cursor:pointer;
 }
 
@@ -110,20 +149,29 @@ textarea{
   display:grid;
   grid-template-columns:repeat(7,1fr);
   gap:5px;
-  margin-top:7px;
+  margin-top:8px;
 }
 
 .thumbs img{
   width:100%;
   aspect-ratio:1;
   object-fit:cover;
-  border-radius:7px;
+  border-radius:8px;
+  border:1px solid #dcecf6;
   cursor:pointer;
 }
 
-.product-title{
+.title{
   font-size:23px;
-  margin-top:14px;
+  margin-top:15px;
+  line-height:1.15;
+}
+
+.rating{
+  color:#e09b20;
+  font-size:13px;
+  font-weight:800;
+  margin-top:6px;
 }
 
 .price{
@@ -131,75 +179,66 @@ textarea{
   align-items:center;
   gap:8px;
   flex-wrap:wrap;
-  margin:5px 0;
+  margin:7px 0;
 }
 
-.sale{
-  font-size:27px;
+.current{
+  font-size:29px;
+  color:#267fb5;
   font-weight:900;
-  color:#ef5799;
 }
 
 .mrp{
-  color:#93858c;
+  font-size:13px;
+  color:#999;
   text-decoration:line-through;
 }
 
 .save{
-  background:#e9faef;
-  color:#168448;
-  padding:3px 7px;
-  border-radius:12px;
-  font-size:11px;
-  font-weight:bold;
-}
-
-.rating{
-  margin:5px 0 8px;
-  font-size:14px;
-  font-weight:bold;
-}
-
-.rating span{
-  color:#f3a800;
+  background:#eaf9f1;
+  color:#17864b;
+  border-radius:20px;
+  padding:4px 8px;
+  font-size:10px;
+  font-weight:900;
 }
 
 .pills{
   display:flex;
-  flex-wrap:wrap;
   gap:6px;
+  flex-wrap:wrap;
   margin:8px 0;
 }
 
 .pill{
-  background:#fff0f6;
-  color:#dc5b94;
-  padding:5px 8px;
-  border-radius:14px;
-  font-size:11px;
-  font-weight:bold;
+  background:#eaf6ff;
+  color:#287eaf;
+  border-radius:20px;
+  padding:6px 8px;
+  font-size:10px;
+  font-weight:800;
 }
 
-.description{
-  color:#756870;
-  font-size:13px;
+.desc{
+  font-size:12px;
+  color:#6d7980;
 }
 
-.quantity{
-  margin:12px 0;
+.qty{
+  margin-top:12px;
 }
 
-.quantity strong{
+.qty strong{
+  font-size:12px;
   display:block;
-  font-size:13px;
   margin-bottom:5px;
 }
 
 .qbox{
   display:flex;
   width:max-content;
-  border:1px solid #f0cedd;
-  border-radius:9px;
+  border:1px solid #dbeaf4;
+  border-radius:10px;
   overflow:hidden;
 }
 
@@ -207,10 +246,9 @@ textarea{
   width:38px;
   height:36px;
   border:0;
-  background:#fff0f6;
-  color:#e55794;
-  font-size:19px;
-  cursor:pointer;
+  background:#eaf6ff;
+  color:#287eaf;
+  font-size:20px;
 }
 
 .qbox span{
@@ -218,312 +256,371 @@ textarea{
   display:flex;
   align-items:center;
   justify-content:center;
-  font-weight:bold;
+  font-weight:900;
 }
 
-.quick-buttons{
-  display:grid;
-  gap:8px;
-  margin:10px 0 4px;
-}
-
-.quick{
+.order-main{
   width:100%;
-  border:1px solid #f4d6e3;
-  background:#fff;
-  color:#493740;
-  padding:12px;
-  border-radius:10px;
-  text-align:left;
-  font-size:14px;
-  font-weight:700;
-  cursor:pointer;
+  margin-top:10px;
 }
 
-.quick:hover{
-  background:#fff4f8;
+/* TRUST */
+
+.trust{
+  background:#fff;
+  border-top:1px solid #e2eef6;
+  border-bottom:1px solid #e2eef6;
+  padding:10px 4px;
+  text-align:center;
+  color:#61717b;
+  font-size:10px;
+}
+
+/* INFO */
+
+.info{
+  padding:13px 0;
 }
 
 .panel{
-  display:none;
-  margin-top:7px;
   background:#fff;
-  border:1px solid #f5dbe7;
-  border-radius:12px;
+  border:1px solid #e2edf5;
+  border-radius:13px;
+  margin-bottom:7px;
+  overflow:hidden;
+}
+
+.panel summary{
+  list-style:none;
   padding:13px;
-}
-
-.panel.show{
-  display:block;
-}
-
-.panel p{
   font-size:13px;
-  color:#756870;
-  margin:5px 0;
-}
-
-.panel b{
-  color:#46343d;
-}
-
-.detail-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:7px;
-}
-
-.detail{
-  background:#fff8fb;
-  padding:9px;
-  border-radius:9px;
-  font-size:12px;
-}
-
-.review-summary{
-  text-align:center;
-  padding:8px 0 14px;
-}
-
-.big-rating{
-  font-size:29px;
   font-weight:900;
-  color:#f0a000;
-}
-
-.stars{
-  color:#f3a800;
-  font-size:18px;
-  letter-spacing:2px;
-}
-
-.review-list{
-  display:grid;
-  gap:10px;
-}
-
-.review-card{
-  background:#fff8fb;
-  border-radius:12px;
-  padding:8px;
-}
-
-.review-card img{
-  width:100%;
-  max-height:300px;
-  object-fit:contain;
-  background:#fff;
-  border-radius:9px;
   cursor:pointer;
 }
 
-.review-info{
-  padding:7px 3px 2px;
+.panel summary::-webkit-details-marker{
+  display:none;
 }
 
-.review-name{
-  font-size:14px;
-  font-weight:800;
+.panel summary:after{
+  content:"+";
+  float:right;
+  color:#318dcc;
+  font-size:17px;
 }
 
-.review-stars{
-  color:#f3a800;
-  font-size:14px;
+.panel[open] summary:after{
+  content:"−";
 }
 
-.review-text{
-  color:#756870;
+.panel-content{
+  padding:0 13px 13px;
+  color:#69767d;
   font-size:12px;
-  margin-top:2px;
 }
 
-.order-box{
+/* REVIEWS */
+
+.review-score{
+  text-align:center;
+  color:#318dcc;
+  font-size:24px;
+  font-weight:900;
+  margin-bottom:4px;
+}
+
+.review-note{
+  text-align:center;
+  color:#92999d;
+  font-size:10px;
+  margin-bottom:10px;
+}
+
+.reviews{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+}
+
+.review{
+  border:1px solid #e4eef5;
+  border-radius:11px;
+  padding:5px;
+}
+
+.review img{
+  width:100%;
+  aspect-ratio:1;
+  object-fit:cover;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.name{
+  font-size:11px;
+  font-weight:900;
+  margin:5px 2px 1px;
+}
+
+.stars{
+  color:#e6a528;
+  font-size:11px;
+}
+
+/* DETAILS GRID */
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6px;
+}
+
+.box{
+  background:#f6fbff;
+  padding:9px;
+  border-radius:9px;
+}
+
+.box b{
+  color:#27343d;
+}
+
+/* ORDER */
+
+#orderSection{
+  display:none;
+  padding:14px 0;
+}
+
+.order{
   background:#fff;
-  border-radius:14px;
-  padding:13px;
-  border:1px solid #f4d8e5;
+  border:1px solid #dcecf6;
+  border-radius:18px;
+  padding:15px;
+  box-shadow:0 7px 28px rgba(40,110,150,.09);
 }
 
-.order-box h3{
-  color:#e95796;
-  margin-bottom:3px;
+.order h2{
+  text-align:center;
+  font-size:21px;
 }
 
 .order-sub{
-  font-size:12px;
-  color:#806f78;
-  margin-bottom:11px;
+  text-align:center;
+  font-size:11px;
+  color:#7a858b;
+  margin:4px 0 13px;
 }
 
 label{
   display:block;
-  font-size:12px;
-  font-weight:bold;
-  margin-bottom:4px;
+  font-size:11px;
+  font-weight:900;
+  margin:8px 0 4px;
 }
 
-input,
-textarea{
+input,textarea{
   width:100%;
-  padding:10px;
-  border:1px solid #ead9e0;
-  border-radius:8px;
+  border:1px solid #d9e9f3;
+  border-radius:9px;
+  padding:11px;
+  font-size:12px;
   outline:none;
-  background:#fffdfd;
-  font-size:13px;
-  margin-bottom:9px;
+  background:#fbfdff;
 }
 
 textarea{
-  height:70px;
+  height:66px;
   resize:vertical;
 }
 
-.total-box{
-  background:#fff0f6;
-  border-radius:10px;
-  padding:9px;
-  text-align:center;
-  margin:5px 0 10px;
+input:focus,textarea:focus{
+  border-color:#63add5;
 }
 
-.total-box p{
-  color:#806f78;
-  font-size:11px;
-}
-
-.total-box strong{
-  display:block;
-  color:#e95796;
-  font-size:21px;
-}
-
-.qr{
-  background:#fff8fb;
-  border:1px solid #f2d8e4;
+.total{
+  margin-top:11px;
+  background:#eaf6ff;
   border-radius:11px;
   padding:10px;
   text-align:center;
-  margin-bottom:10px;
 }
 
-.qr h4{
-  color:#e95796;
-  font-size:15px;
+.total small{
+  display:block;
+  color:#687780;
+  font-size:10px;
 }
 
-.qr p{
-  color:#806f78;
-  font-size:11px;
+.total-price{
+  color:#287fb4;
+  font-size:24px;
+  font-weight:900;
 }
 
-.qr img{
-  width:180px;
-  height:180px;
-  object-fit:contain;
-  background:#fff;
-  padding:5px;
-  border-radius:8px;
-  margin:7px auto;
-  cursor:pointer;
-}
-
-.payments{
-  display:grid;
-  gap:7px;
-}
+/* PAYMENT */
 
 .pay{
+  display:grid;
+  gap:7px;
+  margin-top:9px;
+}
+
+.pay button{
   width:100%;
   border:0;
-  border-radius:9px;
-  padding:12px;
-  font-weight:bold;
+  border-radius:11px;
+  padding:13px;
+  font-size:13px;
+  font-weight:900;
   cursor:pointer;
 }
 
 .online{
-  background:#ff6fae;
-  color:#fff;
+  background:#318dcc;
+  color:white;
 }
 
 .cod{
-  background:#fff0f6;
-  color:#df568f;
+  background:#eaf6ff;
+  color:#277daf;
+}
+
+/* QR */
+
+.online-box{
+  display:none;
+  background:#f7fbff;
+  border:1px solid #dcecf5;
+  border-radius:12px;
+  padding:12px;
+  margin-top:10px;
+  text-align:center;
+}
+
+.online-box.show{
+  display:block;
+}
+
+.online-box h3{
+  font-size:15px;
+}
+
+.online-box p{
+  font-size:10px;
+  color:#77848b;
+  margin:4px 0;
+}
+
+.qr{
+  width:180px;
+  height:180px;
+  object-fit:contain;
+  background:white;
+  margin:8px auto;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.upi{
+  display:inline-block;
+  padding:6px 8px;
+  border:1px solid #dceaf3;
+  border-radius:8px;
+  background:white;
+  color:#287fb4;
+  font-size:10px;
+  font-weight:900;
 }
 
 .confirm{
   display:none;
-  background:#eafaf0;
-  border:1px solid #c9ead6;
-  border-radius:10px;
+  background:#eefaf3;
+  border:1px solid #c8ead7;
+  border-radius:11px;
   padding:12px;
-  text-align:center;
   margin-top:10px;
+  text-align:center;
 }
 
 .confirm.show{
   display:block;
 }
 
-.confirm h4{
-  color:#168448;
+.confirm h3{
+  color:#18874d;
+  font-size:17px;
 }
 
 .confirm p{
-  font-size:12px;
-  color:#62746a;
+  color:#65736b;
+  font-size:11px;
+  margin:4px 0 7px;
 }
 
-.orderid{
-  color:#df568f;
-  font-weight:bold;
-  margin:5px;
+.ref{
   font-size:12px;
-}
-
-.return-box{
-  background:#fff8fb;
-  border-radius:10px;
-  padding:10px;
-}
-
-.return-box p{
-  font-size:12px;
-  color:#806f78;
+  font-weight:900;
+  color:#287fb4;
   margin-bottom:8px;
 }
 
-footer{
-  text-align:center;
-  padding:20px 10px;
-  background:#fff0f6;
-  color:#806f78;
-  font-size:11px;
-  margin-top:15px;
+/* RETURN */
+
+.return-box input,
+.return-box textarea{
+  margin-bottom:3px;
 }
 
-footer b{
-  color:#e95796;
-}
+/* STICKY */
 
-.float{
+.sticky{
   position:fixed;
-  right:15px;
-  bottom:15px;
-  width:50px;
-  height:50px;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(255,255,255,.97);
+  border-top:1px solid #dceaf3;
+  padding:8px 10px;
+  z-index:200;
+  box-shadow:0 -4px 20px rgba(30,100,140,.10);
+}
+
+.sticky button{
+  width:min(700px,100%);
+  margin:auto;
+  display:block;
+  border:0;
+  border-radius:11px;
+  padding:13px;
+  background:#318dcc;
+  color:#fff;
+  font-size:14px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+/* WHATSAPP */
+
+.wa{
+  position:fixed;
+  right:13px;
+  bottom:68px;
+  width:45px;
+  height:45px;
   border-radius:50%;
-  background:#20b95b;
+  background:#20b86b;
   color:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
   text-decoration:none;
-  font-size:23px;
-  box-shadow:0 5px 18px rgba(0,0,0,.18);
-  z-index:20;
+  font-size:21px;
+  z-index:150;
+  box-shadow:0 4px 16px rgba(0,0,0,.18);
 }
+
+/* MODAL */
 
 .modal{
   display:none;
@@ -548,774 +645,722 @@ footer b{
 
 .close{
   position:absolute;
+  right:12px;
   top:12px;
-  right:15px;
   width:40px;
   height:40px;
   border:0;
   border-radius:50%;
+  font-size:26px;
   background:#fff;
-  font-size:27px;
-  cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:25px 10px 20px;
+  color:#8b9499;
+  font-size:10px;
 }
 
 @media(max-width:600px){
 
-  .container{
-    width:94%;
-  }
-
   .hero h1{
-    font-size:25px;
+    font-size:27px;
   }
 
-  .logo{
-    font-size:25px;
+  .title{
+    font-size:22px;
   }
 
-  .main-img{
-    max-height:300px;
+  .current{
+    font-size:27px;
   }
 
-  .thumbs{
-    grid-template-columns:repeat(4,1fr);
-  }
-
-  .detail-grid{
+  .grid{
     grid-template-columns:1fr;
   }
-
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<header>
+  <div class="container head">
+    <div class="logo">REDLEX</div>
+    <a href="#info" class="head-link">Details</a>
+  </div>
+</header>
+
 
 <section class="hero">
+  <div class="container">
 
-<div class="container">
+    <h1>
+      Clean Smarter.<br>
+      <span>Live Better.</span>
+    </h1>
 
-<div class="logo">REDLEX 🩷</div>
+    <p>
+      Powerful cordless cleaning for your everyday home.
+    </p>
 
-<h1>
-Clean Smarter.<br>
-<span>Live Better.</span>
-</h1>
+    <a href="#product" class="btn blue">
+      Shop Now — ₹1,299
+    </a>
 
-<p>
-9-in-1 Electric Spin Scrubber
-</p>
+  </div>
+</section>
 
-<a href="#order" class="btn pink">
-🛒 Order Now
-</a>
 
-</div>
+<section id="product" class="product">
+
+  <div class="container">
+
+    <div class="card">
+
+      <img
+        id="mainProduct"
+        class="main-img"
+        src="Screenshot_20260905-190644~2.jpg"
+        onclick="openImage(this.src)"
+        alt="REDLEX Electric Spin Scrubber"
+      >
+
+      <div class="thumbs">
+
+        <img src="Screenshot_20260905-190644~2.jpg"
+             onclick="changeMain(this.src)">
+
+        <img src="Screenshot_20260905-190648~2.jpg"
+             onclick="changeMain(this.src)">
+
+        <img src="Screenshot_20260905-190652~2.jpg"
+             onclick="changeMain(this.src)">
+
+        <img src="Screenshot_20260905-190655~2.jpg"
+             onclick="changeMain(this.src)">
+
+        <img src="Screenshot_20260905-190658~2.jpg"
+             onclick="changeMain(this.src)">
+
+        <img src="Screenshot_20260905-190700~2.jpg"
+             onclick="changeMain(this.src)">
+
+        <img src="Screenshot_20260905-190707~2.jpg"
+             onclick="changeMain(this.src)">
+
+      </div>
+
+
+      <h2 class="title">
+        9-in-1 Electric Spin Scrubber
+      </h2>
+
+      <div class="rating">
+        ★★★★★ 4.6/5
+      </div>
+
+
+      <div class="price">
+
+        <span class="current">
+          ₹1,299
+        </span>
+
+        <span class="mrp">
+          ₹2,499
+        </span>
+
+        <span class="save">
+          SAVE ₹1,200
+        </span>
+
+      </div>
+
+
+      <div class="pills">
+
+        <span class="pill">💵 COD</span>
+        <span class="pill">🚚 3–10 Days</span>
+        <span class="pill">⚡ Cordless</span>
+        <span class="pill">🧽 9-in-1</span>
+
+      </div>
+
+
+      <p class="desc">
+        Bathrooms, tiles, floors and everyday household cleaning made easier.
+      </p>
+
+
+      <div class="qty">
+
+        <strong>Quantity</strong>
+
+        <div class="qbox">
+
+          <button onclick="changeQty(-1)">
+            −
+          </button>
+
+          <span id="qty">
+            1
+          </span>
+
+          <button onclick="changeQty(1)">
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <button
+        class="btn blue order-main"
+        onclick="openOrder()"
+      >
+        🛒 Order Now — ₹1,299
+      </button>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- PRODUCT -->
+<div class="trust">
 
-<section id="product">
-
-<div class="container">
-
-<div class="card">
-
-<img
-id="mainProduct"
-src="Screenshot_20260905-190644~2.jpg"
-class="main-img"
-onclick="openImage(this.src)"
-alt="REDLEX Electric Spin Scrubber"
->
-
-<div class="thumbs">
-
-<img src="Screenshot_20260905-190644~2.jpg" onclick="changeMain(this.src)">
-<img src="Screenshot_20260905-190648~2.jpg" onclick="changeMain(this.src)">
-<img src="Screenshot_20260905-190652~2.jpg" onclick="changeMain(this.src)">
-<img src="Screenshot_20260905-190655~2.jpg" onclick="changeMain(this.src)">
-<img src="Screenshot_20260905-190658~2.jpg" onclick="changeMain(this.src)">
-<img src="Screenshot_20260905-190700~2.jpg" onclick="changeMain(this.src)">
-<img src="Screenshot_20260905-190707~2.jpg" onclick="changeMain(this.src)">
-
-</div>
-
-<h2 class="product-title">
-Electric Spin Scrubber
-</h2>
-
-<div class="price">
-
-<span class="sale">
-₹1,299
-</span>
-
-<span class="mrp">
-₹2,499
-</span>
-
-<span class="save">
-SAVE ₹1,200
-</span>
-
-</div>
-
-<div class="rating">
-<span>★★★★★</span>
- 4.6/5
- · Customer Rated
-</div>
-
-<div class="pills">
-
-<span class="pill">💵 COD Available</span>
-<span class="pill">🚚 3–10 Days</span>
-<span class="pill">⚡ Cordless</span>
-<span class="pill">🧽 9-in-1</span>
-
-</div>
-
-<p class="description">
-
-Powerful cordless cleaning solution for bathrooms,
-tiles, floors and everyday household cleaning.
-Clean with less effort.
-
-</p>
-
-<div class="quantity">
-
-<strong>Quantity</strong>
-
-<div class="qbox">
-
-<button type="button" onclick="changeQty(-1)">
-−
-</button>
-
-<span id="qty">
-1
-</span>
-
-<button type="button" onclick="changeQty(1)">
-+
-</button>
-
-</div>
-
-</div>
-
-<a href="#order" class="btn pink">
-🛒 Order Now
-</a>
+  💵 COD Available
+  &nbsp; • &nbsp;
+  🚚 3–10 Days
+  &nbsp; • &nbsp;
+  🔒 Secure UPI
+  &nbsp; • &nbsp;
+  💬 Support
 
 </div>
 
 
-<!-- COMPACT BUTTONS -->
+<section id="info" class="info">
 
-<div class="quick-buttons">
+  <div class="container">
 
-<button class="quick" onclick="togglePanel('detailsPanel')">
-📦 Product Details
-</button>
 
-<div id="detailsPanel" class="panel">
+    <details class="panel">
 
-<div class="detail-grid">
+      <summary>
+        📦 Product Details
+      </summary>
 
-<div class="detail">
-<b>Product</b><br>
-Electric Spin Scrubber
-</div>
+      <div class="panel-content">
 
-<div class="detail">
-<b>Type</b><br>
-9-in-1 Cordless
-</div>
+        <div class="grid">
 
-<div class="detail">
-<b>Price</b><br>
-₹1,299 COD
-</div>
+          <div class="box">
+            <b>Product</b><br>
+            9-in-1 Electric Spin Scrubber
+          </div>
 
-<div class="detail">
-<b>Online Price</b><br>
-₹1,099
-</div>
+          <div class="box">
+            <b>COD</b><br>
+            ₹1,299
+          </div>
 
-<div class="detail">
-<b>MRP</b><br>
-₹2,499
-</div>
+          <div class="box">
+            <b>Online</b><br>
+            ₹1,099
+          </div>
 
-<div class="detail">
-<b>Delivery</b><br>
-3–10 Days
-</div>
+          <div class="box">
+            <b>MRP</b><br>
+            ₹2,499
+          </div>
 
-</div>
+          <div class="box">
+            <b>Delivery</b><br>
+            3–10 Days
+          </div>
 
-</div>
+          <div class="box">
+            <b>Design</b><br>
+            Cordless
+          </div>
 
+        </div>
 
-<button class="quick" onclick="togglePanel('reviewPanel')">
-⭐ Customer Reviews · 4.6/5
-</button>
+      </div>
 
-<div id="reviewPanel" class="panel">
+    </details>
 
-<div class="review-summary">
 
-<div class="big-rating">
-4.6/5
-</div>
+    <details class="panel">
 
-<div class="stars">
-★★★★★
-</div>
+      <summary>
+        ⭐ Customer Reviews — 4.6/5
+      </summary>
 
-<p>
-Customer Rating
-</p>
+      <div class="panel-content">
 
-</div>
+        <div class="review-score">
+          4.6 / 5 ⭐
+        </div>
 
-<div class="review-list">
+        <div class="review-note">
+          Review photos are sample display entries.
+        </div>
 
 
-<div class="review-card">
+        <div class="reviews">
 
-<img
-src="review_6142407618_6174757074_6906278ce0787.jpeg.jpg"
-onclick="openImage(this.src)"
->
 
-<div class="review-info">
+          <div class="review">
+            <img
+              src="review_6142407618_6174757074_6906278ce0787.jpeg.jpg"
+              onclick="openImage(this.src)"
+            >
+            <div class="name">Rahul Sharma</div>
+            <div class="stars">★★★★★</div>
+          </div>
 
-<div class="review-name">
-Rahul Sharma
-</div>
 
-<div class="review-stars">
-★★★★★
-</div>
+          <div class="review">
+            <img
+              src="review_1_1265049234_201bec2d03d72.jpeg.jpg"
+              onclick="openImage(this.src)"
+            >
+            <div class="name">Pooja Verma</div>
+            <div class="stars">★★★★★</div>
+          </div>
 
-<div class="review-text">
-“Bathroom cleaning ka kaam kaafi easy ho gaya. Product useful laga.”
-</div>
 
-</div>
+          <div class="review">
+            <img
+              src="review_6137610344_6169936651_255c5aed93d95.jpeg.jpg"
+              onclick="openImage(this.src)"
+            >
+            <div class="name">Amit Patel</div>
+            <div class="stars">★★★★☆</div>
+          </div>
 
-</div>
 
+          <div class="review">
+            <img
+              src="review_8613400696_8656094083_dd06e131ec6ff.jpeg.jpg"
+              onclick="openImage(this.src)"
+            >
+            <div class="name">Neha Singh</div>
+            <div class="stars">★★★★★</div>
+          </div>
 
-<div class="review-card">
 
-<img
-src="review_1_1265049234_201bec2d03d72.jpeg.jpg"
-onclick="openImage(this.src)"
->
+          <div class="review">
+            <img
+              src="review_8055934896_8095884078_3f8e45bd9a085.jpeg.jpg"
+              onclick="openImage(this.src)"
+            >
+            <div class="name">Vikas Gupta</div>
+            <div class="stars">★★★★☆</div>
+          </div>
 
-<div class="review-info">
 
-<div class="review-name">
-Pooja Verma
-</div>
+          <div class="review">
+            <img
+              src="review_7587709200_7625859319_7ee19155db7d4.jpeg.jpg"
+              onclick="openImage(this.src)"
+            >
+            <div class="name">Anjali Mehta</div>
+            <div class="stars">★★★★★</div>
+          </div>
 
-<div class="review-stars">
-★★★★★
-</div>
 
-<div class="review-text">
-“Use karna simple hai aur cleaning me kaafi help milti hai.”
-</div>
+          <div class="review">
+            <img
+              src="review_5870001199_5901022629_4a8f6e2c80b95.jpeg.jpg"
+              onclick="openImage(this.src)"
+            >
+            <div class="name">Rohit Yadav</div>
+            <div class="stars">★★★★★</div>
+          </div>
 
-</div>
 
-</div>
+        </div>
 
+      </div>
 
-<div class="review-card">
+    </details>
 
-<img
-src="review_6137610344_6169936651_255c5aed93d95.jpeg.jpg"
-onclick="openImage(this.src)"
->
 
-<div class="review-info">
+    <details class="panel">
 
-<div class="review-name">
-Amit Patel
-</div>
+      <summary>
+        🚚 Delivery & Payment
+      </summary>
 
-<div class="review-stars">
-★★★★☆
-</div>
+      <div class="panel-content">
 
-<div class="review-text">
-“Different brush heads kaafi useful hain. Good product.”
-</div>
+        <p>🚚 Delivery: <b>3–10 days</b></p>
 
-</div>
+        <p style="margin-top:5px">
+          💵 Cash on Delivery available.
+        </p>
 
-</div>
+        <p style="margin-top:5px">
+          ⚡ Online UPI price: ₹1,099 per unit.
+        </p>
 
+      </div>
 
-<div class="review-card">
+    </details>
 
-<img
-src="review_8613400696_8656094083_dd06e131ec6ff.jpeg.jpg"
-onclick="openImage(this.src)"
->
 
-<div class="review-info">
+    <details class="panel">
 
-<div class="review-name">
-Neha Singh
-</div>
+      <summary>
+        🔄 Return / Exchange
+      </summary>
 
-<div class="review-stars">
-★★★★★
-</div>
+      <div class="panel-content return-box">
 
-<div class="review-text">
-“Tiles aur bathroom ke liye mujhe kaafi helpful laga.”
-</div>
+        <p style="margin-bottom:7px">
+          Return ya exchange help ke liye details bhejo.
+        </p>
 
-</div>
+        <label>Name</label>
 
-</div>
+        <input
+          id="returnName"
+          placeholder="Your name"
+        >
 
+        <label>Order Reference</label>
 
-<div class="review-card">
+        <input
+          id="returnOrder"
+          placeholder="REDLEX-COD-XXXXXX"
+        >
 
-<img
-src="review_8055934896_8095884078_3f8e45bd9a085.jpeg.jpg"
-onclick="openImage(this.src)"
->
+        <label>Reason</label>
 
-<div class="review-info">
+        <textarea
+          id="returnReason"
+          placeholder="Your issue..."
+        ></textarea>
 
-<div class="review-name">
-Vikas Gupta
-</div>
+        <button
+          class="btn green"
+          style="width:100%;margin-top:7px"
+          onclick="returnRequest()"
+        >
+          📲 Send Request
+        </button>
 
-<div class="review-stars">
-★★★★☆
-</div>
+      </div>
 
-<div class="review-text">
-“Cordless hone ki wajah se use karna convenient hai.”
-</div>
+    </details>
 
-</div>
 
-</div>
+    <details class="panel">
 
+      <summary>
+        💬 Help / Contact
+      </summary>
 
-<div class="review-card">
+      <div class="panel-content" style="text-align:center">
 
-<img
-src="review_7587709200_7625859319_7ee19155db7d4.jpeg.jpg"
-onclick="openImage(this.src)"
->
+        <p style="margin-bottom:8px">
+          Need help with your order?
+        </p>
 
-<div class="review-info">
+        <a
+          href="https://wa.me/918602720758"
+          target="_blank"
+          class="btn green"
+        >
+          💬 WhatsApp Support
+        </a>
 
-<div class="review-name">
-Anjali Mehta
-</div>
+      </div>
 
-<div class="review-stars">
-★★★★★
-</div>
+    </details>
 
-<div class="review-text">
-“Cleaning ka effort kam ho gaya. Overall achha laga.”
-</div>
 
-</div>
-
-</div>
-
-
-<div class="review-card">
-
-<img
-src="review_5870001199_5901022629_4a8f6e2c80b95.jpeg.jpg"
-onclick="openImage(this.src)"
->
-
-<div class="review-info">
-
-<div class="review-name">
-Rohit Yadav
-</div>
-
-<div class="review-stars">
-★★★★★
-</div>
-
-<div class="review-text">
-“Product quality achhi lagi aur daily cleaning me useful hai.”
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<button class="quick" onclick="togglePanel('deliveryPanel')">
-🚚 Delivery & Payment
-</button>
-
-<div id="deliveryPanel" class="panel">
-
-<p>
-<b>🚚 Delivery:</b> 3–10 days
-</p>
-
-<p>
-<b>💵 COD:</b> Available
-</p>
-
-<p>
-<b>💳 Online Payment:</b> ₹1,099 for quantity 1
-</p>
-
-<p>
-<b>📦 Order:</b> Customer details website par submit honge.
-</p>
-
-</div>
-
-
-<button class="quick" onclick="togglePanel('returnPanel')">
-🔄 Return / Exchange
-</button>
-
-<div id="returnPanel" class="panel">
-
-<div class="return-box">
-
-<p>
-Return / Exchange ke liye apna naam,
-Order Reference aur reason enter karke
-WhatsApp par request bhej sakte hain.
-</p>
-
-<label>Name</label>
-
-<input
-id="returnName"
-type="text"
-placeholder="Your name"
->
-
-<label>Order Reference</label>
-
-<input
-id="returnOrder"
-type="text"
-placeholder="Order reference"
->
-
-<label>Reason</label>
-
-<textarea
-id="returnReason"
-placeholder="Tell us your issue..."
-></textarea>
-
-<button
-type="button"
-class="btn green"
-onclick="returnRequest()"
->
-📲 Send Request
-</button>
-
-</div>
-
-</div>
-
-
-<button class="quick" onclick="togglePanel('helpPanel')">
-❓ Help / Contact
-</button>
-
-<div id="helpPanel" class="panel">
-
-<p>
-Order ya product se related help ke liye
-WhatsApp par contact karein.
-</p>
-
-<a
-class="btn green"
-href="https://wa.me/918602720758"
-target="_blank"
-rel="noopener"
->
-💬 WhatsApp REDLEX
-</a>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ORDER -->
+<!-- ORDER FORM -->
 
-<section id="order">
+<section id="orderSection">
 
-<div class="container">
+  <div class="container">
 
-<div class="order-box">
+    <div class="order">
 
-<h3>
-🛒 Place Your Order
-</h3>
+      <h2>
+        🛒 Place Your Order
+      </h2>
 
-<p class="order-sub">
-Apni details fill karein aur payment method choose karein.
-</p>
-
-
-<label>
-Full Name
-</label>
-
-<input
-id="name"
-type="text"
-placeholder="Your full name"
->
+      <p class="order-sub">
+        Delivery details fill karo aur payment method choose karo.
+      </p>
 
 
-<label>
-Mobile Number
-</label>
+      <label>Full Name</label>
 
-<input
-id="mobile"
-type="tel"
-maxlength="10"
-inputmode="numeric"
-placeholder="10 digit mobile number"
->
+      <input
+        id="name"
+        type="text"
+        placeholder="Your full name"
+      >
 
 
-<label>
-Full Address
-</label>
+      <label>Mobile Number</label>
 
-<textarea
-id="address"
-placeholder="House no., street, area..."
-></textarea>
-
-
-<label>
-City
-</label>
-
-<input
-id="city"
-type="text"
-placeholder="Your city"
->
+      <input
+        id="mobile"
+        type="tel"
+        maxlength="10"
+        inputmode="numeric"
+        placeholder="10 digit mobile number"
+      >
 
 
-<label>
-State
-</label>
+      <label>Full Address</label>
 
-<input
-id="state"
-type="text"
-placeholder="Your state"
->
+      <textarea
+        id="address"
+        placeholder="House no., street, area..."
+      ></textarea>
 
 
-<label>
-Pincode
-</label>
+      <label>City</label>
 
-<input
-id="pincode"
-type="tel"
-maxlength="6"
-inputmode="numeric"
-placeholder="6 digit pincode"
->
+      <input
+        id="city"
+        type="text"
+        placeholder="Your city"
+      >
 
 
-<div class="total-box">
+      <label>State</label>
 
-<p>
-Your COD order total
-</p>
-
-<strong id="totalAmount">
-₹1,299
-</strong>
-
-</div>
+      <input
+        id="state"
+        type="text"
+        placeholder="Your state"
+      >
 
 
-<div class="qr">
+      <label>Pincode</label>
 
-<h4>
-💳 Online Payment — ₹1,099
-</h4>
-
-<p>
-Online payment quantity 1 ke liye available hai.
-</p>
-
-<img
-src="IMG_20260906_113836_343.jpg"
-onclick="openImage(this.src)"
-alt="REDLEX UPI QR Code"
->
-
-<p>
-₹1,099 pay karke “I Have Paid” button dabayein.
-</p>
-
-</div>
+      <input
+        id="pincode"
+        type="tel"
+        maxlength="6"
+        inputmode="numeric"
+        placeholder="6 digit pincode"
+      >
 
 
-<div class="payments">
+      <div class="total">
 
-<button
-type="button"
-class="pay online"
-onclick="paidOnline()"
->
-✅ I Have Paid ₹1,099
-</button>
+        <small>
+          Quantity: <span id="orderQty">1</span>
+        </small>
 
-<button
-type="button"
-class="pay cod"
-onclick="codOrder()"
->
-💵 Place COD Order
-</button>
+        <span
+          class="total-price"
+          id="codTotal"
+        >
+          ₹1,299
+        </span>
 
-</div>
+        <small>
+          COD Total
+        </small>
 
-
-<div
-id="onlineConfirm"
-class="confirm"
->
-
-<h4>
-🎉 Order Submitted!
-</h4>
-
-<p>
-Order details save ho gaye hain.
-Payment manually verify ki jayegi.
-</p>
-
-<div class="orderid">
-Order Reference:
-<span id="onlineId"></span>
-</div>
-
-<a
-id="onlineWA"
-class="btn green"
-target="_blank"
-rel="noopener"
->
-📲 Send Payment Screenshot
-</a>
-
-</div>
+      </div>
 
 
-<div
-id="codConfirm"
-class="confirm"
->
+      <div class="pay">
 
-<h4>
-🎉 Congratulations!
-</h4>
+        <button
+          class="online"
+          onclick="showOnlinePayment()"
+        >
+          ⚡ Pay Online — ₹<span id="onlineButtonTotal">1,099</span>
+        </button>
 
-<p>
-Aapka COD order successfully submit ho gaya.
-</p>
+        <button
+          class="cod"
+          onclick="placeCOD()"
+        >
+          💵 Place COD Order — ₹<span id="codButtonTotal">1,299</span>
+        </button>
 
-<div class="orderid">
-Order Reference:
-<span id="codId"></span>
-</div>
+      </div>
 
-</div>
 
-</div>
+      <div
+        id="onlinePayment"
+        class="online-box"
+      >
 
-</div>
+        <h3>
+          ⚡ Online Payment
+        </h3>
+
+        <p>
+          Scan QR and pay ₹<b id="onlineAmount">1,099</b>
+        </p>
+
+
+        <img
+          class="qr"
+          src="IMG_20260906_113836_343.jpg"
+          onclick="openImage(this.src)"
+        >
+
+
+        <div class="upi">
+          UPI: patelll09@ptyes
+        </div>
+
+
+        <button
+          class="pay"
+          style="
+            width:100%;
+            border:0;
+            border-radius:10px;
+            padding:12px;
+            margin-top:8px;
+            background:#318dcc;
+            color:#fff;
+            font-weight:900;
+          "
+          onclick="submitOnlineOrder()"
+        >
+          ✅ I Have Paid ₹<span id="paidAmount">1,099</span>
+        </button>
+
+      </div>
+
+
+      <div
+        id="onlineConfirm"
+        class="confirm"
+      >
+
+        <h3>
+          🎉 Order Submitted!
+        </h3>
+
+        <p>
+          Payment details received.
+          Payment verification will be done manually.
+        </p>
+
+        <div class="ref">
+          Order Reference:
+          <span id="onlineId"></span>
+        </div>
+
+        <a
+          id="onlineWA"
+          class="btn green"
+          target="_blank"
+        >
+          📲 Send Payment Confirmation
+        </a>
+
+      </div>
+
+
+      <div
+        id="codConfirm"
+        class="confirm"
+      >
+
+        <h3>
+          🎉 Order Submitted!
+        </h3>
+
+        <p>
+          Aapka COD order successfully submit ho gaya.
+        </p>
+
+        <div class="ref">
+          Order Reference:
+          <span id="codId"></span>
+        </div>
+
+        <a
+          id="codWA"
+          class="btn green"
+          target="_blank"
+        >
+          📲 Send Order Confirmation
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
 <footer>
-
-© 2026 <b>REDLEX</b> — Premium Everyday Cleaning Solutions
-
+  © 2026 REDLEX — Premium Everyday Cleaning Solutions
 </footer>
 
 
+<!-- STICKY ORDER -->
+
+<div class="sticky">
+
+  <button onclick="openOrder()">
+    🛒 Order Now — ₹1,299
+  </button>
+
+</div>
+
+
+<!-- WHATSAPP -->
+
 <a
-class="float"
-href="https://wa.me/918602720758"
-target="_blank"
-rel="noopener"
+  class="wa"
+  href="https://wa.me/918602720758"
+  target="_blank"
 >
-💬
+  💬
 </a>
 
 
+<!-- IMAGE MODAL -->
+
 <div
-id="modal"
-class="modal"
-onclick="closeModal(event)"
+  id="modal"
+  class="modal"
+  onclick="closeModal(event)"
 >
 
-<button
-type="button"
-class="close"
-onclick="closeModal(event)"
->
-×
-</button>
+  <button
+    class="close"
+    onclick="closeModal(event)"
+  >
+    ×
+  </button>
 
-<img
-id="modalImg"
-alt="Preview"
->
+  <img id="modalImg">
 
 </div>
 
@@ -1341,117 +1386,141 @@ const db = createClient(
 
 
 /* =========================
-   SETTINGS
+   CONFIG
 ========================= */
 
-const WA =
-"918602720758";
+const WA = "918602720758";
 
-const COD_PRICE =
-1299;
+const COD_PRICE = 1299;
 
-const ONLINE_PRICE =
-1099;
+const ONLINE_PRICE = 1099;
 
-let quantity =
-1;
+let quantity = 1;
 
 
 /* =========================
    QUANTITY
 ========================= */
 
-function changeQty(amount){
+function changeQty(change){
 
-  quantity += amount;
+  quantity += change;
 
-  if(quantity < 1){
+  if(quantity < 1)
     quantity = 1;
-  }
 
-  if(quantity > 10){
+  if(quantity > 10)
     quantity = 10;
-  }
 
   document.getElementById("qty")
     .textContent = quantity;
 
-  updateTotal();
-}
-
-
-function updateTotal(){
-
-  const total =
-    COD_PRICE * quantity;
-
-  document.getElementById("totalAmount")
-    .textContent =
-    "₹" + total.toLocaleString("en-IN");
+  updateTotals();
 }
 
 
 /* =========================
-   PANELS
+   TOTAL
 ========================= */
 
-function togglePanel(id){
+function updateTotals(){
 
-  const panel =
-    document.getElementById(id);
+  const cod =
+    COD_PRICE * quantity;
 
-  panel.classList.toggle("show");
+  const online =
+    ONLINE_PRICE * quantity;
 
+
+  document.getElementById("orderQty")
+    .textContent = quantity;
+
+  document.getElementById("codTotal")
+    .textContent =
+      "₹" + cod.toLocaleString("en-IN");
+
+  document.getElementById("codButtonTotal")
+    .textContent =
+      cod.toLocaleString("en-IN");
+
+  document.getElementById("onlineButtonTotal")
+    .textContent =
+      online.toLocaleString("en-IN");
+
+  document.getElementById("onlineAmount")
+    .textContent =
+      online.toLocaleString("en-IN");
+
+  document.getElementById("paidAmount")
+    .textContent =
+      online.toLocaleString("en-IN");
 }
 
 
 /* =========================
-   PRODUCT IMAGE
+   OPEN ORDER
+========================= */
+
+function openOrder(){
+
+  const section =
+    document.getElementById("orderSection");
+
+  section.style.display = "block";
+
+  updateTotals();
+
+  section.scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+}
+
+
+/* =========================
+   IMAGES
 ========================= */
 
 function changeMain(src){
 
-  document.getElementById("mainProduct")
-    .src = src;
-
+  document.getElementById(
+    "mainProduct"
+  ).src = src;
 }
 
-
-/* =========================
-   IMAGE MODAL
-========================= */
 
 function openImage(src){
 
-  document.getElementById("modalImg")
-    .src = src;
+  document.getElementById(
+    "modalImg"
+  ).src = src;
 
-  document.getElementById("modal")
-    .classList.add("show");
-
+  document.getElementById(
+    "modal"
+  ).classList.add("show");
 }
 
 
-function closeModal(event){
+function closeModal(e){
 
   if(
-    event.target.id === "modal" ||
-    event.target.classList.contains("close")
+    e.target.id === "modal" ||
+    e.target.classList.contains("close")
   ){
 
-    document.getElementById("modal")
-      .classList.remove("show");
+    document.getElementById(
+      "modal"
+    ).classList.remove("show");
 
   }
-
 }
 
 
 /* =========================
-   CUSTOMER DETAILS
+   FORM VALIDATION
 ========================= */
 
-function getCustomerDetails(){
+function getDetails(){
 
   const name =
     document.getElementById("name")
@@ -1480,9 +1549,7 @@ function getCustomerDetails(){
 
   if(name.length < 2){
 
-    alert(
-      "Please enter your full name."
-    );
+    alert("Please enter your full name.");
 
     return null;
   }
@@ -1510,9 +1577,7 @@ function getCustomerDetails(){
 
   if(city.length < 2){
 
-    alert(
-      "Please enter your city."
-    );
+    alert("Please enter your city.");
 
     return null;
   }
@@ -1520,9 +1585,7 @@ function getCustomerDetails(){
 
   if(state.length < 2){
 
-    alert(
-      "Please enter your state."
-    );
+    alert("Please enter your state.");
 
     return null;
   }
@@ -1539,16 +1602,13 @@ function getCustomerDetails(){
 
 
   return {
-
     name,
     mobile,
     address,
     city,
     state,
     pincode
-
   };
-
 }
 
 
@@ -1556,7 +1616,7 @@ function getCustomerDetails(){
    ORDER REFERENCE
 ========================= */
 
-function createOrderReference(prefix){
+function createReference(prefix){
 
   return (
     prefix +
@@ -1566,64 +1626,55 @@ function createOrderReference(prefix){
       Math.random() * 900000
     )
   );
-
 }
 
 
 /* =========================
-   SAVE TO SUPABASE
+   SUPABASE INSERT
 ========================= */
 
-async function saveOrderToSupabase(
-  customer,
+async function saveOrder(
+  details,
+  method,
   amount,
-  paymentMethod,
-  paymentStatus,
-  orderStatus
+  paymentStatus
 ){
 
   const orderData = {
 
     customer_name:
-      customer.name,
+      details.name,
 
     phone:
-      customer.mobile,
+      details.mobile,
 
     address:
-      customer.address,
+      details.address,
 
     city:
-      customer.city,
+      details.city,
 
     state:
-      customer.state,
+      details.state,
 
     pincode:
-      customer.pincode,
+      details.pincode,
 
     quantity:
-      Number(quantity),
+      quantity,
 
     amount:
-      Number(amount),
+      amount,
 
     payment_method:
-      paymentMethod,
+      method,
 
     payment_status:
       paymentStatus,
 
     order_status:
-      orderStatus
-
+      "new"
   };
-
-
-  console.log(
-    "REDLEX ORDER:",
-    orderData
-  );
 
 
   const { error } =
@@ -1634,15 +1685,10 @@ async function saveOrderToSupabase(
 
   if(error){
 
-    console.error(
-      "SUPABASE ERROR:",
-      error
-    );
+    console.error(error);
 
     alert(
-      "Order save nahi hua.\n\n" +
-      "Supabase Error:\n" +
-      error.message
+      "Order save nahi ho paya. Please try again."
     );
 
     return false;
@@ -1650,215 +1696,229 @@ async function saveOrderToSupabase(
 
 
   return true;
-
 }
 
 
 /* =========================
-   COD ORDER
+   ONLINE
 ========================= */
 
-async function codOrder(){
+function showOnlinePayment(){
 
-  const customer =
-    getCustomerDetails();
+  const details = getDetails();
 
-  if(!customer){
+  if(!details)
     return;
-  }
+
+
+  document.getElementById(
+    "onlinePayment"
+  ).classList.add("show");
+
+  document.getElementById(
+    "onlinePayment"
+  ).scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+  });
+}
+
+
+async function submitOnlineOrder(){
+
+  const details =
+    getDetails();
+
+  if(!details)
+    return;
+
+
+  const amount =
+    ONLINE_PRICE * quantity;
+
+
+  const saved =
+    await saveOrder(
+      details,
+      "UPI",
+      amount,
+      "pending"
+    );
+
+
+  if(!saved)
+    return;
+
+
+  const id =
+    createReference("REDLEX-ON");
+
+
+  document.getElementById(
+    "onlineId"
+  ).textContent = id;
+
+
+  document.getElementById(
+    "onlineWA"
+  ).href =
+    "https://wa.me/" +
+    WA +
+    "?text=" +
+    makeMessage(
+      details,
+      id,
+      amount,
+      "UPI - Online"
+    );
+
+
+  document.getElementById(
+    "onlineConfirm"
+  ).classList.add("show");
+
+  document.getElementById(
+    "codConfirm"
+  ).classList.remove("show");
+
+
+  document.getElementById(
+    "onlineConfirm"
+  ).scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+  });
+}
+
+
+/* =========================
+   COD
+========================= */
+
+async function placeCOD(){
+
+  const details =
+    getDetails();
+
+  if(!details)
+    return;
 
 
   const amount =
     COD_PRICE * quantity;
 
 
-  const reference =
-    createOrderReference(
-      "REDLEX-COD"
-    );
-
-
   const saved =
-    await saveOrderToSupabase(
-      customer,
-      amount,
+    await saveOrder(
+      details,
       "COD",
-      "pending",
-      "new"
+      amount,
+      "pending"
     );
 
 
-  if(!saved){
+  if(!saved)
     return;
-  }
 
 
-  document.getElementById("codId")
-    .textContent =
-    reference;
+  const id =
+    createReference("REDLEX-COD");
 
 
-  document.getElementById("onlineConfirm")
-    .classList.remove("show");
+  document.getElementById(
+    "codId"
+  ).textContent = id;
 
 
-  document.getElementById("codConfirm")
-    .classList.add("show");
-
-
-  document.getElementById("codConfirm")
-    .scrollIntoView({
-      behavior:"smooth",
-      block:"center"
-    });
-
-}
-
-
-/* =========================
-   ONLINE ORDER
-========================= */
-
-async function paidOnline(){
-
-  const customer =
-    getCustomerDetails();
-
-  if(!customer){
-    return;
-  }
-
-
-  if(quantity !== 1){
-
-    alert(
-      "Online payment abhi ₹1,099 ka hai.\n\n" +
-      "Online payment ke liye quantity 1 rakhein.\n\n" +
-      "Multiple quantity ke liye COD use karein."
-    );
-
-    return;
-  }
-
-
-  const reference =
-    createOrderReference(
-      "REDLEX-ON"
-    );
-
-
-  const saved =
-    await saveOrderToSupabase(
-      customer,
-      ONLINE_PRICE,
-      "UPI",
-      "pending",
-      "new"
-    );
-
-
-  if(!saved){
-    return;
-  }
-
-
-  document.getElementById("onlineId")
-    .textContent =
-    reference;
-
-
-  const message =
-
-    "Hi REDLEX,\n\n" +
-
-    "I have paid ₹1,099 online.\n\n" +
-
-    "Order Reference: " +
-    reference +
-    "\n\n" +
-
-    "Product: Electric Spin Scrubber\n" +
-
-    "Quantity: 1\n" +
-
-    "Amount Paid: ₹1,099\n\n" +
-
-    "Name: " +
-    customer.name +
-    "\n" +
-
-    "Mobile: " +
-    customer.mobile +
-    "\n" +
-
-    "Address: " +
-    customer.address +
-    "\n" +
-
-    "City: " +
-    customer.city +
-    "\n" +
-
-    "State: " +
-    customer.state +
-    "\n" +
-
-    "Pincode: " +
-    customer.pincode +
-    "\n\n" +
-
-    "I am sending my payment screenshot.";
-
-
-  document.getElementById("onlineWA")
-    .href =
+  document.getElementById(
+    "codWA"
+  ).href =
     "https://wa.me/" +
     WA +
     "?text=" +
-    encodeURIComponent(message);
+    makeMessage(
+      details,
+      id,
+      amount,
+      "Cash On Delivery"
+    );
 
 
-  document.getElementById("codConfirm")
-    .classList.remove("show");
+  document.getElementById(
+    "codConfirm"
+  ).classList.add("show");
+
+  document.getElementById(
+    "onlineConfirm"
+  ).classList.remove("show");
 
 
-  document.getElementById("onlineConfirm")
-    .classList.add("show");
-
-
-  document.getElementById("onlineConfirm")
-    .scrollIntoView({
-      behavior:"smooth",
-      block:"center"
-    });
-
+  document.getElementById(
+    "codConfirm"
+  ).scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+  });
 }
 
 
 /* =========================
-   RETURN / EXCHANGE
+   WHATSAPP MESSAGE
+========================= */
+
+function makeMessage(
+  d,
+  id,
+  amount,
+  method
+){
+
+  return encodeURIComponent(
+`Hi REDLEX,
+
+I want to confirm my order.
+
+Order Reference: ${id}
+Product: 9-in-1 Electric Spin Scrubber
+Quantity: ${quantity}
+Total: ₹${amount.toLocaleString("en-IN")}
+Payment: ${method}
+
+Name: ${d.name}
+Mobile: ${d.mobile}
+Address: ${d.address}
+City: ${d.city}
+State: ${d.state}
+Pincode: ${d.pincode}`
+  );
+}
+
+
+/* =========================
+   RETURN
 ========================= */
 
 function returnRequest(){
 
   const name =
-    document.getElementById("returnName")
-      .value.trim();
+    document.getElementById(
+      "returnName"
+    ).value.trim();
 
   const order =
-    document.getElementById("returnOrder")
-      .value.trim();
+    document.getElementById(
+      "returnOrder"
+    ).value.trim();
 
   const reason =
-    document.getElementById("returnReason")
-      .value.trim();
+    document.getElementById(
+      "returnReason"
+    ).value.trim();
 
 
   if(name.length < 2){
 
-    alert(
-      "Please enter your name."
-    );
+    alert("Please enter your name.");
 
     return;
   }
@@ -1874,7 +1934,7 @@ function returnRequest(){
   }
 
 
-  if(reason.length < 5){
+  if(reason.length < 3){
 
     alert(
       "Please enter the reason."
@@ -1885,48 +1945,50 @@ function returnRequest(){
 
 
   const message =
+    encodeURIComponent(
+`Hi REDLEX,
 
-    "Hi REDLEX,\n\n" +
+I need Return / Exchange support.
 
-    "I want to request Return / Exchange.\n\n" +
-
-    "Name: " +
-    name +
-    "\n" +
-
-    "Order Reference: " +
-    order +
-    "\n\n" +
-
-    "Reason:\n" +
-    reason;
-
-
-  const whatsappURL =
-
-    "https://wa.me/" +
-    WA +
-    "?text=" +
-    encodeURIComponent(message);
+Name: ${name}
+Order Reference: ${order}
+Reason: ${reason}`
+    );
 
 
   window.open(
-    whatsappURL,
+    "https://wa.me/" +
+    WA +
+    "?text=" +
+    message,
     "_blank"
   );
-
 }
 
 
 /* =========================
-   START
+   ESCAPE
 ========================= */
 
-updateTotal();
+document.addEventListener(
+  "keydown",
+  function(e){
 
-console.log(
-  "REDLEX compact store ready."
+    if(e.key === "Escape"){
+
+      document.getElementById(
+        "modal"
+      ).classList.remove("show");
+
+    }
+
+  }
 );
+
+
+/* INITIAL */
+
+updateTotals();
 
 </script>
 
